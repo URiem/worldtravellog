@@ -33,7 +33,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     '8000-uriem-worldtravellog-lw70fabvim.us2.codeanyapp.com',
-    'worldtravels.herokuapp.com',
+    'worldtravellog.herokuapp.com',
     'localhost'
 ]
 
