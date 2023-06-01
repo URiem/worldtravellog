@@ -41,11 +41,11 @@ class Logentry(models.Model):
     date_created = models.DateTimeField(auto_now_add=True)
     last_updated = models.DateTimeField(auto_now=True)
 
-    def __str__(self):
-        return self.title
-
     class Meta:
         ordering = ['-year']
+
+    def __str__(self):
+        return self.title
 
 
 class Image(models.Model):
