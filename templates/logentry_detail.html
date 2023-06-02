@@ -9,7 +9,7 @@
             <br><br>
             <h1 class="header center teal-text text-lighten-2">{{ logentry.title }}</h1>
             <div class="row center">
-                <h5 class="header col s12 light">{{ logentry.category }} {{ logentry.year }}
+                <h5 class="header col s12 light">{{ logentry.country }} | {{ logentry.year }}
                 </h5>
             </div>
 
@@ -24,35 +24,40 @@
 
 <div class="container">
     <div class="section">
-
         <div class="row">
-            <!-- Travel Log Section  
-            {% for log in logentry_list %}
-            <div class="col s12 m6 l4">
-                <div class="card">
-                    <div class="card-image">
-                        {% if "placeholder" in travellog.featured_image.url %}
-                        <img src="{% static 'media/images/mountcook.jpg' %}">
-                        {% else %}
-                        <img src="{{ log.featured_image.url }}">
-                        {% endif %}
-                        <a class="btn-floating halfway-fab waves-effect waves-light red"><i
-                                class="material-icons">add</i></a>
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title">{{ log.title }}</span>
-                        <p>{{ log.excerpt }}</p>
-                    </div>
-                </div>
+            <div class="col s12 center">
+                <p class="left-align">Created by {{ logentry.author }} on {{ logentry.date_created }}
+                <p>
+                <p class="left-align light"> {{ logentry.description | safe }} </p>
             </div>
-            {% if forloop.counter|divisibleby:3 %}
         </div>
         <div class="row">
-            {% endif %}
-            {% endfor %}
- -->
-
-
+            <div class="col">
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <!-- Images Section   -->
+                <h6>Images:</h6>
+                <!-- {% for image in images %} -->
+                <!-- <div class="col s12 m6 l4">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="{{ image.image.url }}">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title">{{ image.alttext }}</span>
+                        <p>{{ image.caption }}</p>
+                    </div>
+                </div>
+            </div> -->
+                <!-- {% if forloop.counter|divisibleby:3 %}
+        </div>
+        <div class="row">
+            {% endif %} -->
+                <!-- {% endfor %} -->
+            </div>
         </div>
     </div>
 </div>

@@ -22,6 +22,6 @@ class LogentryDetail(View):
             "logentry_detail.html",
             {
                 "logentry": logentry,
-                "images": images,
+                # "images": images,
             },
         )
