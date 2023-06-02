@@ -24,10 +24,10 @@
                 <li><a href="{% url 'home' %}">Home</a></li>
                 <li><a href="#">About</a></li>
                 {% if user.is_authenticated %}
-                <li><a href="#">Logout</a></li>
+                <li><a href="{% url 'account_logout' %}">Logout</a></li>
                 {% else %}
-                <li><a href="#">Sign Up</a></li>
-                <li><a href="#">Login</a></li>
+                <li><a href="{% url 'account_signup' %}">Sign Up</a></li>
+                <li><a href="{% url 'account_login' %}">Login</a></li>
                 {% endif %}
             </ul>
 
@@ -35,10 +35,10 @@
                 <li><a href="{% url 'home' %}">Home</a></li>
                 <li><a href="#">About</a></li>
                 {% if user.is_authenticated %}
-                <li><a href="#">Logout</a></li>
+                <li><a href="{% url 'account_logout' %}">Logout</a></li>
                 {% else %}
-                <li><a href="#">Sign Up</a></li>
-                <li><a href="#">Login</a></li>
+                <li><a href="{% url 'account_signup' %}">Sign Up</a></li>
+                <li><a href="{% url 'account_login' %}">Login</a></li>
                 {% endif %}
             </ul>
             <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
