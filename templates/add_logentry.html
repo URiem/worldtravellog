@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}Add Logentry{% endblock %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<!-- Add post page -->
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col s8 offset-s2">
+
+                <h1><strong>Add a Trip to your Log:</strong></h1>
+                <br>
+                <!-- See forms.py -->
+                <form class="form text-muted" method="POST" action="{% url 'add_logentry' %}"
+                    enctype="multipart/form-data">
+                    <!-- In this form we need to include the encryption type because if 
+                            you upload images without it then it might not upload correctly -->
+                    {% csrf_token %}
+                    {{ form | crispy }}
+                    <button class="btn waves-effect waves-light" type="submit" name="action">Add a Log Entry
+                        <i class="material-icons right">send</i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}

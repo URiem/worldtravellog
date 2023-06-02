@@ -1,6 +1,11 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
-from .models import Logentry
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.http import HttpResponseRedirect
+from django.urls import reverse_lazy
+from django.contrib import messages
+from .models import Logentry, Country
+from .forms import LogentryForm
 
 
 class LogentryList(generic.ListView):
@@ -15,7 +20,7 @@ class LogentryDetail(View):
     def get(self, request, slug, *arg, **kwargs):
         queryset = Logentry.objects.filter(status=1)
         logentry = get_object_or_404(queryset, slug=slug)
-        images = logentry.images
+        # images = logentry.images
 
         return render(
             request,
@@ -25,3 +30,21 @@ class LogentryDetail(View):
                 # "images": images,
             },
         )
+
+
+class AddLogentry(CreateView):
+    """
+    Allows authenticated users to add
+    and save a log entry
+    """
+    model = Logentry
+    form_class = LogentryForm
+    template_name = 'add_logentry.html'
+    success_url = reverse_lazy('home')
+
+    # Source: https://stackoverflow.com/questions/67366138/django-display-message-after-creating-a-post # noqa
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        # msg = "Your trip log was submitted successfully"
+        # messages.add_message(self.request, messages.SUCCESS, msg)
+        return super(CreateView, self).form_valid(form)

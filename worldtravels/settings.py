@@ -54,6 +54,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'cloudinary',
     'django_summernote',
+    'materialize',
+    'crispy_forms',
+    'crispy_forms_materialize',
     'travellog',
 ]
 
@@ -61,6 +64,8 @@ SITE_ID = 1
 
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
+
+CRISPY_TEMPLATE_PACK = 'materialize_css_forms'
 
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 
