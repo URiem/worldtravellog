@@ -1,78 +1,150 @@
-/* Custom Stylesheet */
-/**
- * Use this file to override Materialize files so you can update
- * the core Materialize files in the future
- *
- * Made By MaterializeCSS.com
- */
-
-nav img {
-    height: 40px;
-    margin-top: 12px;
+body {
+    background-color: #F9FAFC;
 }
 
-footer li {
-    font-size: 30px;
+.brand {
+    font-family: Lato, sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #4A4A4F;
 }
 
-label {
-    color: black;
-    font-size: 16px;
+.brand-logo {
+    height: 30px;
 }
 
-#id_remember {
-    outline: 3px solid black;
+.red-o {
+    color: #E84610;
 }
 
-nav ul a,
-nav .brand-logo {
-    color: #444;
+.thin {
+    font-weight: 300;
 }
 
-p {
-    line-height: 2rem;
+.light-bg {
+    background-color: #fff;
 }
 
-.sidenav-trigger {
-    color: #26a69a;
+.dark-bg {
+    background-color: #445261;
 }
 
-.parallax-container {
-    min-height: 380px;
-    line-height: 0;
-    height: auto;
-    color: rgba(255, 255, 255, .9);
+.main-bg {
+    background-color: #F9FAFC;
 }
 
-.parallax-container .section {
+.card {
+    border: none;
+    background-color: transparent;
+}
+
+.image-container {
+    position: relative;
+}
+
+.image-flash {
+    position: absolute;
+    bottom: 5%;
+    min-width: 30%;
+    left: -2px;
+    background-color: #23BBBB;
+}
+
+.author {
+    color: white;
+    margin: 4px;
+    text-transform: uppercase;
+}
+
+.masthead {
+    margin-top: 10px;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    height: 33vh;
     width: 100%;
 }
 
-@media only screen and (max-width : 992px) {
-    .parallax-container .section {
-        position: absolute;
-        top: 40%;
-    }
-
-    #index-banner .section {
-        top: 10%;
-    }
+.masthead-text {
+    background-color: #445261;
+    color: white;
+    position: relative;
 }
 
-@media only screen and (max-width : 600px) {
-    #index-banner .section {
-        top: 0;
-    }
+.masthead-image {
+    position: relative;
+    overflow: hidden;
 }
 
-.icon-block {
-    padding: 0 15px;
+.masthead-image:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 90%;
+    height: 100%;
+    width: 150%;
+    background: #445261;
+    -webkit-transform: skew(15deg);
+    -moz-transform: skew(15deg);
+    transform: skew(15deg);
+    z-index: 100;
 }
 
-.icon-block .material-icons {
-    font-size: inherit;
+.post-link {
+    text-decoration: none;
+    color: #445261;
 }
 
-footer.page-footer {
-    margin: 0;
+.post-link:hover,
+.page-link {
+    color: #E84610;
+}
+
+.post-title {
+    margin-top: 20%;
+    margin-left: 5%;
+}
+
+.post-subtitle {
+    margin-left: 5%;
+    color: lightgray;
+}
+
+.btn-signup {
+    background-color: #23BBBB;
+    color: #fff;
+}
+
+.btn-social {
+    font-size: 30px;
+}
+
+.btn-signup:hover,
+.btn-signup:active {
+    background-color: #fff;
+    color: #23BBBB;
+}
+
+.link {
+    color: #23BBBB;
+    text-decoration: none;
+}
+
+.link:hover,
+.link:active {
+    color: #445261;
+    text-decoration: underline;
+}
+
+.btn-like {
+    color: #E84610;
+    border: none;
+    background: transparent;
+}
+
+.btn-like:hover,
+.btn-like:active {
+    color: #E84610;
+    background: transparent;
+    border: none;
 }
