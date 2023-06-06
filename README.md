@@ -4,16 +4,23 @@
 
 ![Mockup image](#)
 
+**Live Site:**
+
 [Live webpage](https://worldtravels.herokuapp.com/)
+
+**Link to Repository:**
+
+[Repository](https://github.com/URiem/worldtravellog)
+
+**Developed by: Ulrike Riemenschneider**
 
 ## Table of Content
 
 - [The WorldTravel Log](#the-worldtravel-log)
   - [Table of Content](#table-of-content)
   - [Introduction](#introduction)
-  - [Project Goals](#project-goals)
-    - [User Goals](#user-goals)
-    - [Site Owner Goals](#site-owner-goals)
+    - [Project Goals](#project-goals)
+    - [Data Base Design](#data-base-design)
   - [User Experience - UX](#user-experience---ux)
     - [Strategy](#strategy)
       - [Target Audience](#target-audience)
@@ -62,11 +69,14 @@ The WorldTravel Log is a website that is designed to allow users to upload and k
 
 The project was desiged as the 4th portfolio project of the Code Institutes Full Stack Diploma Program. It was built using Django, Python, JS, CSS and HTML.
 
-## Project Goals
+### Project Goals
 
-### User Goals
+The goal of the project was to build a tool for users to create a repository of memories from travels so that they may share them with others, privately or publically, or use them like a small photo diary of experiences. Each travel log can be populated with a small gallery of pictures from memorable moments of the adventures. So often images from our travel sit in file structures on private computers and are seldom looked at. If shared on common social media site, they disappear in a long, long timeline of social media posts that are difficult to search for or retrieve in the future. This site allows users to create log entries focusing on a specific trip, with a short description and defining information, such as the country of travel, the year and a descriptive title. The log entries can be edited and deleted by the user who created them. To protect their privacy, users can choose if they wish to publically share a log entry or keep it private.
 
-### Site Owner Goals
+### Data Base Design
+
+![EDR](/static/media/images/erd.jpeg)
+
 
 ## User Experience - UX
 
@@ -92,23 +102,15 @@ The project was desiged as the 4th portfolio project of the Code Institutes Full
 
 #### Wireframes
 
-1. **Welcome Section**
+1. **Home Page**
 
-![Welcome](#)
+![Home Page](#)
 
-1. **Choose Level Section**
+2. **Logentry Detail Page**
 
-![Level](#)
+![Logentry Detail](#)
 
-1. **Quiz Section**
-
-![Quiz](#)
-
-1. **End of Game Page**
-
-![End of Game](#)
-
-5. **404 Page** - a simple 404 Error page is also included (404.html)
+3. **404 Page** - a simple 404 Error page is also included (404.html)
 
 ### Skeleton
 
