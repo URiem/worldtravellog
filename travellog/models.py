@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
+from django.template.defaultfilters import slugify
 
 STATUS = ((0, "Draft"), (1, "Published"))
 PRIVACY = ((0, "Private"), (1, "Public"))
@@ -46,6 +47,14 @@ class Logentry(models.Model):
 
     def __str__(self):
         return self.title
+
+    def save(self, *args, **kwargs):
+        """
+        helper method to generate slug for travel logs submitted
+        by non-admin users
+        """
+        self.slug = slugify(self.title)
+        super(Logentry, self).save(*args, **kwargs)
 
 
 class Image(models.Model):

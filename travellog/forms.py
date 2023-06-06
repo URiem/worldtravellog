@@ -17,14 +17,15 @@ class LogentryForm(forms.ModelForm):
     """
     class Meta:
         model = Logentry
-        fields = ('title', 'country', 'year', 'description',
+        fields = ('title', 'country', 'year', 'description', 'excerpt',
                   'featured_image', 'status', 'privacy', )
 
         widgets = {
             'title': forms.TextInput(attrs={'placeholder': 'Enter a title'}),
             'country': forms.Select(),
             'description': forms.Textarea(
-                attrs={'placeholder': 'Add a descriptions of your adventure!'})
+                attrs={'placeholder': 'Add a descriptions of your adventure!'}),
+            'excerpt': forms.Textarea(attrs={'placeholder': 'Add a short teaser about your trip'})
         }
 
 

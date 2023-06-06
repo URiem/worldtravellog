@@ -25,6 +25,7 @@
                             </div>
                             <a href="{% url 'logentry_detail' log.slug  %}" class="post-link">
                                 <h2 class="card-title">{{ log.title }}</h2>
+                                <p class="card-text"><strong>{{ log.country }} | {{ log.year }}</strong></p>
                                 <p class="card-text">{{ log.excerpt }}</p>
                             </a>
                             <hr />
