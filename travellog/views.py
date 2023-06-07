@@ -4,8 +4,8 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.http import HttpResponseRedirect
 from django.urls import reverse_lazy
 from django.contrib import messages
-from .models import Logentry, Country
-from .forms import LogentryForm
+from .models import Logentry, Country, Image
+from .forms import LogentryForm, ImageForm
 
 
 class LogentryList(generic.ListView):
@@ -30,7 +30,32 @@ class LogentryDetail(View):
             "logentry_detail.html",
             {
                 "logentry": logentry,
-                "images": images,
+                # "images": images,
+                "image_form": ImageForm()
+            },
+        )
+
+    def post(self, request, slug, *arg, **kwargs):
+        queryset = Logentry.objects.filter(status=1)
+        logentry = get_object_or_404(queryset, slug=slug)
+        images = logentry.images
+
+        image_form = ImageForm(data=request.POST)
+
+        if image_form.is_valid():
+            image = image_form.save(commit=False)
+            image.logentry = logentry
+            image.save
+        else:
+            image_form = ImageForm()
+
+        return render(
+            request,
+            "logentry_detail.html",
+            {
+                "logentry": logentry,
+                # "images": images,
+                "image_form": ImageForm()
             },
         )
 

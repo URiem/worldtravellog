@@ -1,5 +1,7 @@
 {% extends 'base.html' %} {% block content %}
 
+{% load crispy_forms_tags %}
+
 
 <div class="masthead">
     <div class="container">
@@ -65,20 +67,24 @@
         <div class="images">
             <p> This is where the picture gallary will go.</p>
         </div>
-        {% for img in images %}
+        <!-- {% for img in images %}
         <p>image associated with this post</p>
-        {% endfor %}
+        {% endfor %} -->
     </div>
 </div>
 
-{% if user.id == logentry.author.id %}
 <div class="container">
     <div class="row">
-        <div class="update-btn-group">
-            <p> This is where you can images to your log.</p>
-        </div>
+        {% if user.id == logentry.author.id %}
+        <p> This is where you can images to your log.</p>
+        <form method="post" style="margin-top: 1.3em;">
+            {{ image_form | crispy }}
+            {% csrf_token %}
+            <button type="submit" class="btn btn-signup btn-lg">Submit</button>
+        </form>
+        {% endif %}
     </div>
 </div>
-{% endif %}
+
 
 {% endblock content %}

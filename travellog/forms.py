@@ -1,14 +1,14 @@
 from django import forms
-from .models import Logentry, Country
+from .models import Logentry, Country, Image
 
 
-# class ImageForm(forms.ModelForm):
-#     """
-#     Class to enable adding images to a Logentry
-#     """
-#     class Meta:
-#         model = Logentry
-#         fields = ('image', 'caption', 'alttext')
+class ImageForm(forms.ModelForm):
+    """
+    Class to enable adding images to a Logentry
+    """
+    class Meta:
+        model = Image
+        fields = ('image', 'caption', 'alttext',)
 
 
 class LogentryForm(forms.ModelForm):
