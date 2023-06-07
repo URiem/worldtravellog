@@ -50,4 +50,35 @@
     </div>
 </div>
 
+{% if user.id == logentry.author.id %}
+<div class="container">
+    <div class="row">
+        <div class="update-btn-group">
+            <p> This is where you can update your log</p>
+        </div>
+    </div>
+</div>
+{% endif %}
+
+<div class="container">
+    <div class="row">
+        <div class="images">
+            <p> This is where the picture gallary will go.</p>
+        </div>
+        {% for img in images %}
+        <p>image associated with this post</p>
+        {% endfor %}
+    </div>
+</div>
+
+{% if user.id == logentry.author.id %}
+<div class="container">
+    <div class="row">
+        <div class="update-btn-group">
+            <p> This is where you can images to your log.</p>
+        </div>
+    </div>
+</div>
+{% endif %}
+
 {% endblock content %}

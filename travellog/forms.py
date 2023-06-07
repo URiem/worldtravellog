@@ -2,7 +2,7 @@ from django import forms
 from .models import Logentry, Country
 
 
-# class IamageForm(forms.ModelForm):
+# class ImageForm(forms.ModelForm):
 #     """
 #     Class to enable adding images to a Logentry
 #     """

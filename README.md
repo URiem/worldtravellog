@@ -77,7 +77,7 @@ The goal of the project was to build a tool for users to create a repository of 
 
 The Entity Relationship Diagram (ERD) illustrates the structure of the data base which lies at the core of the functionality of the site:
 
-![EDR](/static/media/images/erd.jpeg)
+![ERD](/static/media/images/erd.jpeg)
 
 A User Model is provided by Django, a Logentry Model stores the details of each Triplog that a user adds, a user can add many log entries. An Image Model allows the user to add and store images specific to each Triplog, each Log can have multiple pictures associated with it. In addition a Country Model allows the user to categorize their entries by country of travel, which then makes the log entries searchable to the user.
 

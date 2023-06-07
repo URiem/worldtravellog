@@ -16,18 +16,21 @@ class LogentryList(generic.ListView):
 
 
 class LogentryDetail(View):
+    """
+    Class Based View for displaying the Details of the Logentry selected
+    """
 
     def get(self, request, slug, *arg, **kwargs):
         queryset = Logentry.objects.filter(status=1)
         logentry = get_object_or_404(queryset, slug=slug)
-        # images = logentry.images
+        images = logentry.images
 
         return render(
             request,
             "logentry_detail.html",
             {
                 "logentry": logentry,
-                # "images": images,
+                "images": images,
             },
         )
 
