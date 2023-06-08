@@ -8,7 +8,7 @@ class ImageForm(forms.ModelForm):
     """
     class Meta:
         model = Image
-        fields = ('image', 'caption', 'alttext',)
+        fields = ('gallery_image', 'caption', 'alttext',)
 
 
 class LogentryForm(forms.ModelForm):

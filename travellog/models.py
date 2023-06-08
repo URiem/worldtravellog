@@ -64,7 +64,7 @@ class Image(models.Model):
     """
     logentry = models.ForeignKey(
         Logentry, on_delete=models.CASCADE, related_name="images")
-    image = CloudinaryField('image', default='placeholder')
+    gallery_image = CloudinaryField('image', default='placeholder')
     caption = models.CharField(max_length=80)
     alttext = models.CharField(max_length=50)
 

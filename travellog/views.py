@@ -23,14 +23,14 @@ class LogentryDetail(View):
     def get(self, request, slug, *arg, **kwargs):
         queryset = Logentry.objects.filter(status=1)
         logentry = get_object_or_404(queryset, slug=slug)
-        images = logentry.images
+        images = logentry.images.all()
 
         return render(
             request,
             "logentry_detail.html",
             {
                 "logentry": logentry,
-                # "images": images,
+                "images": images,
                 "image_form": ImageForm()
             },
         )
@@ -38,14 +38,14 @@ class LogentryDetail(View):
     def post(self, request, slug, *arg, **kwargs):
         queryset = Logentry.objects.filter(status=1)
         logentry = get_object_or_404(queryset, slug=slug)
-        images = logentry.images
+        images = logentry.images.all()
 
         image_form = ImageForm(data=request.POST)
 
         if image_form.is_valid():
             image = image_form.save(commit=False)
             image.logentry = logentry
-            image.save
+            image.save()
         else:
             image_form = ImageForm()
 
@@ -54,7 +54,7 @@ class LogentryDetail(View):
             "logentry_detail.html",
             {
                 "logentry": logentry,
-                # "images": images,
+                "images": images,
                 "image_form": ImageForm()
             },
         )

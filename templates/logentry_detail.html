@@ -63,21 +63,22 @@
 {% endif %}
 
 <div class="container">
-    <div class="row">
-        <div class="images">
-            <p> This is where the picture gallary will go.</p>
+    <div class="col-lg-4 mb-4 mb-lg-0">
+        <div class="row">
+
+            {% for img in images %}
+            <img src="{{ img.gallery_image.url }}" class="w-100 shadow-1-strong rounded mb-4" alt="{{ img.alttext }}">
+            <!-- <p>{{ img.alttext }} | {{ img.caption }}</p> -->
+            {% endfor %}
         </div>
-        <!-- {% for img in images %}
-        <p>image associated with this post</p>
-        {% endfor %} -->
     </div>
 </div>
 
 <div class="container">
     <div class="row">
         {% if user.id == logentry.author.id %}
-        <p> This is where you can images to your log.</p>
-        <form method="post" style="margin-top: 1.3em;">
+        <p> This is where you can add images to your log.</p>
+        <form method="post" style="margin-top: 1.3em;" enctype="multipart/form-data">
             {{ image_form | crispy }}
             {% csrf_token %}
             <button type="submit" class="btn btn-signup btn-lg">Submit</button>
