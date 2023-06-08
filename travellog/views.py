@@ -40,7 +40,7 @@ class LogentryDetail(View):
         logentry = get_object_or_404(queryset, slug=slug)
         images = logentry.images.all()
 
-        image_form = ImageForm(data=request.POST)
+        image_form = ImageForm(request.POST, request.FILES)
 
         if image_form.is_valid():
             image = image_form.save(commit=False)
