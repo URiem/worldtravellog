@@ -76,3 +76,19 @@ class AddLogentry(CreateView):
         # msg = "Your trip log was submitted successfully"
         # messages.add_message(self.request, messages.SUCCESS, msg)
         return super(CreateView, self).form_valid(form)
+
+
+class UpdateLogentry(UpdateView):
+    """
+    Allows an authenticated user to update an already submitted Log Entry
+    """
+    model = Logentry
+    form_class = LogentryForm
+    template_name = 'update_logentry.html'
+    success_url = reverse_lazy('home')
+
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        # msg = "Your trip log was updated successfully"
+        # messages.add_message(self.request, messages.SUCCESS, msg)
+        return super(UpdateView, self).form_valid(form)

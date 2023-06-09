@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block title %}Update Log Entry{% endblock %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<!-- This if statement prevents unauthorized users 
+                    from editing the log entry via the URL -->
+{% if user.is_authenticated %}
+{% if user.id == logentry.author.id %}
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 mt-3 offset-md-2">
+                <h2>Update your Travel Log Entry</h2>
+                <br>
+                <!-- Log Entry edit form -->
+                <form method="POST" class="form text-muted" action="{% url 'update' logentry.slug %}"
+                    enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ form | crispy }}
+                    <div class="update-btn-group">
+                        <button type="submit" class="btn btn-signup btn-lg">Update</button>
+                        <a href="{% url 'home' %}" class="cancel">Cancel</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% else %}
+
+<!-- If a user is not logged in and sees this page -->
+
+<h1>You have to be logged in in order to view this page.</h1>
+
+{% endif %}
+
+{% endif %}
+
+{% endblock %}
