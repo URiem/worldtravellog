@@ -6,4 +6,5 @@ urlpatterns = [
     path('', views.LogentryList.as_view(), name='home'),
     path('<slug:slug>/', views.LogentryDetail.as_view(), name='logentry_detail'),
     path('update/<slug:slug>', views.UpdateLogentry.as_view(), name='update'),
+    path('delete/<slug:slug>', views.DeleteLogentry.as_view(), name='delete'),
 ]

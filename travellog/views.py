@@ -92,3 +92,17 @@ class UpdateLogentry(UpdateView):
         # msg = "Your trip log was updated successfully"
         # messages.add_message(self.request, messages.SUCCESS, msg)
         return super(UpdateView, self).form_valid(form)
+
+
+class DeleteLogentry(DeleteView):
+    """
+    This allows an authenticated user to delete a log entry
+    """
+    model = Logentry
+    template_name = 'delete_logentry.html'
+    success_url = reverse_lazy('home')
+
+    def delete(self, request, *args, **kwargs):
+        # msg = "Your Log Entry has been deleted"
+        # messages.add_message(self.request, messages.SUCCESS, msg)
+        return super(DeleteView, self).delete(request, *args, **kwargs)
