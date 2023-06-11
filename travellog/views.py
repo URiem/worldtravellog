@@ -9,8 +9,12 @@ from .forms import LogentryForm, ImageForm
 
 
 class LogentryList(generic.ListView):
+    """
+    Displays all objects of the Logentry model that are set by the user
+    as 'published' and 'public'
+    """
     model = Logentry
-    queryset = Logentry.objects.filter(status=1).order_by('-year')
+    queryset = Logentry.objects.filter(status=1, privacy=1).order_by('-year')
     template_name = 'index.html'
     paginate_by = 6
 
@@ -106,3 +110,19 @@ class DeleteLogentry(DeleteView):
         # msg = "Your Log Entry has been deleted"
         # messages.add_message(self.request, messages.SUCCESS, msg)
         return super(DeleteView, self).delete(request, *args, **kwargs)
+
+
+class UserLogentryList(generic.ListView):
+    """
+    Displays all objects of the Logentry model submitted only by the
+    currently authenticates user, including draft and private entries.
+    """
+    model = Logentry
+    queryset = Logentry.objects.order_by('-year')
+    template_name = 'user_logentry.html'
+    paginate_by = 6
+
+    def get_queryset(self):
+        queryset = Logentry.objects.filter(
+            author__id=self.request.user.id).order_by('-year')
+        return queryset
