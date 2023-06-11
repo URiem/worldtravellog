@@ -6,7 +6,7 @@
 
 **Live Site:**
 
-[Live webpage](https://worldtravels.herokuapp.com/)
+[Live webpage](https://worldtravellog.herokuapp.com/)
 
 **Link to Repository:**
 
