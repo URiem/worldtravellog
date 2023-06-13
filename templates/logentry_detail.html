@@ -36,35 +36,46 @@
             </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col">
-            <hr>
-        </div>
-    </div>
 </div>
 
 {% if user.id == logentry.author.id %}
 <div class="container">
     <div class="row">
-        <div class="update-btn-group">
-            <p> This is where you can update your log</p>
-            <div class="update-btn-group">
-                <a href="{% url 'update' logentry.slug %}" class="btn btn-signup btn-lg" role="button">Update</a>
-                <a href="{% url 'delete' logentry.slug %}" class="btn btn-signup btn-lg" role="button">Delete</a>
-            </div>
+        <div class=" update-btn-group d-flex flex-row-reverse">
+            <a href="{% url 'delete' logentry.slug %}" class="btn btn-outline-danger me-2" role="button">Delete
+                the trip</a>
+            <a href="{% url 'update' logentry.slug %}" class="btn btn-signup me-2" role="button">Update the trip</a>
         </div>
     </div>
 </div>
 {% endif %}
 
+<!-- container for image gallery -->
 <div class="container">
-    <div class="col-lg-4 mb-4 mb-lg-0">
-        <div class="row">
-
-            {% for img in images %}
-            <img src="{{ img.gallery_image.url }}" class="w-100 shadow-1-strong rounded mb-4" alt="{{ img.alttext }}">
-            <!-- <p>{{ img.alttext }} | {{ img.caption }}</p> -->
-            {% endfor %}
+    <div class="row">
+        <h2 class="fw-ligth text-center text-lg-start mt-4 mb-0">Trip Gallery</h2>
+        <hr class="mt-2 mb-5">
+        <div class="col-12 mt-3 left">
+            <div class="row">
+                {% for img in images %}
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <div class="img-container">
+                                <img src="{{ img.gallery_image.url }}" class="card-img-top" alt="{{ img.alttext }}">
+                            </div>
+                            <p class="mt-2 text-center">{{ img.caption }}</p>
+                            {% if user.id == logentry.author.id %}
+                            <div class="update-btn-group d-flex flex-row-reverse">
+                                <a href="#" class="btn btn-outline-danger btn-sm me-1" role="button">Delete</a>
+                                <a href="#" class="btn btn-signup btn-sm me-1" role="button">Update</a>
+                            </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
         </div>
     </div>
 </div>
@@ -72,11 +83,11 @@
 <div class="container">
     <div class="row">
         {% if user.id == logentry.author.id %}
-        <p> This is where you can add images to your log.</p>
-        <form method="post" style="margin-top: 1.3em;" enctype="multipart/form-data">
+        <h5> Add images to your trip log:</h5>
+        <form method="post" style="margin-top: 0.2em;" enctype="multipart/form-data">
             {{ image_form | crispy }}
             {% csrf_token %}
-            <button type="submit" class="btn btn-signup btn-lg">Submit</button>
+            <button type="submit" class="btn btn-signup mt-2">Submit</button>
         </form>
         {% endif %}
     </div>

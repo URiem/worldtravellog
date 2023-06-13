@@ -14,14 +14,15 @@
             <div class="col-md-8 mt-3 offset-md-2">
                 <h2>Delete your Travel Log Entry</h2>
                 <br>
-                <p>Are you sure you want to delete the entry titled "{{ logentry.title }}"?</p>
+                <p>Are you sure you want to delete the entry titled "{{ logentry.title }}"? This will also delete all
+                    images in the gallery associated with this trip entry.</p>
                 <!-- Log Entry edit form -->
                 <form method="POST" class="form text-muted" action="{% url 'delete' logentry.slug %}"
                     enctype="multipart/form-data">
                     {% csrf_token %}
                     <div class="update-btn-group">
-                        <button type="submit" class="btn btn-signup btn-lg">Delete</button>
-                        <a href="{% url 'home' %}" class="cancel">Cancel</a>
+                        <button type="submit" class="btn btn-signup">Delete</button>
+                        <a href="{% url 'home' %}" class="btn btn-secondary">Cancel</a>
                     </div>
                 </form>
             </div>
