@@ -8,7 +8,7 @@
         <!-- Log Entries Column -->
         <div class="col-12 mt-3 left">
             <div class="row">
-                <h1 class="text-center my-5">Hi {{ user.username }}! Here are all the trips you have added:</h1>
+                <h1 class="text-center my-5">Hi {{ user.username }}! These are your trips:</h1>
                 {% for log in logentry_list %}
                 <div class="col-md-4">
                     <div class="card mb-4">
@@ -27,10 +27,12 @@
                             <a href="{% url 'logentry_detail' log.slug  %}" class="post-link">
                                 <h2 class="card-title">{{ log.title }}</h2>
                                 <p class="card-text"><strong>{{ log.country }} | {{ log.year }}</strong></p>
-                                <p class="card-text">{% if log.privacy is 1 %}Public{% else %}Private{% endif %} |
-                                    {% if log.status is 1 %}Published{% else %}Draft{% endif %}
-                                </p>
                                 <p class="card-text">{{ log.excerpt }}</p>
+                                <p class="card-text d-flex flex-row-reverse">
+                                    {% if log.status is 1 %}Published{% else %}Draft{% endif %} |
+                                    {% if log.privacy is 1 %}Public{% else %}Private{% endif %}
+
+                                </p>
                             </a>
                             <hr />
                         </div>

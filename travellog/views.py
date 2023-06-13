@@ -25,7 +25,7 @@ class LogentryDetail(View):
     """
 
     def get(self, request, slug, *arg, **kwargs):
-        queryset = Logentry.objects.filter(status=1)
+        queryset = Logentry.objects.all()
         logentry = get_object_or_404(queryset, slug=slug)
         images = logentry.images.all()
 
@@ -40,7 +40,7 @@ class LogentryDetail(View):
         )
 
     def post(self, request, slug, *arg, **kwargs):
-        queryset = Logentry.objects.filter(status=1)
+        queryset = Logentry.objects.all()
         logentry = get_object_or_404(queryset, slug=slug)
         images = logentry.images.all()
 
@@ -72,7 +72,7 @@ class AddLogentry(CreateView):
     model = Logentry
     form_class = LogentryForm
     template_name = 'add_logentry.html'
-    success_url = reverse_lazy('home')
+    success_url = reverse_lazy('user_logentry')
 
     # Source: https://stackoverflow.com/questions/67366138/django-display-message-after-creating-a-post # noqa
     def form_valid(self, form):
@@ -89,7 +89,7 @@ class UpdateLogentry(UpdateView):
     model = Logentry
     form_class = LogentryForm
     template_name = 'update_logentry.html'
-    success_url = reverse_lazy('home')
+    success_url = reverse_lazy('user_logentry')
 
     def form_valid(self, form):
         form.instance.author = self.request.user
@@ -104,7 +104,7 @@ class DeleteLogentry(DeleteView):
     """
     model = Logentry
     template_name = 'delete_logentry.html'
-    success_url = reverse_lazy('home')
+    success_url = reverse_lazy('user_logentry')
 
     def delete(self, request, *args, **kwargs):
         # msg = "Your Log Entry has been deleted"
