@@ -4,6 +4,7 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.http import HttpResponseRedirect
 from django.urls import reverse_lazy
 from django.contrib import messages
+from django.contrib.messages.views import SuccessMessageMixin
 from .models import Logentry, Country, Image
 from .forms import LogentryForm, ImageForm
 
@@ -64,7 +65,7 @@ class LogentryDetail(View):
         )
 
 
-class AddLogentry(CreateView):
+class AddLogentry(SuccessMessageMixin, CreateView):
     """
     Allows authenticated users to add
     and save a log entry
@@ -73,6 +74,7 @@ class AddLogentry(CreateView):
     form_class = LogentryForm
     template_name = 'add_logentry.html'
     success_url = reverse_lazy('user_logentry')
+    success_message = 'Trip Log was created successfully!'
 
     # Source: https://stackoverflow.com/questions/67366138/django-display-message-after-creating-a-post # noqa
     def form_valid(self, form):
@@ -82,7 +84,7 @@ class AddLogentry(CreateView):
         return super(CreateView, self).form_valid(form)
 
 
-class UpdateLogentry(UpdateView):
+class UpdateLogentry(SuccessMessageMixin, UpdateView):
     """
     Allows an authenticated user to update an already submitted Log Entry
     """
@@ -90,6 +92,7 @@ class UpdateLogentry(UpdateView):
     form_class = LogentryForm
     template_name = 'update_logentry.html'
     success_url = reverse_lazy('user_logentry')
+    success_message = 'Your trip log was updated successfully!'
 
     def form_valid(self, form):
         form.instance.author = self.request.user
@@ -98,13 +101,14 @@ class UpdateLogentry(UpdateView):
         return super(UpdateView, self).form_valid(form)
 
 
-class DeleteLogentry(DeleteView):
+class DeleteLogentry(SuccessMessageMixin, DeleteView):
     """
     This allows an authenticated user to delete a log entry
     """
     model = Logentry
     template_name = 'delete_logentry.html'
     success_url = reverse_lazy('user_logentry')
+    success_message = 'Your trip log was deleted successfully!'
 
     def delete(self, request, *args, **kwargs):
         # msg = "Your Log Entry has been deleted"

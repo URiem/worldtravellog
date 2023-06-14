@@ -64,6 +64,21 @@
         </div>
     </nav>
 
+    <div class="container">
+        <div class="row alert-fixed">
+            <div class="col-8 mx-auto m-0">
+                {% if messages %}
+                {% for message in messages %}
+                <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
+                    {{ message | safe }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
     <main class="flex-shrink-0 main-bg">
         {% block content %}
         <!-- Content Goes here -->
@@ -81,6 +96,13 @@
     </footer>
     <!--Script-->
     <script src="https://kit.fontawesome.com/3e15c9c764.js" crossorigin="anonymous"></script>
+    <script>
+        setTimeout(function () {
+            let messages = document.getElementById('msg');
+            let alert = new bootstrap.Alert(messages);
+            alert.close();
+        }, 2000);
+    </script>
 </body>
 
 </html>
