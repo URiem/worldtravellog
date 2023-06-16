@@ -65,13 +65,13 @@
 
 ## Introduction
 
-The WorldTravel Log is a website that is designed to allow users to upload and keep track of information on travels they have undertaken. Each 'Travel Log Entry' contains information on one particular trip and the user can then opt to add additional images to the log of each particular trip. Users can set up accounts which allows them to add, edit and delete entries as well as images associated with each entry. Users can also choose to give an entry a privacy setting so that only they will be able to view it and it will not be shared for all users to see. 
+The WorldTravel Log is a website that is designed to allow users to upload and keep track of information on travels they have undertaken. Each 'Travel Log Entry' contains information on one particular trip and the user can then opt to add additional images to the log of each particular trip. Users can set up accounts which allows them to add, edit and delete entries as well as images associated with each entry. Users can also choose to give an entry a privacy setting so that only they will be able to view it and it will not be shared for all users to see.
 
-The project was desiged as the 4th portfolio project of the Code Institutes Full Stack Diploma Program. It was built using Django, Python, JS, CSS and HTML.
+The project was desiged as the 4th portfolio project of the Code Institutes Full Stack Diploma Program. It was built using Django, Python, JS, CSS and HTML. The data are stored in a PostgeSQL database.
 
 ### Project Goals
 
-The goal of the project was to build a tool for users to create a repository of memories from travels so that they may share them with others, privately or publically, or use them like a small photo diary of experiences. Each travel log can be populated with a small gallery of pictures from memorable moments of the adventures. So often images from our travel sit in file structures on private computers and are seldom looked at. If shared on common social media site, they disappear in a long, long timeline of social media posts that are difficult to search for or retrieve in the future. This site allows users to create log entries focusing on a specific trip, with a short description and defining information, such as the country of travel, the year and a descriptive title. The log entries can be edited and deleted by the user who created them. To protect their privacy, users can choose if they wish to publically share a log entry or keep it private.
+The goal of the project was to build a tool for users to create a repository of memories from travels so that they may share them with others, privately or publically, or use them like a small photo diary of experiences. Each travel log can be populated with a small gallery of pictures from memorable moments of the adventures. So often images from travel experiences sit in file structures on private computers and are seldom looked at. If shared on common social media site, they disappear in a long, long timeline of social media posts that are difficult to search for or retrieve in the future. This site allows users to create log entries focusing on a specific trip, with a short description and defining information, such as the country of travel, the year and a descriptive title. The log entries can be edited and deleted by the user who created them. To protect their privacy, users can choose to publically share a log entry or keep it private.
 
 ### Data Base Design
 
@@ -83,7 +83,32 @@ A User Model is provided by Django, a Logentry Model stores the details of each 
 
 ## User Experience - UX
 
+The application was developed taking the Five Planes of User Experience into consideration:
+
 ### Strategy
+
+| EPIC                       | ID  | User Story                                                                                                                                                                                        |
+| -------------------------- | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **CONTENT AND NAVIGATION** |     |                                                                                                                                                                                                   |
+|                            | 1A  | As a user, I want to see a navigation menu so I can easily movement through the site.                                                                                                             |
+|                            | 1B  | As a user, I want to see relevant information about the site and its content easily so I can decide if I want to register an account                                                              |
+|                            | 1C  | As a user, I want to see an intitive and visualy pleasing design that matches the intent of the website.                                                                                          |
+| **REGISTRATION AND USER**  |     |                                                                                                                                                                                                   |
+|                            | 2A  | As a user, I want to be able to register a profile, so I can access the main functionality of the site.                                                                                           |
+|                            | 2B  | As a user, I want to be able to log into my account easily, so I can access my account information.                                                                                               |
+|                            | 2C  | As a user, I want to be able to logout of my account with ease to protect my account information.                                                                                                 |
+|                            | 2D  | As a user, I want to be able to delete my account information or request account deletion from the website owner.                                                                                 |
+| **MANAGING LOG ENTRIES**   |     |                                                                                                                                                                                                   |
+|                            | 3A  | As an authenticated user, I want to be able to add a log entry and choose privacy and draft/publish setting, so that I can create a trip log that displays as specified on the site.              |
+|                            | 3B  | As an authenticated user, I want to be able to edit and delete my log entries so that I can customize as I see fit.                                                                               |
+|                            | 3C  | As an authenticated user, I want to be able to add images to individual log entries so that I can customize the log entry with this added feature.                                                |
+|                            | 3D  | As an authenticated user, I want to be able to edit and delete the images associated with a particular log entry so that I can customize individual entries.                                      |
+| **USER VIEWS**             |     |                                                                                                                                                                                                   |
+|                            | 4A  | As a user, I want to be able to see all publically available log entries so that I can browse through them.                                                                                       |
+|                            | 4B  | As a user, I want to be able to view the detail of all publically available log entries, so I can learn details about the trip entry.                                                             |
+|                            | 4C  | As a user, I want to be able to search the log entries by country, in order to see various trips associated with that country.                                                                    |
+|                            | 4D  | As an authenticated user, I want to be able to view all my personal entries including the current settings on privacy and published/draft status so that I can get a quick overview of my entries |
+|                            | 4E  | As an authenticated user, I want to be able to select and save favorite log entries, so that I can save them and view them in a separate page.                                                    |
 
 #### Target Audience
 
@@ -199,7 +224,7 @@ The websites compatability was tested on the following browsers:
 ## Bugs & Fixes
 
 | **Bug** | **Fix** |
-| ----------- | ----------- |
+| ------- | ------- |
 
 ## Deployment & Development
 
@@ -210,6 +235,7 @@ The websites compatability was tested on the following browsers:
 Images not referenced below are owned by the developer.
 
 Images:
+
 - Background image by <a href="https://unsplash.com/@drwmrk">Andrew Stutesman</a> on <a href="https://unsplash.com/photos/l68Z6eF2peA">Unsplash</a>
 
 ### Code
