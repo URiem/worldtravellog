@@ -109,26 +109,72 @@ The application was developed taking the Five Planes of User Experience into con
 |                            | 4C  | As a user, I want to be able to search the log entries by country, in order to see various trips associated with that country.                                                                    |
 |                            | 4D  | As an authenticated user, I want to be able to view all my personal entries including the current settings on privacy and published/draft status so that I can get a quick overview of my entries |
 |                            | 4E  | As an authenticated user, I want to be able to select and save favorite log entries, so that I can save them and view them in a separate page.                                                    |
+|                            | 4F  | As an authenticated user, I want to see feedback on my interactions with the site functionality, so that I can confirm my intended action was executed correctly.                                 |
 
 #### Target Audience
 
+The target audience is user who enjoy travelling and would like to record their experiences and impressions in succint form online in order to share them with the wider public or privately for they own future enjoyment.
+
 #### User Requirements and Expectations
 
-- Simple and intuitive navigation system.
-- Links work as expected.
-- Immediate feedback on progress.
+- Simple and intuitive navigation system and design.
+- Easy access to all functionality of the site.
+- All links and features work as expected.
+- Immediate feedback on progress during interaction with site features.
 - Visually appealing responsive design.
 - Accessibility.
 
 ### Scope
 
-#### Intial Stage
+**Simple and intuitive User Experience**
 
-#### Future Additions
+- Ensure navigation menu is easily accessible and functions as expected.
+- Ensure page names match the intended content.
+- Ensure the user gets visual feedback when navigating through the sites functionalities.
+- Create a design that matches the intent of the page.
+
+**Relevant content**
+
+- Add information about the site's purpose to make its intent clear to the user.
+- Feature user created content on the front page that help the new user understand the purpose of the site.
+
+**Core Website Functionality**
+
+- Implement a Log Entry Features that allow the user to interact with the site.
+- Implement the registration/login/logout features for access to core site functionality.
+- Implement a form for adding an entry to the log.
+- Implement a feature to edit and delete a log entry.
+- Implement a feature that allows the user to add/edit/delete images to a log entry.
+
+**Responsiveness**
+
+- Implement responsive design for smooth desktop, tablet and mobile device access.
 
 ### Structure
 
+The website is divided into XXX pages with content depending on whether the user is authenticated or not.
+
+#### Current/Initial Structure
+
+- **Home Page** is visible to both types of users. It includes a list of publically shared trip logs for the user to browse. Unauthenticated users will also see a banner calling them to register, authenticated users will not see the banner.
+- **Register Page** gives the user the opportunity to create an account in order to access the core functionality of the site.
+- **Login/Logut Pages** allow the user to authenticate or logout of their account.
+- **Add Log Entry Page** allows an authenticated user to add a logentry to their account.
+- **User Entries Page** allows authenticated user to see all their logs including those with the private setting and those that have not yet been published and are just saved as a draft.
+- **Log Entry Detail Page** allows the user to view all the details of a trip log, if they are authenticated and it is their own post they will see buttons that allow to access the edit or delete features. They will also see a feature for adding/editing/deleting images associated with the log entry.
+- **Update Log Entry Page** displays a prepopulated entry log form and allows the user to edit their previous inputs.
+
+#### Yet to be implemented/future pages
+
+- **Favorite Entries Page** allows a user to select/save and display their favorite log entries from all publically published posts.
+
+**Add a flowchart illustrating user navigation through the site.**
+
+### Skeleton
+
 #### Wireframes
+
+The wireframes for the pages listed in the above [Structure](#structure) section follow:
 
 1. **Home Page**
 
@@ -140,8 +186,6 @@ The application was developed taking the Five Planes of User Experience into con
 
 3. **404 Page** - a simple 404 Error page is also included (404.html)
 
-### Skeleton
-
 ### Surface
 
 #### Color Scheme
@@ -152,7 +196,23 @@ The application was developed taking the Five Planes of User Experience into con
 
 ## Agile Development
 
-Table of Epics, Userstories, Tasks etc.
+All functionality and development of this project was managed through GitHub issues, milestones and projects.
+
+### Sprints
+
+- Sprint 1: Initial Set-up
+
+- Sprint 2: Add user authentication
+
+- Sprint 3: Add Log Entry feature
+
+- Sprint 4: Create customized views
+
+- Sprint 5: Refine and customize the CSS including footer and header
+
+- Sprint 6: Testing
+
+- Sprint 7: Final revisions to code and documentation
 
 ## Features
 
