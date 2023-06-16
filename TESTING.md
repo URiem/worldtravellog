@@ -1,4 +1,4 @@
-# The Newsbox Testing
+# The WorldTravel Log Testing
 
 :arrow_left: [Return to the README](README.md)
 

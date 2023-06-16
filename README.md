@@ -296,6 +296,22 @@ The testing documentation can be found at [TESTING.md](TESTING.md)
 
 ## Deployment & Development
 
+### Deploy on Heroku
+
+**Requirement and Procfile**
+
+**Creating Heroku App**
+
+**Connecting to GitHub**
+
+**Setting Environment Variables**
+
+**Final Deploy**
+
+### Forking the Repository
+
+### Cloning the Repository
+
 ## Credits
 
 ### Media
