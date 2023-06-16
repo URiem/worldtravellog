@@ -216,39 +216,71 @@ All functionality and development of this project was managed through GitHub iss
 
 ## Features
 
-### Welcome Section
+### Existing Features
 
-### Choose A Level Section
+**Account Features**
 
-### Quiz Section
+- Create an account
+- Login to an account
+- Log out of an account
 
-### End of Game page
+**CRUD Functionality**
 
-### Header
+- Create a Log Entry and add images to Log Entry
+- Read/View Log Entry list and Log Entry details including images for unregistered and registered users
+- Update Log Entry and images for registered users
+- Delete Log Entry and images for registered users
 
-### Footer
+**Header and Navigation**
 
-## Future Features
+- Header with links for unregistered users
+- Header with links for registered users
+- Header for large devices
+- Header for small devices
+
+**Footer with Links**
+
+- Footer with social media links and motto text on large screens.
+- Footer on small screens.
+
+### Possible Future Features
+
+**Saving Favorite Log Entries**
+
+**Delete account feature**
 
 ## Technologies Used
 
 ### Languages
 
-- HTML
-- CSS
-- JavaScript
-- Python
+- HTML - used at the main language to set up the structure of the website.
+- CSS - used to customize the styling of the website.
+- JavaScript - used to manipulate the DOM on various pages.
+- Python - used to set up the core functionality of the site, such as models, and views.
+
+### Python Modules/Packages used:
+
+- django
+- gunicorn
+- dj-database-url
+- psycopg2
+- dj3-cloudinary-storage
+- django-allauth
+- django-crispy-forms
+- and more ...
 
 ### Frameworks & Tools
 
-- Django
-- Git
-- GitHub
-- Gitpod
-- Balsamiq
-- Google Fonts
-- Font Awesome
-- Coolors.co
+- Django - used to set up the back-logic and user model on the website.
+- GitHub - used to host the source code of the website. Also contains the record of the Agile development framework set up to plan the project, using issues, milestone and projects on GitHub.
+- CodeAnywhere - used write and develope the code for the website, and for comitting and pushing code to GitHub.
+- Heroku - used for live website deployment.
+- Cloudinary - is a cloud storage solution for website media and other static files. It also allows for manipulation and optimization of media delivery.
+- Bootstrap - used throughout the site for responsiveness, layout and predifined styles elements.
+- Balsamiq - used to create the project wireframes.
+- Lucid Chart - used for creating the ERD and Flowchart.
+- Google Fonts - used to import fonts for the website.
+- Font Awesome - used for icons features on the site.
 
 ### Helpful sites
 
@@ -260,31 +292,7 @@ Several sites came in handy while developing the code to help with problem solvi
 
 ## Testing and Validation
 
-### HTML Validation
-
-### CSS Validation
-
-### JavaScript Validation
-
-### Accessibility & Performance
-
-### Browser Compatability
-
-The websites compatability was tested on the following browsers:
-
-- Google Chrome
-- Mozilla Waterfox
-- Microsoft Edge
-- Safari
-
-### Testing User Stories
-
-### Outstanding Issues
-
-## Bugs & Fixes
-
-| **Bug** | **Fix** |
-| ------- | ------- |
+The testing documentation can be found at [TESTING.md](TESTING.md)
 
 ## Deployment & Development
 
