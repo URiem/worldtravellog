@@ -333,11 +333,12 @@ Before depolyment on Heroku, two files need to be created and be up to date, a `
 - At the top of the `env.py` file add the line: `import os`.
 - Below that add the following two or three lines:
 
-`os.environ["DATABASE_URL"] = "<copied URL from SQL database>"` <br>
-`os.environ["SECRET_KEY"] = "<create a secret key of your own>"` <br>
-If you are using Cloudinary storage also add the following line: <br>
+  `os.environ["DATABASE_URL"] = "<copied URL from SQL database>"` <br>
+  `os.environ["SECRET_KEY"] = "<create a secret key of your own>"` <br>
 
-`os.environ["CLOUDINARY_URL"] = "<copied URL from Cloudinary account>"`<br>
+- If you are using Cloudinary storage also add the following line: <br>
+
+  `os.environ["CLOUDINARY_URL"] = "<copied URL from Cloudinary account>"`<br>
 
 - Make sure the environment variable are imported correctly into the `settings.py` file.
 - Run `python manage.py migrate` in the terminal window to migrate the data structure to the database instance.
@@ -349,8 +350,9 @@ If you are using Cloudinary storage also add the following line: <br>
 - Add the following config vars:
   `DATABASE_URL` - copy the data base URL from ElephantSQL in here, it should also be in the `env.py` file. <br>
   `SECRET_KEY` - copy your secret key in here. <br>
-  If you are using Cloudinary storage you also need to copy your personal `CLOUDINARY_URL` into these fields. <br>
-  In addition you may need the key `PORT` with value `8000`.
+
+- If you are using Cloudinary storage you also need to copy your personal `CLOUDINARY_URL` into these fields. <br>
+- In addition you may need the key `PORT` with value `8000`.
 
 **Connecting to GitHub and Deploy**
 
