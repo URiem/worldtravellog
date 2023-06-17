@@ -300,7 +300,11 @@ The testing documentation can be found at [TESTING.md](TESTING.md)
 
 **Requirement and Procfile**
 
-Before depolyment on Heroku, two files need to be created and be up to date, a ```requirements.txt``` file and a ```Procfile```. The ```requirements.txt``` file is created by executing the following command in the terminal window: ``` pip3 freeze --local > requirements.txt```. A file with all requirements will be created. Then create a file named ```Procfile``` and insert the following code: ```web: gunicorn worldtravels.wsgi```, with no empty lines after it. Then make sure to push these files to your repository.
+Before depolyment on Heroku, two files need to be created and be up to date, a `requirements.txt` file and a `Procfile`.
+
+- The `requirements.txt` file is created by executing the following command in the terminal window: ` pip3 freeze --local > requirements.txt`. A file with all requirements will be created.
+- Then create a file named `Procfile` and insert the following code: `web: gunicorn worldtravels.wsgi`, with no empty lines after it.
+- Then make sure to push these files to your repository.
 
 **Creating Heroku App**
 
@@ -319,22 +323,36 @@ Before depolyment on Heroku, two files need to be created and be up to date, a `
 - Confirm your details and then click "Create instance".
 - Return to the ElephantSQL dashboard and click on the database instance name for this project.
 - In the URL section, click the copy icon to copy the database URL.
+- In your workspace make sure django and gunicorn are installed by running `pip3 install 'django<4' gunicorn`.
+- Equally make sure that infrastructure for the data base is installe by running `pip3 install dj_database_url===0.5.0 psycopg2`.
+- Update the `requirements.txt` file if needed.
 
 **The env.py file**
 
-- If you do not have a ```env.py``` file in your workspace create one and make sure it is included in the ```.gitignore``` file.
-- At the top of the ```env.py``` file add the line: ```import os```.
-- Below that add the following three lines:
+- If you do not have a `env.py` file in your workspace create one and make sure it is included in the `.gitignore` file.
+- At the top of the `env.py` file add the line: `import os`.
+- Below that add the following two or three lines:
 
-```os.environ["DATABASE_URL"] = "<copied URL from SQL database>"```
-```os.environ["SECRET_KEY"] = "<create a secret key of your own>"```
-```os.environ["CLOUDINARY_URL"] = "<copied URL from Cloudinary account>"```
+`os.environ["DATABASE_URL"] = "<copied URL from SQL database>"` <br>
+`os.environ["SECRET_KEY"] = "<create a secret key of your own>"` <br>
+If you are using Cloudinary storage also add the following line: <br>
 
+`os.environ["CLOUDINARY_URL"] = "<copied URL from Cloudinary account>"`<br>
 
-
-**Connecting to GitHub**
+- Make sure the environment variable are imported correctly into the `settings.py` file.
+- Run `python manage.py migrate` in the terminal window to migrate the data structure to the database instance.
 
 **Setting Environment Variables**
+
+- On the Heroku Dashboard select the "Settings" tab.
+- Click "Reveal Config Vars"
+- Add the following config vars:
+  `DATABASE_URL` - copy the data base URL from ElephantSQL in here, it should also be in the `env.py` file. <br>
+  `SECRET_KEY` - copy your secret key in here. <br>
+  If you are using Cloudinary storage you also need to copy your personal `CLOUDINARY_URL` into these fields. <br>
+  In addition you may need the key `PORT` with value `8000`.
+
+**Connecting to GitHub**
 
 **Final Deploy**
 
