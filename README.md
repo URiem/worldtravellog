@@ -344,7 +344,7 @@ If you are using Cloudinary storage also add the following line: <br>
 
 **Setting Environment Variables**
 
-- On the Heroku Dashboard select the "Settings" tab.
+- On the Heroku Dashboard select the app you just created and then select the "Settings" tab.
 - Click "Reveal Config Vars"
 - Add the following config vars:
   `DATABASE_URL` - copy the data base URL from ElephantSQL in here, it should also be in the `env.py` file. <br>
@@ -352,13 +352,33 @@ If you are using Cloudinary storage also add the following line: <br>
   If you are using Cloudinary storage you also need to copy your personal `CLOUDINARY_URL` into these fields. <br>
   In addition you may need the key `PORT` with value `8000`.
 
-**Connecting to GitHub**
+**Connecting to GitHub and Deploy**
 
-**Final Deploy**
+- On the Heroku Dashboard select the app you just created and then select the "Deploy" tab.
+- Select GitHub for deployment method.
+- Search for the name of the project repository and click "Connect".
+- Further down the page, select "Enable Automatic Deploys" if desired.
+- Then finally further down, select "Deploy Branch" and watch the app being built.
 
 ### Forking the Repository
 
-### Cloning the Repository
+- Log in to GitHub and locate the GitHub repository you want to fork.
+- At the top of the Repository above the "Settings" Tab on the menu, locate the "Fork" Button and click it.
+- You will have a copy of the original repository in your GitHub account.
+- You will now be able to make changes to the new version and keep the original safe.
+
+### Making a Local Clone
+
+- Log into GitHub and locate the repository you want to clone.
+- Click the 'Code' dropdown above the file list.
+- Copy the URL for the repository.
+- Open Git Bash in your IDE.
+- Change the current working directory to the location where you want the cloned directory.
+- Type `git clone` in the CLI and then paste the URL you copied earlier. This is what it should look like:
+  `$ git clone https://github.com/`
+- Press Enter to create your local clone.
+
+You will need to install all of the packages listed in the requirements file you can use the following command in the terminal `pip install -r requirements.txt` which will do it for you.
 
 ## Credits
 
