@@ -331,7 +331,7 @@ Before depolyment on Heroku, two files need to be created and be up to date, a `
 
 - If you do not have a `env.py` file in your workspace create one and make sure it is included in the `.gitignore` file.
 - At the top of the `env.py` file add the line: `import os`.
-- Below that add the following two or three lines:
+- Below that add the following two lines:
 
   `os.environ["DATABASE_URL"] = "<copied URL from SQL database>"` <br>
   `os.environ["SECRET_KEY"] = "<create a secret key of your own>"` <br>
@@ -347,7 +347,8 @@ Before depolyment on Heroku, two files need to be created and be up to date, a `
 
 - On the Heroku Dashboard select the app you just created and then select the "Settings" tab.
 - Click "Reveal Config Vars"
-- Add the following config vars:
+- Add the following config vars: <br>
+
   `DATABASE_URL` - copy the data base URL from ElephantSQL in here, it should also be in the `env.py` file. <br>
   `SECRET_KEY` - copy your secret key in here. <br>
 
