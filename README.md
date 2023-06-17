@@ -300,7 +300,37 @@ The testing documentation can be found at [TESTING.md](TESTING.md)
 
 **Requirement and Procfile**
 
+Before depolyment on Heroku, two files need to be created and be up to date, a ```requirements.txt``` file and a ```Procfile```. The ```requirements.txt``` file is created by executing the following command in the terminal window: ``` pip3 freeze --local > requirements.txt```. A file with all requirements will be created. Then create a file named ```Procfile``` and insert the following code: ```web: gunicorn worldtravels.wsgi```, with no empty lines after it. Then make sure to push these files to your repository.
+
 **Creating Heroku App**
+
+- Log into Heroku and go to the Dashboard.
+- Click "New" and then select "Create new app".
+- Give your app a name and select the region closest to you.
+- Click "Create app" to confirm.
+
+**Creating a database**
+
+- Log into ElephantSQL.com and access your dashboard.
+- Click "Create New Instance"
+- Set up a plan, give your plan a **Name**, select the **Tiny Turtel (Free)** plan, leave the **Tags** field blank.
+- Select "Select Retion" and select a data center new you.
+- Click "Review".
+- Confirm your details and then click "Create instance".
+- Return to the ElephantSQL dashboard and click on the database instance name for this project.
+- In the URL section, click the copy icon to copy the database URL.
+
+**The env.py file**
+
+- If you do not have a ```env.py``` file in your workspace create one and make sure it is included in the ```.gitignore``` file.
+- At the top of the ```env.py``` file add the line: ```import os```.
+- Below that add the following three lines:
+
+```os.environ["DATABASE_URL"] = "<copied URL from SQL database>"```
+```os.environ["SECRET_KEY"] = "<create a secret key of your own>"```
+```os.environ["CLOUDINARY_URL"] = "<copied URL from Cloudinary account>"```
+
+
 
 **Connecting to GitHub**
 
