@@ -15,6 +15,7 @@ body {
 
 .nav-list {
     margin-left: auto;
+    float: right;
 }
 
 .red-o {
@@ -89,6 +90,7 @@ body {
 .masthead-image {
     position: relative;
     overflow: hidden;
+    top-margin: -10px;
 }
 
 .masthead-image:after {
