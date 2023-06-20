@@ -33,6 +33,17 @@ body {
     background-color: #F9FAFC;
 }
 
+.hero-header {
+    color: teal;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.hero-subheader {
+    color: teal;
+    font-size: 25px;
+}
+
 .card {
     border: none;
     background-color: transparent;
