@@ -13,6 +13,10 @@ body {
     height: 30px;
 }
 
+.nav-list {
+    margin-left: auto;
+}
+
 .red-o {
     color: #E84610;
 }
