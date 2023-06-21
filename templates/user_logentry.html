@@ -16,9 +16,10 @@
                             <div class="image-container">
                                 {% if "placeholder" in log.featured_image.url %}
                                 <img class="card-img-top"
-                                    src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
+                                    src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg"
+                                    alt="Laptop keyboard">
                                 {% else %}
-                                <img class="card-img-top" src=" {{ log.featured_image.url }}">
+                                <img class="card-img-top" src=" {{ log.featured_image.url }}" alt="{{ log.title }}">
                                 {% endif %}
                                 <div class="image-flash">
                                     <p class="author">Author: {{ log.author }}</p>

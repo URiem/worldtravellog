@@ -1,4 +1,6 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %}
+{% block title %}{{ logentry.title|slice:":15"}}...{% endblock %}
+{% block content %}
 
 {% load crispy_forms_tags %}
 
