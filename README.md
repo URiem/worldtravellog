@@ -200,19 +200,53 @@ All functionality and development of this project was managed through GitHub iss
 
 ### Sprints
 
-- Sprint 1: Initial Set-up
+- Sprint 1: Initial Set-up - May 25th, 2023 to June 1st, 2023
+    - Setup CI template
+    - Create the project and app
+    - Install packages: django, dj_database, psyocpg2, cloudinary-storage, etc.
+    - Update/create project files: settings.py, env.py, Procfile
+    - Migrate changes
+    - Setup database
+    - Create a base.html
+    
 
-- Sprint 2: Add user authentication
+- Sprint 2: LogEntry feature and user authentication - June 1st, 2023 to June 5th, 2023
+    - Setup database models
+    - Import static files for layout, css, js, images
+    - Create an index.html and view
+    - Add a view for the main LogEntry model
+    - Create a detail view of the LogEntry model
+    - Install allauth and crispy-forms
+    - Add allauth templates to workspace
+    - Link up the login, logout, and signup templates to base.html
+    - Add css styling to authorization pages
+    - Setup a README file with basic layout
+    - Change materialize to bootstrap styling
+    - Install crispy-bootstrap4
+    - Add introduction to README
 
-- Sprint 3: Add Log Entry feature
+- Sprint 3: Customized views and README - June 6th, 2023 to June 17th, 2023
+    - Add ERD and goal section to README
+    - Add form and view to upload image to logentry_details page
+    - Add form and view to update and delete Log Entries.
+    - Add a privacy filter to index.html to display only public entries
+    - Add UserLogentry view including private entries for authenticated users
+    - Style image gallery
+    - Add delete image functionality
+    - Add content to README: UX, Deployment and Development
+    - Create separate TESTING file with layout
 
-- Sprint 4: Create customized views
+- Sprint 4: Refine and customize the CSS including footer and header - June 17th, 2023 to present
+    - Style banner, add call to action to banner
+    - Style header and footer
+    - Add and finalize display of success-messages
 
-- Sprint 5: Refine and customize the CSS including footer and header
 
-- Sprint 6: Testing
+    - MVP reached
 
-- Sprint 7: Final revisions to code and documentation
+- Sprint 5: Testing
+
+- Sprint 6: Final revisions to code and documentation
 
 ## Features
 
