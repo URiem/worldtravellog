@@ -63,7 +63,7 @@ body {
     bottom: 5%;
     min-width: 30%;
     left: -2px;
-    background-color: #23BBBB;
+    background-color: rgb(22, 112, 112);
 }
 
 .author {
