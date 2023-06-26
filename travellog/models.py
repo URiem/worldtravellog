@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 from django.template.defaultfilters import slugify
+from django.core.validators import MaxValueValidator, MinValueValidator
 
 STATUS = ((0, "Draft"), (1, "Published"))
 PRIVACY = ((0, "Private"), (1, "Public"))
@@ -31,7 +32,7 @@ class Logentry(models.Model):
     slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="log_entries")
-    year = models.IntegerField(blank=False)
+    year = models.IntegerField(validators=[MinValueValidator(1950), MaxValueValidator(2030)], blank=False)
     description = models.TextField()
     excerpt = models.TextField(blank=True)
     status = models.IntegerField(choices=STATUS, default=0)
