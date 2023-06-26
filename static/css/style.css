@@ -165,3 +165,25 @@ body {
     background: transparent;
     border: none;
 }
+
+/* // Small devices (landscape phones, 576px and down) */
+@media screen and (max-width: 350px) {
+    .hero-header {
+        font-size: 25px;
+    }
+
+    .hero-subheader {
+        font-size: 15px;
+    }
+}
+
+/* // Medium devices (tablets, 992 and down) */
+@media screen and (max-width: 992px) {
+    .hero-header {
+        font-size: 35px;
+    }
+
+    .hero-subheader {
+        font-size: 15px;
+    }
+}
