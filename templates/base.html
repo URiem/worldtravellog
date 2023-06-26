@@ -69,8 +69,13 @@
                     </li>
                     {% endif %}
                     {% endwith %}
-
                 </ul>
+                <!-- <form class="d-flex input-group w-auto" method="GET" action="/search/">
+                    <input type="text" name="q" class="form-control" placeholder="Type query" aria-label="Search">
+                    <button class="btn btn-outline-primary" type="submit" data-mdb-ripple-color="dark">
+                        Search
+                    </button>
+                </form> -->
             </div>
         </div>
     </nav>
@@ -80,7 +85,7 @@
             <div class="col-8 mx-auto m-0">
                 {% if messages %}
                 {% for message in messages %}
-                <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
+                <div class="alert {{ message.tags }} alert-dismissible fade show mt-3" id="msg" role="alert">
                     {{ message | safe }}
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
@@ -90,15 +95,15 @@
         </div>
     </div>
 
-    <main class="flex-shrink-0 main-bg">
+    <main class="flex-shrink-0 main-bg mb-4">
         {% block content %}
         <!-- Content Goes here -->
         {% endblock content %}
     </main>
 
     <!-- Footer -->
-    <footer class="footer container-fluid d-flex flex-column align-items-center  mt-auto py-3">
-        <div>The world is at your doorstep, got out and have a blast!
+    <footer class="footer container-fluid d-flex flex-column align-items-center  mt-auto py-3 bg-white">
+        <div>The world is at your doorstep, go out and have a blast!
         </div>
         <div>
             <a class="btn btn-social" target="_blank" href="https://www.linkedin.com/in/ulrike-r-8b538385/"
