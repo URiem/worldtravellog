@@ -23,44 +23,24 @@
     - [Data Base Design](#data-base-design)
   - [User Experience - UX](#user-experience---ux)
     - [Strategy](#strategy)
-      - [Target Audience](#target-audience)
-      - [User Requirements and Expectations](#user-requirements-and-expectations)
     - [Scope](#scope)
-      - [Intial Stage](#intial-stage)
-      - [Future Additions](#future-additions)
     - [Structure](#structure)
-      - [Wireframes](#wireframes)
     - [Skeleton](#skeleton)
     - [Surface](#surface)
-      - [Color Scheme](#color-scheme)
-      - [Font](#font)
   - [Agile Development](#agile-development)
   - [Features](#features)
-    - [Welcome Section](#welcome-section)
-    - [Choose A Level Section](#choose-a-level-section)
-    - [Quiz Section](#quiz-section)
-    - [End of Game page](#end-of-game-page)
-    - [Header](#header)
-    - [Footer](#footer)
-  - [Future Features](#future-features)
+    - [Existing Features](#existing_features)    
+    - [Future Features](#future-features)
   - [Technologies Used](#technologies-used)
     - [Languages](#languages)
+    - [Python Modules \& Packages](#python-modulespackages-used)
     - [Frameworks \& Tools](#frameworks--tools)
     - [Helpful sites](#helpful-sites)
   - [Testing and Validation](#testing-and-validation)
-    - [HTML Validation](#html-validation)
-    - [CSS Validation](#css-validation)
-    - [JavaScript Validation](#javascript-validation)
-    - [Accessibility \& Performance](#accessibility--performance)
-    - [Browser Compatability](#browser-compatability)
-    - [Testing User Stories](#testing-user-stories)
-    - [Outstanding Issues](#outstanding-issues)
-  - [Bugs \& Fixes](#bugs--fixes)
   - [Deployment \& Development](#deployment--development)
   - [Credits](#credits)
     - [Media](#media)
     - [Code](#code)
-  - [Content](#content)
   - [Acknowledgements](#acknowledgements)
 
 ## Introduction
@@ -93,7 +73,7 @@ The application was developed taking the Five Planes of User Experience into con
 |                            | 1A                                                                                                                                  | As a user, I want to see a navigation menu so I can easily movement through the site.                                                                                                             |
 |                            | 1B                                                                                                                                  | As a user, I want to see relevant information about the site and its content easily so I can decide if I want to register an account                                                              |
 |                            | 1C                                                                                                                                  | As a user, I want to see an intitive and visualy pleasing design that matches the intent of the website.                                                                                          |
-|                            | 1D ! As a user, I can access different pages on the site, so that I can navigate smoothy through all the functionality of the site. |
+|                            | 1D | As a user, I can access different pages on the site, so that I can navigate smoothy through all the functionality of the site. |
 | **REGISTRATION AND USER**  |                                                                                                                                     |                                                                                                                                                                                                   |
 |                            | 2A                                                                                                                                  | As a user, I want to be able to register a profile, so I can access the main functionality of the site.                                                                                           |
 |                            | 2B                                                                                                                                  | As a user, I want to be able to log into my account easily, so I can access my account information.                                                                                               |
@@ -200,7 +180,6 @@ The wireframes for the pages listed in the above [Structure](#structure) section
 5. **Sign Up View**
 
 ![Sign Up](https://res.cloudinary.com/dcw0uahxd/image/upload/v1687849883/static/media/images/readme/wireframes/Sign_Up_Form_mjxxxe.png)
-
 
 6. **404 Page** - a simple 404 Error page is also included (404.html)
 
