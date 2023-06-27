@@ -16,6 +16,7 @@ class Country(models.Model):
     slug = models.SlugField(max_length=200, unique=True)
 
     class Meta:
+        ordering = ['ctry_title']
         verbose_name = "country"
         verbose_name_plural = "countries"
 
