@@ -90,7 +90,7 @@ body {
 .masthead-image {
     position: relative;
     overflow: hidden;
-    top-margin: -10px;
+    margin-top: -10px;
 }
 
 .masthead-image:after {

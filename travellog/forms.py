@@ -24,8 +24,10 @@ class LogentryForm(forms.ModelForm):
             'title': forms.TextInput(attrs={'placeholder': 'Enter a title'}),
             'country': forms.Select(),
             'description': forms.Textarea(
-                attrs={'placeholder': 'Add a descriptions of your adventure!'}),
-            'excerpt': forms.Textarea(attrs={'placeholder': 'Add a short teaser about your trip'})
+                attrs={'placeholder': 'Add a descriptions of your adventure!'}
+            ),
+            'excerpt': forms.Textarea(
+                attrs={'placeholder': 'Add a short teaser about your trip'})
         }
 
 

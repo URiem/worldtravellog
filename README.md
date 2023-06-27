@@ -2,7 +2,7 @@
 
 (Developer: Ulrike Riemenschneider)
 
-![Mockup image](#)
+![Mockup image](https://res.cloudinary.com/dcw0uahxd/image/upload/v1687849927/static/media/images/readme/HomePage_bx9plc.png)
 
 **Live Site:**
 
@@ -179,13 +179,30 @@ The wireframes for the pages listed in the above [Structure](#structure) section
 
 1. **Home Page**
 
-![Home Page](#)
+![Home Page for unauthorized users](https://res.cloudinary.com/dcw0uahxd/image/upload/v1687849884/static/media/images/readme/wireframes/Home_View_unregistered_user_i3cqdt.png)
+
+![Home Page for authorized users](https://res.cloudinary.com/dcw0uahxd/image/upload/v1687849883/static/media/images/readme/wireframes/Home_View_registered_user_xyx7ri.png)
 
 2. **Logentry Detail Page**
 
-![Logentry Detail](#)
+![Logentry Detail for unauthorized users](https://res.cloudinary.com/dcw0uahxd/image/upload/v1687849884/static/media/images/readme/wireframes/Log_Detail_View_unregistered_user_brg19n.png)
 
-3. **404 Page** - a simple 404 Error page is also included (404.html)
+![Logentry Detail for authorized users](https://res.cloudinary.com/dcw0uahxd/image/upload/v1687849883/static/media/images/readme/wireframes/Log_Detail_View_registered_user_gkiqpn.png)
+
+3. **My Trips View**
+
+![My Trips View](https://res.cloudinary.com/dcw0uahxd/image/upload/v1687849883/static/media/images/readme/wireframes/My_Trips_View_lntrd8.png)
+
+4. **Add a Log Entry View**
+
+![Add a Log Entry](https://res.cloudinary.com/dcw0uahxd/image/upload/v1687849883/static/media/images/readme/wireframes/Add_Trip_Log_Form_chikx7.png)
+
+5. **Sign Up View**
+
+![Sign Up](https://res.cloudinary.com/dcw0uahxd/image/upload/v1687849883/static/media/images/readme/wireframes/Sign_Up_Form_mjxxxe.png)
+
+
+6. **404 Page** - a simple 404 Error page is also included (404.html)
 
 ### Surface
 

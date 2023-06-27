@@ -32,7 +32,9 @@ class Logentry(models.Model):
     slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="log_entries")
-    year = models.IntegerField(validators=[MinValueValidator(1950), MaxValueValidator(2030)], blank=False)
+    year = models.IntegerField(validators=[MinValueValidator(1950),
+                                           MaxValueValidator(2030)],
+                               blank=False)
     description = models.TextField()
     excerpt = models.TextField(blank=True)
     status = models.IntegerField(choices=STATUS, default=0)
@@ -60,7 +62,7 @@ class Logentry(models.Model):
 
 class Image(models.Model):
     """
-    Image Model 
+    Image Model
     Images are associated with individual Log Entries
     """
     logentry = models.ForeignKey(
