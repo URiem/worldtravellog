@@ -276,11 +276,17 @@ All functionality and development of this project was managed through GitHub iss
 - Footer with social media links and motto text on large screens.
 - Footer on small screens.
 
-### Possible Future Features
+### Future Features
 
-**Saving Favorite Log Entries**
+**List of Favorites Feature** 
+Creating functionality that lets the user add individual, publically available posts to a list of favorite Log Entries which can then be displayed in a 'My Favorites' View. Implementing this would involve adding a 'Favorite' model to models.py and then create a view and template that displays the list based on the authenticated user.
 
-**Delete account feature**
+**Delete Acccount Feature**
+To give users ultimate control over their data a feature should be added that allows users to delete their account. A tutorial on how to do this can be found in this YouTube video <a href="https://www.youtube.com/watch?v=ke1IIHDwCIk">Django Update & Delete Account Tutorial</a>.
+
+**Retrieve Password Feature**
+A feature to allow the user to retrieve/reset their password if they have lost/forgotten it, is also quite important and should be added for a more complete user experience.
+
 
 ## Technologies Used
 

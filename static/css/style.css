@@ -38,6 +38,10 @@ body {
     background-color: #f8f9fa;
 }
 
+.hero-text {
+    padding-top: 10vh;
+}
+
 .hero-header {
     color: #f8f9fa;
     font-size: 45px;
@@ -168,6 +172,11 @@ body {
 
 /* // Small devices (landscape phones, 576px and down) */
 @media screen and (max-width: 350px) {
+    .hero-text {
+        padding-top: 2vh;
+        width: 100%;
+    }
+
     .hero-header {
         font-size: 25px;
     }
@@ -179,6 +188,11 @@ body {
 
 /* // Medium devices (tablets, 992 and down) */
 @media screen and (max-width: 992px) {
+    .hero-text {
+        /* padding-top: 5vh; */
+        width: 90%;
+    }
+
     .hero-header {
         font-size: 35px;
     }
