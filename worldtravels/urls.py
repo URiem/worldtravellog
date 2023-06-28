@@ -22,3 +22,5 @@ urlpatterns = [
     path('', include('travellog.urls'), name='travellog_urls'),
     path('accounts/', include('allauth.urls')),
 ]
+
+handler404 = "worldtravels.views.page_not_found_view"
