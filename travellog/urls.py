@@ -1,5 +1,6 @@
 from . import views
 from django.urls import path
+from django.contrib import admin
 
 urlpatterns = [
     path('add_logentry/', views.AddLogentry.as_view(), name='add_logentry'),

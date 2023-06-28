@@ -39,7 +39,7 @@ body {
 }
 
 .hero-text {
-    padding-top: 10vh;
+    /* padding-top: 10vh; */
 }
 
 .hero-header {
@@ -146,6 +146,10 @@ body {
     color: #23BBBB;
 }
 
+.btn-takeoff {
+    width: 200px;
+}
+
 .link {
     color: #23BBBB;
     text-decoration: none;
@@ -173,7 +177,7 @@ body {
 /* // Small devices (landscape phones, 576px and down) */
 @media screen and (max-width: 350px) {
     .hero-text {
-        padding-top: 2vh;
+        /* padding-top: 2vh; */
         width: 100%;
     }
 

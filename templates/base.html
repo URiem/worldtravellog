@@ -68,6 +68,12 @@
                             href="{% url 'account_login' %}">Login</a>
                     </li>
                     {% endif %}
+                    {% if user.is_superuser %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="/admin">Admin
+                            Page</a>
+                    </li>
+                    {% endif %}
                     {% endwith %}
                 </ul>
                 <!-- <form class="d-flex input-group w-auto" method="GET" action="/search/">
