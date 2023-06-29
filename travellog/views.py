@@ -6,7 +6,7 @@ from django.http import HttpResponseRedirect
 from django.urls import reverse_lazy
 from django.contrib import messages
 from .models import Logentry, Country, Image
-from .forms import LogentryForm, ImageForm
+from .forms import LogentryForm, ImageForm, CountryForm
 
 
 class LogentryList(generic.ListView):
@@ -85,6 +85,24 @@ class AddLogentry(CreateView):
         return super(CreateView, self).form_valid(form)
 
 
+class AddCountry(CreateView):
+    """
+    Allows authenticated users to add a new Country category
+    """
+    model = Country
+    form_class = CountryForm
+    template_name = 'add_country.html'
+    success_url = reverse_lazy('add_logentry')
+
+    # Source: https://stackoverflow.com/questions/67366138/django-display-message-after-creating-a-post # noqa
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        msg = "Your request to add a country has been submitted!"
+        messages.add_message(self.request, messages.SUCCESS, msg)
+        return super(CreateView, self).form_valid(form)
+
+
+
 class UpdateLogentry(UpdateView):
     """
     Allows an authenticated user to update an already submitted Log Entry
@@ -139,15 +157,15 @@ def delete_image(request, pk):
     return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
 
 
-class DeleteImage(DeleteView):
-    """
-    This allows an authenticated user to delete an image
-    """
-    model = Image
-    template_name = 'delete_image.html'
-    success_url = reverse_lazy('logentry_detail')
+# class DeleteImage(DeleteView):
+#     """
+#     This allows an authenticated user to delete an image
+#     """
+#     model = Image
+#     template_name = 'delete_image.html'
+#     success_url = reverse_lazy('logentry_detail')
 
-    def delete(self, request, *args, **kwargs):
-        msg = "The image has been deleted"
-        messages.add_message(self.request, messages.SUCCESS, msg)
-        return super(DeleteView, self).delete(request, *args, **kwargs)
+#     def delete(self, request, *args, **kwargs):
+#         msg = "The image has been deleted"
+#         messages.add_message(self.request, messages.SUCCESS, msg)
+#         return super(DeleteView, self).delete(request, *args, **kwargs)

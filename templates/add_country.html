@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %}Update Image{% endblock %}
+{% block title %}Add a Country Category{% endblock %}
 {% load crispy_forms_tags %}
 
 {% block content %}
@@ -7,24 +7,19 @@
 <!-- This if statement prevents unauthorized users 
                     from editing the log entry via the URL -->
 {% if user.is_authenticated %}
-{% if user.id == logentry.author.id %}
 <section>
     <div class="container">
         <div class="row">
             <div class="col-md-8 mt-3 offset-md-2">
-                <h2>Update your Image</h2>
+                <h2>Add a country category</h2>
                 <br>
-                <div class="img-container">
-                    <img src="{{ img.gallery_image.url }}" class="card-img-top" alt="{{ img.alttext }}">
-                </div>
                 <!-- Log Entry edit form -->
-                <form method="POST" class="form text-muted" action="{% url 'update' img.id %}"
-                    enctype="multipart/form-data">
+                <form method="POST" class="form text-muted">
                     {% csrf_token %}
                     {{ form | crispy }}
                     <div class="update-btn-group">
-                        <button type="submit" class="btn btn-signup mt-2">Update</button>
-                        <a href="{% url 'logentry_detail' %}" class="btn btn-secondary mt-2">Cancel</a>
+                        <button type="submit" class="btn btn-signup mt-2">Submit</button>
+                        <a href="{% url 'add_logentry' %}" class="btn btn-secondary mt-2">Cancel</a>
                     </div>
                 </form>
             </div>
@@ -36,8 +31,6 @@
 <!-- If a user is not logged in and sees this page -->
 
 <h1>You have to be logged in in order to view this page.</h1>
-
-{% endif %}
 
 {% endif %}
 

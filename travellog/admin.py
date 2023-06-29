@@ -8,9 +8,14 @@ class CountryAdmin(admin.ModelAdmin):
     """
     Register the Country model in the Admin area
     """
-    list_display = ('ctry_title',)
+    list_display = ('ctry_title', 'slug', 'approved')
+    list_filter = ('approved',)
     search_fields = ['ctry_title']
     prepopulated_fields = {'slug': ('ctry_title',)}
+    actions = ['approve_country']
+
+    def approve_country(self, request, queryset):
+        queryset.update(approved=True)
 
 
 @admin.register(Logentry)

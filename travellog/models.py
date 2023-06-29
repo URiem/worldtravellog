@@ -14,6 +14,7 @@ class Country(models.Model):
     """
     ctry_title = models.CharField(max_length=40, blank=False)
     slug = models.SlugField(max_length=200, unique=True)
+    approved = models.BooleanField(default=False)
 
     class Meta:
         ordering = ['ctry_title']
@@ -22,6 +23,15 @@ class Country(models.Model):
 
     def __str__(self):
         return self.ctry_title
+
+    def save(self, *args, **kwargs):
+        """
+        helper method to generate slug for travel logs submitted
+        by non-admin users
+        """
+        self.slug = slugify(self.ctry_title)
+        super(Country, self).save(*args, **kwargs)
+
 
 
 class Logentry(models.Model):
@@ -34,7 +44,7 @@ class Logentry(models.Model):
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="log_entries")
     year = models.IntegerField(validators=[MinValueValidator(1950),
-                                           MaxValueValidator(2030)],
+                                           MaxValueValidator(2050)],
                                blank=False)
     description = models.TextField()
     excerpt = models.TextField(blank=True)
