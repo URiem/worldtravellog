@@ -94,13 +94,40 @@ class AddCountry(CreateView):
     template_name = 'add_country.html'
     success_url = reverse_lazy('add_logentry')
 
-    # Source: https://stackoverflow.com/questions/67366138/django-display-message-after-creating-a-post # noqa
-    def form_valid(self, form):
-        form.instance.author = self.request.user
-        msg = "Your request to add a country has been submitted!"
-        messages.add_message(self.request, messages.SUCCESS, msg)
-        return super(CreateView, self).form_valid(form)
+    def get(self, request, *arg, **kwargs):
+        countries = Country.objects.all()
 
+        return render(
+            request,
+            "add_country.html",
+            {
+                "countries": countries,
+                "country_form": CountryForm()
+            },
+        )
+
+    def post(self, request, *arg, **kwargs):
+        countries = Country.objects.all()
+
+        country_form = CountryForm(data=request.POST)
+
+        if country_form.is_valid():
+            country = country_form.save(commit=False)
+            country.approved = False
+            country.save()
+            msg = "The country was submitted for approval"
+            messages.add_message(self.request, messages.SUCCESS, msg)
+        else:
+            country_form = CountryForm()
+
+        return HttpResponseRedirect(reverse('add_logentry'))
+
+    # Source: https://stackoverflow.com/questions/67366138/django-display-message-after-creating-a-post # noqa
+    # def form_valid(self, form):
+    #     form.instance.author = self.request.user
+    #     msg = "Your request to add a country has been submitted!"
+    #     messages.add_message(self.request, messages.SUCCESS, msg)
+    #     return super(CreateView, self).form_valid(form)
 
 
 class UpdateLogentry(UpdateView):

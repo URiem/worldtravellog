@@ -16,12 +16,19 @@
                 <!-- Log Entry edit form -->
                 <form method="POST" class="form text-muted">
                     {% csrf_token %}
-                    {{ form | crispy }}
+                    {{ country_form | crispy }}
                     <div class="update-btn-group">
                         <button type="submit" class="btn btn-signup mt-2">Submit</button>
                         <a href="{% url 'add_logentry' %}" class="btn btn-secondary mt-2">Cancel</a>
                     </div>
                 </form>
+                <h3 class="my-4">The following countries have been submitted for approval:</h3>
+                {% for ctry in countries %}
+                {% if not ctry.approved %}
+                <p>{{ ctry.ctry_title }}</p>
+                {% endif %}
+                {% endfor %}
+
             </div>
         </div>
     </div>
