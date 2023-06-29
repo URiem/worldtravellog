@@ -29,7 +29,8 @@ class LogentryForm(forms.ModelForm):
             'excerpt': forms.Textarea(
                 attrs={'placeholder': 'Add a short teaser about your trip'})
         }
-        
+
+
 class CountryForm(forms.ModelForm):
     """
     class enables authenticated users to add a country to the site
