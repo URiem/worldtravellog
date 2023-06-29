@@ -15,14 +15,17 @@ class LogentryForm(forms.ModelForm):
     """
     Class to enable authenticated users to add a logentry to the site
     """
+    country = forms.ModelChoiceField(
+        queryset=Country.objects.filter(approved=True))
+
     class Meta:
         model = Logentry
+
         fields = ('title', 'country', 'year', 'description', 'excerpt',
                   'featured_image', 'status', 'privacy', )
 
         widgets = {
             'title': forms.TextInput(attrs={'placeholder': 'Enter a title'}),
-            'country': forms.Select(),
             'description': forms.Textarea(
                 attrs={'placeholder': 'Add a descriptions of your adventure!'}
             ),
