@@ -73,16 +73,24 @@ opacity: 0.9; background-size: cover; background-position: center; background-re
     {% endif %}
 </div>
 
-<h2>Browse the Log Entries</h2>
+<div class="container">
+    <div class="row">
+        <div class="col-12 my-3 left">
+            <div class="row">
+                <h2>Browse the Log Entries</h2>
 
-<!-- Btn group to filter haikus by tag -->
-<p>Filter the Trips by country:</p>
-<div class="container-fluid filter-btn-group">
-    <a href="{% url 'home' %}" role="button" class="tag-link">All Trips</a>
-    {% for item in ctry_items %}
-    <a href="{% url 'countries' item %}" role="button" class="tag-link">
-        {{ item }}
-    </a>
-    {% endfor %}
+                <!-- Btn group to filter Trip Logs by Country -->
+                <p>Filter the Trips by country:</p>
+                <div class="container">
+                    <a href="{% url 'home' %}" role="button" class="btn btn-secondary btn-lg mt-3 gap-3">All Trips</a>
+                    {% for item in ctry_items %}
+                    <a href="{% url 'countries' item %}" role="button" class="btn btn-secondary btn-lg mt-3 gap-3">
+                        {{ item }}
+                    </a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 {%endblock%}
