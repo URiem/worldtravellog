@@ -9,14 +9,6 @@ from .models import Logentry, Country, Image
 from .forms import LogentryForm, ImageForm, CountryForm
 
 
-def ctry_items(request):
-    ctry_items = Country.objects.filter(approved=True)
-    context = {
-        "ctry_items": ctry_items,
-    }
-    return context
-
-
 class LogentryList(generic.ListView):
     """
     Displays all objects of the Logentry model that are set by the user
@@ -32,6 +24,14 @@ class LogentryList(generic.ListView):
         context = super(LogentryList, self).get_context_data(*args, **kwargs)
         context["ctry_items"] = ctry_items
         return context
+
+
+def ctry_items(request):
+    ctry_items = Country.objects.filter(approved=True)
+    context = {
+        "ctry_items": ctry_items,
+    }
+    return context
 
 
 class LogentryDetail(View):
