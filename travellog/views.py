@@ -19,11 +19,11 @@ class LogentryList(generic.ListView):
     template_name = 'index.html'
     paginate_by = 6
 
-    def get_context_data(self, *args, **kwargs):
-        ctry_items = Country.objects.filter(approved=True)
-        context = super(LogentryList, self).get_context_data(*args, **kwargs)
-        context["ctry_items"] = ctry_items
-        return context
+    # def get_context_data(self, *args, **kwargs):
+    #     ctry_items = Country.objects.filter(approved=True)
+    #     context = super(LogentryList, self).get_context_data(*args, **kwargs)
+    #     context["ctry_items"] = ctry_items
+    #     return context
 
 
 def ctry_items(request):
