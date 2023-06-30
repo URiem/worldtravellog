@@ -15,6 +15,8 @@ class LogentryForm(forms.ModelForm):
     """
     Class to enable authenticated users to add a logentry to the site
     """
+
+    # Thanks for this line of code, Roman Rakic!!
     country = forms.ModelChoiceField(
         queryset=Country.objects.filter(approved=True))
 

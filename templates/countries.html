@@ -1,22 +1,6 @@
 {% extends "base.html" %}
-{% block title %}The WorldTravel Log{% endblock %}
+{% block title %}Countries{% endblock %}
 {% block content %}
-
-{% if not user.is_authenticated %}
-<header class="bg-image-full d-flex justify-content-center align-items-center"
-    style="background-image: url(https://res.cloudinary.com/dcw0uahxd/image/upload/v1687253135/DSC_0273_prfblp.jpg); 
-opacity: 0.9; background-size: cover; background-position: center; background-repeat: no-repeat; width: 100%; height: 50vh;">
-    <div style="height: 1.0rem"></div>
-    <div class="hero-text text-center">
-        <h1 class="hero-header">Welcome to The WorldTravel Log</h1>
-        <p class="hero-subheader mb-0">Get started sharing your adventures!</p>
-        <div class="d-grid gap-2 d-sm-flex justify-content-center">
-            <a href="{% url 'account_signup' %}" class="btn btn-takeoff btn-light btn-lg mt-3 gap-3"><i
-                    class="fa-solid fa-plane-departure"></i> Take off</a>
-        </div>
-    </div>
-</header>
-{% endif %}
 
 <div class="container-fluid">
     <div class="row">
@@ -24,7 +8,10 @@ opacity: 0.9; background-size: cover; background-position: center; background-re
         <!-- Blog Entries Column -->
         <div class="col-12 mt-3 left">
             <div class="row">
-                {% for log in logentry_list %}
+                {% for log in country_logs %}
+                <h1 class="text-center my-5">All trips to {{ country }}</h1>
+
+
                 <div class="col-sm-12 col-md-6 col-lg-4 ">
                     <div class="card mb-4">
                         <div class="card-body">
@@ -53,6 +40,8 @@ opacity: 0.9; background-size: cover; background-position: center; background-re
             </div>
             <div class="row">
                 {% endif %}
+                {% empty %}
+                Sorry there are currently no log entries for this country!
                 {% endfor %}
 
             </div>
@@ -71,18 +60,5 @@ opacity: 0.9; background-size: cover; background-position: center; background-re
         </ul>
     </nav>
     {% endif %}
-</div>
-
-<h2>Browse the Log Entries</h2>
-
-<!-- Btn group to filter haikus by tag -->
-<p>Filter the Trips by country:</p>
-<div class="container-fluid filter-btn-group">
-    <a href="{% url 'home' %}" role="button" class="tag-link">All Trips</a>
-    {% for item in ctry_items %}
-    <a href="{% url 'countries' item %}" role="button" class="tag-link">
-        {{ item }}
-    </a>
-    {% endfor %}
 </div>
 {%endblock%}

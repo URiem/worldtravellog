@@ -9,6 +9,14 @@ from .models import Logentry, Country, Image
 from .forms import LogentryForm, ImageForm, CountryForm
 
 
+def ctry_items(request):
+    ctry_items = Country.objects.filter(approved=True)
+    context = {
+        "ctry_items": ctry_items,
+    }
+    return context
+
+
 class LogentryList(generic.ListView):
     """
     Displays all objects of the Logentry model that are set by the user
@@ -18,6 +26,12 @@ class LogentryList(generic.ListView):
     queryset = Logentry.objects.filter(status=1, privacy=1).order_by('-year')
     template_name = 'index.html'
     paginate_by = 6
+
+    def get_context_data(self, *args, **kwargs):
+        ctry_items = Country.objects.filter(approved=True)
+        context = super(LogentryList, self).get_context_data(*args, **kwargs)
+        context["ctry_items"] = ctry_items
+        return context
 
 
 class LogentryDetail(View):
@@ -122,13 +136,6 @@ class AddCountry(CreateView):
 
         return HttpResponseRedirect(reverse('add_logentry'))
 
-    # Source: https://stackoverflow.com/questions/67366138/django-display-message-after-creating-a-post # noqa
-    # def form_valid(self, form):
-    #     form.instance.author = self.request.user
-    #     msg = "Your request to add a country has been submitted!"
-    #     messages.add_message(self.request, messages.SUCCESS, msg)
-    #     return super(CreateView, self).form_valid(form)
-
 
 class UpdateLogentry(UpdateView):
     """
@@ -184,15 +191,20 @@ def delete_image(request, pk):
     return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
 
 
-# class DeleteImage(DeleteView):
-#     """
-#     This allows an authenticated user to delete an image
-#     """
-#     model = Image
-#     template_name = 'delete_image.html'
-#     success_url = reverse_lazy('logentry_detail')
+class CountryView(View):
+    """
+    List based view of to display log entries of a specific country
+    """
 
-#     def delete(self, request, *args, **kwargs):
-#         msg = "The image has been deleted"
-#         messages.add_message(self.request, messages.SUCCESS, msg)
-#         return super(DeleteView, self).delete(request, *args, **kwargs)
+    def get(self, request, country):
+        country_logs = Logentry.objects.filter(
+            country__ctry_title=self.kwargs['country'])
+
+        return render(
+            request,
+            "countries.html",
+            {
+                "country": country,
+                "country_logs": country_logs
+            }
+        )
