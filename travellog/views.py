@@ -15,15 +15,10 @@ class LogentryList(generic.ListView):
     as 'published' and 'public'
     """
     model = Logentry
-    queryset = Logentry.objects.filter(status=1, privacy=1).order_by('-year')
+    queryset = Logentry.objects.filter(
+        status=1, privacy=1).order_by('-date_created')
     template_name = 'index.html'
     paginate_by = 6
-
-    # def get_context_data(self, *args, **kwargs):
-    #     ctry_items = Country.objects.filter(approved=True)
-    #     context = super(LogentryList, self).get_context_data(*args, **kwargs)
-    #     context["ctry_items"] = ctry_items
-    #     return context
 
 
 def ctry_items(request):
@@ -198,7 +193,7 @@ class CountryView(View):
 
     def get(self, request, country):
         country_logs = Logentry.objects.filter(
-            country__ctry_title=self.kwargs['country'])
+            country__ctry_title=self.kwargs['country'], privacy=1, status=1)
 
         return render(
             request,
