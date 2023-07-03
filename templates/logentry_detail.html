@@ -5,17 +5,14 @@
 {% load crispy_forms_tags %}
 
 
-<div class="masthead">
+<!-- <div class="masthead">
     <div class="container">
         <div class="row g-0">
             <div class="col-md-6 masthead-text">
-                <!-- Post title goes in these h1 tags -->
                 <h1 class="post-title">{{ logentry.title }}</h1>
-                <!-- Post author goes before the | the post's created date goes after -->
                 <p class="post-subtitle">{{ logentry.country }} | {{ logentry.year }}</p>
             </div>
             <div class="d-none d-md-block col-md-6 masthead-image">
-                <!-- The featured image URL goes in the src attribute -->
                 {% if "placeholder" in logentry.featured_image.url %}
                 <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" width="100%">
                 {% else %}
@@ -24,11 +21,41 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
 <div class="container">
+
+    <div class="card my-3">
+        <div class="row g-0">
+            <div class="col-md-6">
+                <div class="card-body">
+                    <div class="my-3 mx-3">
+                        <h1 class="card-title">{{ logentry.title }}</h1>
+                        <p class="card-text">{{ logentry.country }} | {{ logentry.year }}</p>
+                        <p class="card-text hide mt-5">{{ logentry.excerpt }}</p>
+                        <!-- <p class="card-text mt-5">
+                        <div class="d-flex flex-row-reverse hide">
+                            {% if logentry.status is 1 %}Published{% else %}Draft{% endif %} |
+                            {% if logentry.privacy is 1 %}Public{% else %}Private{% endif %}
+                        </div>
+                        </p> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                {% if "placeholder" in logentry.featured_image.url %}
+                <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg"
+                    class="img-fluid rounded-start">
+                {% else %}
+                <img src="{{ logentry.featured_image.url }}" class="card-img" alt="{{ logentry.title }}">
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
     <div class="row">
-        <div class="col card mb-4  mt-3 left  top">
+        <div class="col card mb-4  mt-3 mx-2 left  top">
             <div class="card-body">
                 <!-- The post content goes inside the card-text. -->
                 <!-- Use the | safe filter inside the template tags -->
@@ -46,7 +73,8 @@
         <div class=" update-btn-group d-flex flex-row-reverse">
             <a href="{% url 'delete' logentry.slug %}" class="btn btn-outline-danger me-2" role="button">Delete
                 the trip</a>
-            <a href="{% url 'update' logentry.slug %}" class="btn btn-signup me-2" role="button">Update the trip</a>
+            <a href="{% url 'update' logentry.slug %}" class="btn btn-signup me-2" role="button">Update the
+                trip</a>
         </div>
     </div>
 </div>
@@ -61,21 +89,23 @@
             <div class="row">
                 {% for img in images %}
                 <div class="col-md-6 col-sm-12 col-lg-4">
-                    <div class="card mb-4">
-                        <div class="card-body">
+                    <div class="card-deck">
+                        <div class="card mb-4">
                             <div class="img-container">
                                 <img src="{{ img.gallery_image.url }}" class="card-img-top" alt="{{ img.alttext }}">
                             </div>
-                            <div class="d-flex justify-content-between">
-                                <p class="mt-2">{{ img.caption }}</p>
-                                {% if user.id == logentry.author.id %}
-                                <div class="update-btn-group">
-                                    <a href="{% url 'delete_image' img.id %}"
-                                        class="btn btn-outline-danger btn-sm me-1 mt-2" role="button"><i
-                                            class="fa-solid fa-trash-can"></i></a>
-                                    <!-- <a href="#" class="btn btn-signup btn-sm me-1" role="button">Update</a> -->
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <p class="mt-2">{{ img.caption }}</p>
+                                    {% if user.id == logentry.author.id %}
+                                    <div class="update-btn-group">
+                                        <a href="{% url 'delete_image' img.id %}"
+                                            class="btn btn-outline-danger btn-sm me-1 mt-2" role="button"><i
+                                                class="fa-solid fa-trash-can"></i></a>
+                                        <!-- <a href="#" class="btn btn-signup btn-sm me-1" role="button">Update</a> -->
+                                    </div>
+                                    {% endif %}
                                 </div>
-                                {% endif %}
                             </div>
                         </div>
                     </div>
@@ -93,7 +123,7 @@
         <form method="post" style="margin-top: 0.2em;" enctype="multipart/form-data">
             {{ image_form | crispy }}
             {% csrf_token %}
-            <button type="submit" class="btn btn-signup mt-2">Submit</button>
+            <button type="submit" class="btn btn-signup my-2">Submit</button>
         </form>
         {% endif %}
     </div>

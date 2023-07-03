@@ -54,9 +54,10 @@ body {
 }
 
 .card {
-    border: none;
+    /* border: none; */
     background-color: transparent;
 }
+
 
 .image-container {
     position: relative;
@@ -203,5 +204,9 @@ body {
 
     .hero-subheader {
         font-size: 15px;
+    }
+
+    .hide {
+        display: none;
     }
 }

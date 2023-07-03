@@ -11,8 +11,8 @@
                 <h1 class="text-center my-5">Hi {{ user.username }}! These are your trips:</h1>
                 {% for log in logentry_list %}
                 <div class="col-md-4">
-                    <div class="card mb-4">
-                        <div class="card-body">
+                    <div class="card-deck">
+                        <div class="card mb-4">
                             <div class="image-container">
                                 {% if "placeholder" in log.featured_image.url %}
                                 <img class="card-img-top"
@@ -25,17 +25,18 @@
                                     <p class="author">Author: {{ log.author }}</p>
                                 </div>
                             </div>
-                            <a href="{% url 'logentry_detail' log.slug  %}" class="post-link">
-                                <h2 class="card-title">{{ log.title }}</h2>
-                                <p class="card-text"><strong>{{ log.country }} | {{ log.year }}</strong></p>
-                                <p class="card-text">{{ log.excerpt }}</p>
-                                <p class="card-text d-flex flex-row-reverse">
-                                    {% if log.status is 1 %}Published{% else %}Draft{% endif %} |
-                                    {% if log.privacy is 1 %}Public{% else %}Private{% endif %}
+                            <div class="card-body">
+                                <a href="{% url 'logentry_detail' log.slug  %}" class="post-link">
+                                    <h2 class="card-title">{{ log.title }}</h2>
+                                    <p class="card-text"><strong>{{ log.country }} | {{ log.year }}</strong></p>
+                                    <p class="card-text">{{ log.excerpt }}</p>
+                                    <p class="card-text d-flex flex-row-reverse">
+                                        {% if log.status is 1 %}Published{% else %}Draft{% endif %} |
+                                        {% if log.privacy is 1 %}Public{% else %}Private{% endif %}
 
-                                </p>
-                            </a>
-                            <hr>
+                                    </p>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
