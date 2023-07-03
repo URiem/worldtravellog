@@ -42,12 +42,13 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 flex align-items-center">
                 {% if "placeholder" in logentry.featured_image.url %}
                 <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg"
-                    class="img-fluid rounded-start">
+                    class="card-img img-fluid rounded-start img-max-hgt">
                 {% else %}
-                <img src="{{ logentry.featured_image.url }}" class="card-img" alt="{{ logentry.title }}">
+                <img src="{{ logentry.featured_image.url }}" class="card-img img-fluid rounded-start img-max-hgt"
+                    alt="{{ logentry.title }}">
                 {% endif %}
             </div>
         </div>

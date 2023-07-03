@@ -78,6 +78,11 @@ body {
     text-transform: uppercase;
 }
 
+.img-max-hgt {
+    max-height: 350px;
+    object-fit: cover;
+}
+
 .masthead {
     margin-top: 10px;
     overflow: hidden;

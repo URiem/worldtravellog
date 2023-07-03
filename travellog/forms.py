@@ -10,6 +10,12 @@ class ImageForm(forms.ModelForm):
         model = Image
         fields = ('gallery_image', 'caption', 'alttext',)
 
+        widgets = {
+            'caption': forms.TextInput(attrs={'placeholder': 'Enter a caption'}),
+            'alttext': forms.TextInput(
+                attrs={'placeholder': 'Enter keywords'})
+        }
+
 
 class LogentryForm(forms.ModelForm):
     """
@@ -31,7 +37,7 @@ class LogentryForm(forms.ModelForm):
             'description': forms.Textarea(
                 attrs={'placeholder': 'Add a descriptions of your adventure!'}
             ),
-            'excerpt': forms.Textarea(
+            'excerpt': forms.TextInput(
                 attrs={'placeholder': 'Add a short teaser about your trip'})
         }
 

@@ -11,7 +11,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8 mt-3 offset-md-2">
-                <h2>Add a country category</h2>
+                <h1>Add a country category</h1>
                 <br>
                 <!-- Log Entry edit form -->
                 <form method="POST" class="form text-muted">
@@ -22,7 +22,7 @@
                         <a href="{% url 'add_logentry' %}" class="btn btn-secondary mt-2">Cancel</a>
                     </div>
                 </form>
-                <h3 class="my-4">Countries submitted for approval:</h3>
+                <h2 class="my-4">Countries submitted for approval:</h2>
                 {% for ctry in countries %}
                 {% if not ctry.approved %}
                 <p>{{ ctry.ctry_title }}</p>
