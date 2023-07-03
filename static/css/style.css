@@ -1,9 +1,10 @@
 body {
     background-color: #F9FAFC;
+    font-family: 'Public Sans', sans-serif;
 }
 
 .brand {
-    font-family: Lato, sans-serif;
+    font-family: 'Public Sans', sans-serif;
     font-size: 1.4rem;
     font-weight: 700;
     color: #4A4A4F;
@@ -115,11 +116,12 @@ body {
 .post-link {
     text-decoration: none;
     color: #445261;
+    ;
 }
 
 .post-link:hover,
 .page-link {
-    color: teal;
+    color: rgb(2, 156, 156);
 }
 
 .post-title {
@@ -133,7 +135,7 @@ body {
 }
 
 .btn-signup {
-    background-color: #23BBBB;
+    background-color: rgb(22, 112, 112);
     color: #fff;
 }
 
@@ -144,7 +146,7 @@ body {
 .btn-signup:hover,
 .btn-signup:active {
     background-color: #fff;
-    color: #23BBBB;
+    color: rgb(22, 112, 112);
 }
 
 .btn-takeoff {
@@ -152,7 +154,7 @@ body {
 }
 
 .link {
-    color: #23BBBB;
+    color: rgb(22, 112, 112);
     text-decoration: none;
 }
 
