@@ -44,6 +44,6 @@ class CountryForm(forms.ModelForm):
         model = Country
         fields = ('ctry_title',)
 
-
-# class PostSearchForm(forms.Form):
-#     q = forms.CharField()
+        widgets = {
+            'ctry_title': forms.TextInput(attrs={'placeholder': 'Enter country name'}),
+        }

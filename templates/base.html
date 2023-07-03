@@ -39,7 +39,12 @@
             </button>
             <div class="collapse navbar-collapse nav-list" id="navbarTogglerDemo02">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    {% if ctry_items %}
+                    <!-- https://gist.github.com/delneg/b6d625708ae1a75fd5f036a5fe6f6a62 -->
+                    {% with url_name=request.resolver_match.url_name %}
+                    <li class="nav-item">
+                        <a class="nav-link {% if url_name == 'home' %}active{% endif %}" aria-current="page"
+                            href="{% url 'home' %}">Home</a>
+                    </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
@@ -52,13 +57,6 @@
                             </a>
                             {% endfor %}
                         </div>
-                    </li>
-                    {% endif %}
-                    <!-- https://gist.github.com/delneg/b6d625708ae1a75fd5f036a5fe6f6a62 -->
-                    {% with url_name=request.resolver_match.url_name %}
-                    <li class="nav-item">
-                        <a class="nav-link {% if url_name == 'home' %}active{% endif %}" aria-current="page"
-                            href="{% url 'home' %}">Home</a>
                     </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">
