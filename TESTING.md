@@ -59,6 +59,16 @@ BDD, or Behaviour Driven Development, is the process used to test user stories i
 
 ## Automated View Testing
 
+https://github.com/useriasminna/italianissimo-booking-website/blob/main/booking/tests.py
+https://www.valentinog.com/blog/testing-modelform/
+https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Testing
+https://github.com/cloudinary/pycloudinary/blob/master/django_tests/test_cloudinaryField.py
+https://stackoverflow.com/questions/26298821/django-testing-model-with-imagefield#26307916
+https://cferreirasuazo.medium.com/lets-unit-test-django-forms-280704168d1b
+
+
+
+
 **Travel Log Testing**
 
 # Browser Testing
