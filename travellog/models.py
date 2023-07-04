@@ -12,7 +12,7 @@ class Country(models.Model):
     """
     Country Model acting as categories linked to each Logentry
     """
-    ctry_title = models.CharField(max_length=40, blank=False)
+    ctry_title = models.CharField('Country', max_length=40, blank=False)
     slug = models.SlugField(max_length=200, unique=True)
     approved = models.BooleanField(default=False)
 
@@ -31,7 +31,6 @@ class Country(models.Model):
         """
         self.slug = slugify(self.ctry_title)
         super(Country, self).save(*args, **kwargs)
-
 
 
 class Logentry(models.Model):
@@ -78,9 +77,9 @@ class Image(models.Model):
     """
     logentry = models.ForeignKey(
         Logentry, on_delete=models.CASCADE, related_name="images")
-    gallery_image = CloudinaryField('image', default='placeholder')
-    caption = models.CharField(max_length=80)
-    alttext = models.CharField(max_length=50)
+    gallery_image = CloudinaryField('Image', default='placeholder')
+    caption = models.CharField('Caption', max_length=80)
+    alttext = models.CharField('Alternative Text', max_length=50)
 
     def __str__(self):
         return self.caption
