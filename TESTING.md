@@ -5,14 +5,12 @@
 ## Table of Contents
 
 - [Performance](#performance)
-  - [Google's Lighthouse Performance](#googles-lighthouse-performance)
 - [Accessibility](#accessibility)
-  - [Accessibility Validation](#accessibility-validation)
 - [Code Validation](#code-validation)
   - [HTML Validation](#html-validation)
   - [CSS Validation](#css-validation)
   - [JS Validation](#js-validation)
-  - [PEP8 Validation](#pep8-validation)
+  - [PEP8 Validation](#python-code-validation)
 - [Testing](#testing)
   - [Manual Testing](#manual-testing-bdd)
   - [Automated View Testing](#automated-view-testing)
@@ -20,8 +18,6 @@
 - [Bugs & Fixes](#bugs-and-fixes)
 
 # Performance
-
-## Google Lighthouse Performance
 
 [Google Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) was used to test the performance of the website.
 
