@@ -59,9 +59,8 @@ The [WAVE WebAIM web accessibility evaluation tool](https://wave.webaim.org/) wa
 
 <details>
 <summary>Home page</summary>
-<img src="static/media/docs/accessibility_test_wave.png" width="30%"><br><br>
+<img src="static/media/docs/accessibility_test_wave.png" width="30%">
 </details>
-<details>
 
 # Code Validation
 
