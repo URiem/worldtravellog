@@ -41,6 +41,51 @@ The [WAVE WebAIM web accessibility evaluation tool](https://wave.webaim.org/) wa
 
 The [W3C Markup Validation Service](https://validator.w3.org/) was used to validate the HTML of the website.
 
+**HTML results:**
+
+No errors were detected on any of the pages tested.
+
+<details>
+<summary>Home page</summary>
+<img src="static/media/docs/html_test_home.png" width="30%"><br><br>
+</details>
+<details>
+<summary>Log Entry Detail page</summary>
+<img src="static/media/docs/html_test_entrydetail.png" width="30%"><br><br>
+</details>
+<details>
+<summary>Login page</summary>
+<img src="static/media/docs/html_test_login.png" width="30%"><br><br>
+</details>
+<details>
+<summary>Sign Up page</summary>
+<img src="static/media/docs/html_test_signup.png" width="30%"><br><br>
+</details>
+<details>
+<summary>Logout page</summary>
+<img src="static/media/docs/html_test_logout.png" width="30%"><br><br>
+</details>
+<details>
+<details>
+<summary>Add Logentry page</summary>
+<img src="static/media/docs/html_test_addlogentry.png" width="30%"><br><br>
+</details>
+<summary>Update Logentry page</summary>
+<img src="static/media/docs/html_test_updatelogentry.png" width="30%"><br><br>
+</details>
+<details>
+<summary>Delete Logentry page</summary>
+<img src="static/media/docs/html_test_deleteentry.png" width="30%"><br><br>
+</details>
+<details>
+<summary>User Entries page</summary>
+<img src="static/media/docs/html_test_userentries.png" width="30%"><br><br>
+</details>
+<details>
+<summary>Countries page</summary>
+<img src="static/media/docs/html_test_countries.png" width="30%"><br><br>
+</details>
+
 ## CSS Validation
 
 The [W3C Jigsaw CSS Validation Service](https://jigsaw.w3.org/css-validator/) was used to validate the CSS of the website.
@@ -65,9 +110,6 @@ https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Testing
 https://github.com/cloudinary/pycloudinary/blob/master/django_tests/test_cloudinaryField.py
 https://stackoverflow.com/questions/26298821/django-testing-model-with-imagefield#26307916
 https://cferreirasuazo.medium.com/lets-unit-test-django-forms-280704168d1b
-
-
-
 
 **Travel Log Testing**
 
