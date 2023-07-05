@@ -13,7 +13,7 @@
   - [PEP8 Validation](#python-code-validation)
 - [Testing](#testing)
   - [Manual Testing](#manual-testing-bdd)
-  - [Automated View Testing](#automated-view-testing)
+  - [Automated Testing](#automated-testing)
 - [Browser Testing](#browser-testing)
 - [Bugs & Fixes](#bugs-and-fixes)
 
