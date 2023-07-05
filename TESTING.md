@@ -92,7 +92,7 @@ The [W3C Jigsaw CSS Validation Service](https://jigsaw.w3.org/css-validator/) wa
 
 The testing of the `style.css` file resulted in the following outcome:
 
-<img src="static/media/docs/css_testing_cssfile.png" width="50%"><br><br>
+<img src="static/media/docs/css_test_cssfile.png" width="50%"><br><br>
 
 ## JS Validation
 
@@ -122,7 +122,7 @@ The python code was tested using the [CI Python Linter](https://pep8ci.herokuapp
 </details>
 <details>
 <summary>apps.py</summary>
-<img src="static/media/docs/py_test_views_app.png" width="60%"><br><br>
+<img src="static/media/docs/py_test_app.png" width="60%"><br><br>
 </details>
 <details>
 <summary>admin.py</summary>
@@ -147,11 +147,6 @@ The python code was tested using the [CI Python Linter](https://pep8ci.herokuapp
 <summary>urls.py</summary>
 <img src="static/media/docs/py_test_urls_worldtravel.png" width="60%"><br><br>
 </details>
-<details>
-<summary>settings.py</summary>
-<img src="static/media/docs/py_test_views_settings.png" width="60%"><br><br>
-</details>
-<details>
 
 # Testing
 
