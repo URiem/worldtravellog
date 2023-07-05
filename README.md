@@ -2,7 +2,7 @@
 
 (Developer: Ulrike Riemenschneider)
 
-![Mockup image](https://res.cloudinary.com/dcw0uahxd/image/upload/v1687849927/static/media/images/readme/HomePage_bx9plc.png)
+![Mockup image](/static/media/docs/iamresponsivepp4.png)
 
 **Live Site:**
 
@@ -57,7 +57,7 @@ The goal of the project was to build a tool for users to create a repository of 
 
 The Entity Relationship Diagram (ERD) illustrates the structure of the data base which lies at the core of the functionality of the site:
 
-![ERD](/static/media/images/erd.jpeg)
+![ERD](/static/media/docs/erd.jpeg)
 
 A User Model is provided by Django, a Logentry Model stores the details of each Triplog that a user adds, a user can add many log entries. An Image Model allows the user to add and store images specific to each Triplog, each Log can have multiple pictures associated with it. In addition a Country Model allows the user to categorize their entries by country of travel, which then makes the log entries searchable to the user.
 
@@ -278,7 +278,7 @@ All functionality and development of this project was managed through GitHub iss
 
 ### Future Features
 
-**List of Favorites Feature** 
+**List of Favorites Feature**
 Creating functionality that lets the user add individual, publically available posts to a list of favorite Log Entries which can then be displayed in a 'My Favorites' View. Implementing this would involve adding a 'Favorite' model to models.py and then create a view and template that displays the list based on the authenticated user.
 
 **Delete Acccount Feature**
@@ -286,7 +286,6 @@ To give users ultimate control over their data a feature should be added that al
 
 **Retrieve Password Feature**
 A feature to allow the user to retrieve/reset their password if they have lost/forgotten it, is also quite important and should be added for a more complete user experience.
-
 
 ## Technologies Used
 
