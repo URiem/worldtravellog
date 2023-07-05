@@ -11,7 +11,8 @@ class ImageForm(forms.ModelForm):
         fields = ('gallery_image', 'caption', 'alttext',)
 
         widgets = {
-            'caption': forms.TextInput(attrs={'placeholder': 'Enter a caption'}),
+            'caption': forms.TextInput(
+                attrs={'placeholder': 'Enter a caption'}),
             'alttext': forms.TextInput(
                 attrs={'placeholder': 'Enter keywords'})
         }
@@ -51,5 +52,6 @@ class CountryForm(forms.ModelForm):
         fields = ('ctry_title',)
 
         widgets = {
-            'ctry_title': forms.TextInput(attrs={'placeholder': 'Enter country name'}),
+            'ctry_title': forms.TextInput(
+                attrs={'placeholder': 'Enter country name'}),
         }
