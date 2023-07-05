@@ -177,16 +177,38 @@ The python code was tested using the [CI Python Linter](https://pep8ci.herokuapp
 
 BDD, or Behaviour Driven Development, is the process used to test user stories in a non-technical way, allowing anyone to test the features of an app.
 
-## Automated View Testing
+## Automated Testing
 
-https://github.com/useriasminna/italianissimo-booking-website/blob/main/booking/tests.py
-https://www.valentinog.com/blog/testing-modelform/
-https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Testing
-https://github.com/cloudinary/pycloudinary/blob/master/django_tests/test_cloudinaryField.py
-https://stackoverflow.com/questions/26298821/django-testing-model-with-imagefield#26307916
-https://cferreirasuazo.medium.com/lets-unit-test-django-forms-280704168d1b
+Based on testing guidance and instruction on the Code Institute LMS 'Hello Django' walkthrough some automated testing for the project was carried out. Three separate files where used `test_models.py` to test some aspects of the models, `test_views.py` to test aspects of the views, and `test_forms.py` to test the forms.
 
-**Travel Log Testing**
+In addition the following website were used for guidance and trouble shooting on how to implement the automated testing:
+
+- https://github.com/useriasminna/italianissimo-booking-website/blob/main/booking/tests.py
+- https://www.valentinog.com/blog/testing-modelform/
+- https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Testing
+- https://github.com/cloudinary/pycloudinary/blob/master/django_tests/test_cloudinaryField.py
+- https://stackoverflow.com/questions/26298821/django-testing-model-with-imagefield#26307916
+- https://cferreirasuazo.medium.com/lets-unit-test-django-forms-280704168d1b
+
+**Testing results:**
+
+- **test_models.py**
+
+<img src="static/media/docs/at_test_models.png">
+
+- **test_views.py**
+
+<img src="static/media/docs/at_test_views.png">
+
+- **test_forms.py**
+
+<img src="static/media/docs/at_test_forms.png">
+
+**Testing coverage:**
+
+A coverage report was generated to determine the percentage of code tested:
+
+<img src="static/media/docs/automated_testing_coverage.png">
 
 # Browser Testing
 
