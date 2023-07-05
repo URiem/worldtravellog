@@ -29,9 +29,11 @@
 <summary>Desktop</summary>
 
 - Home page
+
   <img src="static/media/docs/lighthouse_test_mainpage.png" width="60%">
 
 - Entry Detail page
+
   <img src="static/media/docs/lighthouse_test_entrydetail.png" width="60%">
 
 </details>
@@ -40,9 +42,11 @@
 <summary>Mobile</summary>
 
 - Home page
+
   <img src="static/media/docs/#.png" width="60%">
 
 - Entry Detail page
+
   <img src="static/media/docs/#.png" width="60%">
 
 </details>
