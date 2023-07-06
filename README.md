@@ -250,11 +250,7 @@ All functionality and development of this project was managed through GitHub iss
 
 ### Header and Navigation
 
-- Navbar with logo, pagename and links
-- Different links are visible for unauthenticated users, authenticated users and the admin user
-- Active links are rendered in black as opposed to the default grey
-- On small to medium screen the navigation links are displayed as a collapsible burger menu
-- A dropdown menu for country categories is available on all screen sizes
+Navbar with logo, pagename and links. Different links are visible for unauthenticated users, authenticated users and the admin user. Active links are rendered in black as opposed to the default grey. On small to medium screen the navigation links are displayed as a collapsible burger menu. A dropdown menu for country categories is available on all screen sizes.
 
 - **Navbar for unregistered user**
 
@@ -282,7 +278,7 @@ All functionality and development of this project was managed through GitHub iss
 
 ### Footer
 
-- Footer with a slogan, links to several of the developers pages and a copyright feature
+- Footer with a slogan, links to several of the developers pages and a copyright feature.
 - Footer is almost identical on all screen sizes.
 
 <img src="static/media/docs/footer.png" width="60%">
@@ -294,31 +290,25 @@ All functionality and development of this project was managed through GitHub iss
 - Allows a user to sign up
 - Fields include Username, Email (optional), Password and Password confirmation
 
-<img src="static/media/docs/viewsignup.png" width="60%">
-
+<img src="static/media/docs/signupform.png" width="80%">
 
 **Login to an account**
 
 - Allows a user to access their information
 
-<img src="static/media/docs/viewsignin.png" width="60%">
-
+<img src="static/media/docs/viewsignin.png" width="80%">
 
 **Log out of an account**
 
 - Allows a user to exit their account
 
-<img src="static/media/docs/viewsignout.png" width="60%">
+<img src="static/media/docs/signoutconfirmation.png" width="60%">
 
 ### Main Views
 
 **Home Page**
 
-- Two distinct views for a registered and unregistered user
-- Unregistered user see a hero image with a call to action to sign up for an account
-- Registered user do not see this hero image
-- A paginated list of publically viewable trip entry cards is displayed on the home page
-- Individual log entry cards feature an image, a year and country/location category as well as a short teaser of the trip entry
+Two distinct views for a registered and unregistered user. Unregistered user see a hero image with a call to action to sign up for an account. Registered user do not see this hero image. A paginated list of publically viewable trip entry cards is displayed on the home page. Individual log entry cards feature an image, a year and country/location category as well as a short teaser of the trip entry.
 
 - **Unregistered Mobile Vertical**
 
@@ -328,17 +318,17 @@ All functionality and development of this project was managed through GitHub iss
 
 <img src="static/media/docs/mobilehorizontalviewhomepage.png" width="60%">
 
-- **Home Page Registered** 
+- **Home Page Registered**
 
-<img src="static/media/docs/viewhomereg.png" width="60%">
-
+<img src="static/media/docs/homepagereguser.png" width="60%">
 
 **My Log Entries**
 
-- Allows registered users to see their personal log entries including those set to private
-- The log entry card for these trips will also display the status of the entry (whether it is a draft or published) and the privacy setting (whether it is viewable by the public or private)
+- Allows registered users to see their personal log entries including those set to private:
 
 ![My Log Entries](/static/media/docs/viewuserentries.png)
+
+- The log entry card for these trips will also display the status of the entry (whether it is a draft or published) and the privacy setting (whether it is viewable by the public or private):
 
 ![My Log Entry Card](/static/media/docs/entrycardreguser.png)
 
@@ -347,37 +337,61 @@ All functionality and development of this project was managed through GitHub iss
 - A dropdown menu in the nav bar allows both registered and unregistered users to search the entries by country/region.
 - The search will display the results. For uregistered users only publically available entries will be show. Registered users will also see their own entries if set to private.
 
+![Country View](/static/media/docs/countryview.png)
+
+**Log Entry Detail View**
+
+The Log Entry Detail view allows both registered and unregistered users to view the details of a Log Entry. The title, featured image, year and country are displayed in the header. Below the description is featured followed by the image gallery associated with the entry. 
+
+Registered users will have access to buttons that allow them to update or delete and entry, that allow them to add more images or delete images.
+
+
+
 ### CRUD Functionality
 
 All CRUD functionality is only available to registered users once they are logged in.
 
 **Create a Log Entry**
 
-![Add a Log Entry](/static/media/docs/viewaddtrip.png)
+Allows the user to create a log entry. The fields included in the form are: a title, a country select menu, a year, a description, a teaser section which is optional, upload of a feature image, published/draft choice and private/public choice.
+
+![Add a Log Entry](/static/media/docs/addtripview.png)
 
 **Add Images to Log Entry**
+
+Allows the user to add a selection of images to their log entry.
 
 ![Add an Image](/static/media/docs/addimagefeature.png)
 
 **Update a Log Entry**
 
+Allows the user to update a log entry. The form is prefilled with all the details from the original entry.
+
 ![Update a Log Entry](/static/media/docs/viewupdateentry.png)
 
 **Delete a Log Entry**
+
+Allow the user to delete an entry. The user will be prompted to confirm that they really want to delete the entry.
 
 ![Delete a Log Entry](/static/media/docs/viewdeleteentry.png)
 
 **Delete an Image**
 
-![Delete an Image](/static/media/docs/deleteimage.png)
+The user is able to delete an image by clicking on the small red waste basket icon at the bottom of the image, which is only visible to the author of the entry. The image is immediately deleted, the user is not asked to confirm their wish to delete the image.
+
+![Delete an Image](/static/media/docs/singleimage.png)
 
 **Add a country/region category**
 
+The user can add a country category (or region) should one not be available that would fit a new entry they want to add. The category name is then submitted for approval by the page administrator.
+
 ![Add a Country](/static/media/docs/addcountryfeature.png)
+
+![Add Country Form](/static/media/docs/addcountryform.png)
 
 ### Success Messages
 
-Every time a user carries out a function on the website, either as part of the account functionality or the CRUD functionality, a success message will be displayed confirm that the function as been carried our successfully.
+Every time a user carries out a function on the website, either as part of the account functionality or the CRUD functionality, a success message will be displayed confirm that the function as been carried our successfully. Some of the messages are shown here but this is not an exhaustive list.
 
 ![Success Sign In](/static/media/docs/successmessagesignin.png)
 
