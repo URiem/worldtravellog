@@ -11,8 +11,13 @@
                 <h1>Add a Trip to your Log</h1>
                 <br>
                 <ul>
-                    <li>If you would like to add a new country category, click here: <a class="nav-link"
-                            aria-current="page" href="{% url 'add_country' %}">Add a country category</a></li>
+                    <li>If you would like to add a new country category, click on the link below. If you feel a country
+                        does not quite fit the trip location, you can request to have another
+                        category added, such as an ocean or continent. We do have a category called 'North Atlantic' for
+                        example.
+                        <a class="nav-link" aria-current="page" href="{% url 'add_country' %}">Add a country
+                            category</a>
+                    </li>
                     <li>The year for the trip needs to be an integer between 1950 and 2030</li>
                 </ul>
                 <!-- See forms.py -->

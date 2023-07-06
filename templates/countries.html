@@ -9,6 +9,7 @@
         <div class="col-12 mt-3 left">
             <div class="row">
                 {% for log in country_logs %}
+                {% if user.id != log.author.id and log.privacy == 1 %}
                 <div class="col-sm-12 col-md-6 col-lg-3 ">
                     <div class="card-deck">
                         <div class="card mb-4">
@@ -37,6 +38,37 @@
                 {% if forloop.counter|divisibleby:4 %}
             </div>
             <div class="row">
+                {% endif %}
+                {% elif user.id == log.author.id %}
+                <div class="col-sm-12 col-md-6 col-lg-3 ">
+                    <div class="card-deck">
+                        <div class="card mb-4">
+                            <div class="image-container">
+                                {% if "placeholder" in log.featured_image.url %}
+                                <img class="card-img-top"
+                                    src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg"
+                                    alt="Laptop keyboard">
+                                {% else %}
+                                <img class="card-img-top" src=" {{ log.featured_image.url }}" alt="{{ log.title }}">
+                                {% endif %}
+                                <div class="image-flash">
+                                    <p class="author">Author: {{ log.author }}</p>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <a href="{% url 'logentry_detail' log.slug  %}" class="post-link">
+                                    <h2 class="card-title">{{ log.title }}</h2>
+                                    <p class="card-text"><strong>{{ log.country }} | {{ log.year }}</strong></p>
+                                    <p class="card-text">{{ log.excerpt }}</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% if forloop.counter|divisibleby:4 %}
+            </div>
+            <div class="row">
+                {% endif %}
                 {% endif %}
                 {% empty %}
                 <p class="text-center lead mt-2">

@@ -18,7 +18,7 @@ class LogentryList(generic.ListView):
     queryset = Logentry.objects.filter(
         status=1, privacy=1).order_by('-date_created')
     template_name = 'index.html'
-    paginate_by = 6
+    paginate_by = 8
 
 
 def ctry_items(request):
@@ -170,7 +170,7 @@ class UserLogentryList(generic.ListView):
     model = Logentry
     queryset = Logentry.objects.order_by('-year')
     template_name = 'user_logentry.html'
-    paginate_by = 6
+    paginate_by = 8
 
     def get_queryset(self):
         queryset = Logentry.objects.filter(
@@ -190,10 +190,11 @@ class CountryView(View):
     """
     List based view of to display log entries of a specific country
     """
+    paginate_by = 8
 
     def get(self, request, country):
         country_logs = Logentry.objects.filter(
-            country__ctry_title=self.kwargs['country'], privacy=1, status=1)
+            country__ctry_title=self.kwargs['country'], status=1)
 
         return render(
             request,
