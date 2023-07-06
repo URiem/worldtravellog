@@ -5,24 +5,6 @@
 {% load crispy_forms_tags %}
 
 
-<!-- <div class="masthead">
-    <div class="container">
-        <div class="row g-0">
-            <div class="col-md-6 masthead-text">
-                <h1 class="post-title">{{ logentry.title }}</h1>
-                <p class="post-subtitle">{{ logentry.country }} | {{ logentry.year }}</p>
-            </div>
-            <div class="d-none d-md-block col-md-6 masthead-image">
-                {% if "placeholder" in logentry.featured_image.url %}
-                <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" width="100%">
-                {% else %}
-                <img src="{{ logentry.featured_image.url }}" width="100%" alt="{{ logentry.title }}">
-                {% endif %}
-            </div>
-        </div>
-    </div>
-</div> -->
-
 <div class="container">
 
     <div class="card my-3">
@@ -33,18 +15,12 @@
                         <h1 class="card-title">{{ logentry.title }}</h1>
                         <p class="card-text">{{ logentry.country }} | {{ logentry.year }}</p>
                         <p class="card-text hide mt-5">{{ logentry.excerpt }}</p>
-                        <!-- <p class="card-text mt-5">
-                        <div class="d-flex flex-row-reverse hide">
-                            {% if logentry.status is 1 %}Published{% else %}Draft{% endif %} |
-                            {% if logentry.privacy is 1 %}Public{% else %}Private{% endif %}
-                        </div>
-                        </p> -->
                     </div>
                 </div>
             </div>
             <div class="col-md-6 flex align-items-center">
                 {% if "placeholder" in logentry.featured_image.url %}
-                <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg"
+                <img src="https://res.cloudinary.com/dcw0uahxd/image/upload/v1688654556/amy-shamblen-unsplash_wld8zm.jpg"
                     class="card-img img-fluid rounded-start img-max-hgt">
                 {% else %}
                 <img src="{{ logentry.featured_image.url }}" class="card-img img-fluid rounded-start img-max-hgt"
