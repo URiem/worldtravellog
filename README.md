@@ -28,9 +28,8 @@
     - [Skeleton](#skeleton)
     - [Surface](#surface)
   - [Agile Development](#agile-development)
-  - [Features](#features)
-    - [Existing Features](#existing-features)
-    - [Future Features](#possible-future-features)
+  - [Existing Features](#existing-features)
+  - [Future Features](#future-features)
   - [Technologies Used](#technologies-used)
     - [Languages](#languages)
     - [Python Modules \& Packages](#python-modulespackages-used)
@@ -247,11 +246,9 @@ All functionality and development of this project was managed through GitHub iss
 
 - Sprint 6: Final revisions to code and documentation
 
-## Features
+## Existing Features
 
-### Existing Features
-
-#### Header and Navigation
+### Header and Navigation
 
 - Navbar with logo, pagename and links
 - Different links are visible for unauthenticated users, authenticated users and the admin user
@@ -259,61 +256,61 @@ All functionality and development of this project was managed through GitHub iss
 - On small to medium screen the navigation links are displayed as a collapsible burger menu
 - A dropdown menu for country categories is available on all screen sizes
 
-<!-- ![Navbar for unregistered user](/static/media/docs/navbarunreguser.png) -->
-
-**Navbar for unregistered user**
+- **Navbar for unregistered user**
 
 <img src="static/media/docs/navbarunreguser.png" width="60%">
 
-**Navbar for registered user**
+- **Navbar for registered user**
 
 <img src="static/media/docs/navbarreguser.png" width="60%">
 
-**Navbar for admin user**
+- **Navbar for admin user**
 
 <img src="static/media/docs/adminnavbar.png" width="60%">
 
-**Navbar on mobile**
+- **Navbar on mobile**
 
 <img src="static/media/docs/mobilenavbar.png" width="40%">
 
-**Navbar expanded on mobile**
+- **Navbar expanded on mobile**
 
 <img src="static/media/docs/mobilenavbarexpanded.png" width="40%">
 
-**Navbar expanded dropdown menu**
+- **Navbar expanded dropdown menu**
 
 <img src="static/media/docs/countriesmenuexpanded.png" width="40%">
 
-#### Footer
+### Footer
 
 - Footer with a slogan, links to several of the developers pages and a copyright feature
 - Footer is almost identical on all screen sizes.
 
-<img src="static/media/docs/footer.png" width="40%">
+<img src="static/media/docs/footer.png" width="60%">
 
-#### Account Features
+### Account Features
 
 **Create an account**
 
 - Allows a user to sign up
 - Fields include Username, Email (optional), Password and Password confirmation
 
-![Sign Up](/static/media/docs/viewsignup.png)
+<img src="static/media/docs/viewsignup.png" width="60%">
+
 
 **Login to an account**
 
 - Allows a user to access their information
 
-![Sign In](/static/media/docs/viewsignin.png)
+<img src="static/media/docs/viewsignin.png" width="60%">
+
 
 **Log out of an account**
 
 - Allows a user to exit their account
 
-![Sign Out](/static/media/docs/viewsignout.png)
+<img src="static/media/docs/viewsignout.png" width="60%">
 
-#### Main Views
+### Main Views
 
 **Home Page**
 
@@ -323,11 +320,18 @@ All functionality and development of this project was managed through GitHub iss
 - A paginated list of publically viewable trip entry cards is displayed on the home page
 - Individual log entry cards feature an image, a year and country/location category as well as a short teaser of the trip entry
 
-![Home Page Unregistered Mobile Vertical](/static/media/docs/mobileviewhomepage.png)
+- **Unregistered Mobile Vertical**
 
-![Home Page Unregistered Mobile Horizontal](/static/media/docs/mobilehorizontalviewhomepage.png)
+<img src="static/media/docs/mobileviewhomepage.png" width="40%">
 
-![Home Page Registered](/static/media/docs/viewhomereg.png)
+- **Unregistered Mobile Horizontal**
+
+<img src="static/media/docs/mobilehorizontalviewhomepage.png" width="60%">
+
+- **Home Page Registered** 
+
+<img src="static/media/docs/viewhomereg.png" width="60%">
+
 
 **My Log Entries**
 
@@ -343,7 +347,7 @@ All functionality and development of this project was managed through GitHub iss
 - A dropdown menu in the nav bar allows both registered and unregistered users to search the entries by country/region.
 - The search will display the results. For uregistered users only publically available entries will be show. Registered users will also see their own entries if set to private.
 
-#### CRUD Functionality
+### CRUD Functionality
 
 All CRUD functionality is only available to registered users once they are logged in.
 
@@ -371,7 +375,7 @@ All CRUD functionality is only available to registered users once they are logge
 
 ![Add a Country](/static/media/docs/addcountryfeature.png)
 
-#### Success Messages
+### Success Messages
 
 Every time a user carries out a function on the website, either as part of the account functionality or the CRUD functionality, a success message will be displayed confirm that the function as been carried our successfully.
 
@@ -385,7 +389,7 @@ Every time a user carries out a function on the website, either as part of the a
 
 ![Success Trip Deleted](/static/media/docs/successmesssagelogentrydeleted.png)
 
-### Future Features
+## Future Features
 
 **List of Favorites Feature**
 Creating functionality that lets the user add individual, publically available posts to a list of favorite Log Entries which can then be displayed in a 'My Favorites' View. Implementing this would involve adding a 'Favorite' model to models.py and then create a view and template that displays the list based on the authenticated user.
