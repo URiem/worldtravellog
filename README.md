@@ -252,7 +252,7 @@ All functionality and development of this project was managed through GitHub iss
 
 Navbar with logo, pagename and links. Different links are visible for unauthenticated users, authenticated users and the admin user. Active links are rendered in black as opposed to the default grey. On small to medium screen the navigation links are displayed as a collapsible burger menu. A dropdown menu for country categories is available on all screen sizes.
 
-- **Navbar for unregistered user**
+- **Default navbar for unregistered user**
 
 <img src="static/media/docs/navbarunreguser.png" width="60%">
 
@@ -310,17 +310,17 @@ Navbar with logo, pagename and links. Different links are visible for unauthenti
 
 Two distinct views for a registered and unregistered user. Unregistered user see a hero image with a call to action to sign up for an account. Registered user do not see this hero image. A paginated list of publically viewable trip entry cards is displayed on the home page. Individual log entry cards feature an image, a year and country/location category as well as a short teaser of the trip entry.
 
-- **Unregistered Mobile Vertical**
+- **Vertical Mobile View for Unregistered Users**
 
 <img src="static/media/docs/mobileviewhomepage.png" width="40%">
 
-- **Unregistered Mobile Horizontal**
+- **Horizontal Movile View for Unregistered Users**
 
 <img src="static/media/docs/mobilehorizontalviewhomepage.png" width="60%">
 
-- **Home Page Registered**
+- **Desktop View of Home Page for Registered Users**
 
-<img src="static/media/docs/homepagereguser.png" width="60%">
+<img src="static/media/docs/homepagereguser.png" width="100%">
 
 **My Log Entries**
 
@@ -341,11 +341,13 @@ Two distinct views for a registered and unregistered user. Unregistered user see
 
 **Log Entry Detail View**
 
-The Log Entry Detail view allows both registered and unregistered users to view the details of a Log Entry. The title, featured image, year and country are displayed in the header. Below the description is featured followed by the image gallery associated with the entry. 
+The Log Entry Detail view allows both registered and unregistered users to view the details of a Log Entry by clicking on the title and teaser of log entry card on the various list view pages. The title, featured image, year and country are displayed in the header. Below the header the description is featured followed by the image gallery associated with the entry.
 
-Registered users will have access to buttons that allow them to update or delete and entry, that allow them to add more images or delete images.
+Registered users will have access to buttons that allow them to update or delete and entry, a form that allows them to add more images or delete images. These features are absent on the detail view if users are not logged in or if they are not the author of the entry.
 
+![Log Detail View Registered User and Author](/static/media/docs/logdetailview.png)
 
+![Log Detail View Unregistered User or not the Author](/static/media/docs/detailviewunreg.png)
 
 ### CRUD Functionality
 
@@ -377,13 +379,13 @@ Allow the user to delete an entry. The user will be prompted to confirm that the
 
 **Delete an Image**
 
-The user is able to delete an image by clicking on the small red waste basket icon at the bottom of the image, which is only visible to the author of the entry. The image is immediately deleted, the user is not asked to confirm their wish to delete the image.
+The user is able to delete an image by clicking on the small red waste basket icon at the bottom of the image, which is only visible to the author of the entry if he/she is logged in. The image is immediately deleted, the user is not asked to confirm their wish to delete the image.
 
 ![Delete an Image](/static/media/docs/singleimage.png)
 
 **Add a country/region category**
 
-The user can add a country category (or region) should one not be available that would fit a new entry they want to add. The category name is then submitted for approval by the page administrator.
+The user can add a country category (or region) should one not be available that would fit a new entry they want to add. A link is displayed at the beginning of the 'Add Log Entry Form'. It links to a separate page with a form to be completed. The category name is then submitted for approval by the page administrator. Below the form a list of countries currently waiting for approval is displayed.
 
 ![Add a Country](/static/media/docs/addcountryfeature.png)
 
@@ -391,7 +393,7 @@ The user can add a country category (or region) should one not be available that
 
 ### Success Messages
 
-Every time a user carries out a function on the website, either as part of the account functionality or the CRUD functionality, a success message will be displayed confirm that the function as been carried our successfully. Some of the messages are shown here but this is not an exhaustive list.
+Every time a user carries out a function on the website, either as part of the account functionality or the CRUD functionality, a success message will be displayed confirming that the function as been carried our successfully. Some of the messages are shown here but this is not an exhaustive list.
 
 ![Success Sign In](/static/media/docs/successmessagesignin.png)
 
