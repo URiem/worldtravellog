@@ -259,7 +259,10 @@ All functionality and development of this project was managed through GitHub iss
 - On small to medium screen the navigation links are displayed as a collapsible burger menu
 - A dropdown menu for country categories is available on all screen sizes
 
-![Navbar for unregistered user](/static/media/docs/navbarunreguser.png)
+<!-- ![Navbar for unregistered user](/static/media/docs/navbarunreguser.png) -->
+
+**Navbar for unregistered user**
+<img src="static/media/docs/navbarunreguser.png" width="60%">
 
 ![Navbar for registered user](/static/media/docs/navbarreguser.png)
 
@@ -329,6 +332,38 @@ All functionality and development of this project was managed through GitHub iss
 - A dropdown menu in the nav bar allows both registered and unregistered users to search the entries by country/region.
 - The search will display the results. For uregistered users only publically available entries will be show. Registered users will also see their own entries if set to private.
 
+#### CRUD Functionality
+
+All CRUD functionality is only available to registered users once they are logged in.
+
+**Create a Log Entry**
+
+![Add a Log Entry](/static/media/docs/viewaddtrip.png)
+
+**Add Images to Log Entry**
+
+![Add an Image](/static/media/docs/addimagefeature.png)
+
+**Update a Log Entry**
+
+![Update a Log Entry](/static/media/docs/viewupdateentry.png)
+
+**Delete a Log Entry**
+
+![Delete a Log Entry](/static/media/docs/viewdeleteentry.png)
+
+**Delete an Image**
+
+![Delete an Image](/static/media/docs/deleteimage.png)
+
+**Add a country/region category**
+
+![Add a Country](/static/media/docs/addcountryfeature.png)
+
+#### Success Messages
+
+Every time a user carries out a function on the website, either as part of the account functionality or the CRUD functionality, a success message will be displayed confirm that the function as been carried our successfully.
+
 ![Success Sign In](/static/media/docs/successmessagesignin.png)
 
 ![Success Trip Update](/static/media/docs/tripupdatesuccess.png)
@@ -338,17 +373,6 @@ All functionality and development of this project was managed through GitHub iss
 ![Success Image Deleted](/static/media/docs/successmessageimagedeleted.png)
 
 ![Success Trip Deleted](/static/media/docs/successmesssagelogentrydeleted.png)
-
-#### CRUD Functionality
-
-- Create a Log Entry and add images to Log Entry
-- Read/View Log Entry list and Log Entry details including images for unregistered and registered users
-- Update Log Entry and images for registered users
-- Delete Log Entry and images for registered users
-
-#### Success Messages
-
-Every time a user carries out a function on the website, either as part of the account functionality or the CRUD functionality, a success message will be displayed confirm that the function as been carried our successfully.
 
 ### Future Features
 
