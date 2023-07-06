@@ -251,6 +251,24 @@ All functionality and development of this project was managed through GitHub iss
 
 ### Existing Features
 
+**Navigation**
+
+- Navbar with logo, pagename and links
+- Different links are visible for unauthenticated users, authenticated users and the admin user
+- Active links are rendered in black as opposed to the default grey
+- On small to medium screen the navigation links are displayed as a collapsible burger menu
+- A dropdown menu for country categories is available on all screen sizes
+
+![Navbar for unregistered user](/static/media/docs/navbarunreguser.png)
+
+![Navbar for registered user](/static/media/docs/navbarreguser.png)
+
+![Navbar for admin user](/static/media/docs/adminnavbar.png)
+
+![Navbar on mobile](/static/media/docs/mobilenavbar.png)
+
+![Navbar expanded on mobile](/static/media/docs/mobilenavbarexpanded.png)
+
 **Account Features**
 
 - Create an account
