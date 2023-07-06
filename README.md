@@ -251,7 +251,7 @@ All functionality and development of this project was managed through GitHub iss
 
 ### Existing Features
 
-**Navigation**
+#### Header and Navigation
 
 - Navbar with logo, pagename and links
 - Different links are visible for unauthenticated users, authenticated users and the admin user
@@ -269,30 +269,86 @@ All functionality and development of this project was managed through GitHub iss
 
 ![Navbar expanded on mobile](/static/media/docs/mobilenavbarexpanded.png)
 
-**Account Features**
+![Navbar expanded dropdown menu](/static/media/docs/countriesmenuexpanded.png)
 
-- Create an account
-- Login to an account
-- Log out of an account
+#### Footer
 
-**CRUD Functionality**
+- Footer with a slogan, links to several of the developers pages and a copyright feature
+- Footer is almost identical on all screen sizes.
+
+![Footer](/static/media/docs/footer.png)
+
+#### Account Features
+
+**Create an account**
+
+- Allows a user to sign up
+- Fields include Username, Email (optional), Password and Password confirmation
+
+![Sign Up](/static/media/docs/viewsignup.png)
+
+**Login to an account**
+
+- Allows a user to access their information
+
+![Sign In](/static/media/docs/viewsignin.png)
+
+**Log out of an account**
+
+- Allows a user to exit their account
+
+![Sign Out](/static/media/docs/viewsignout.png)
+
+#### Main Views
+
+**Home Page**
+
+- Two distinct views for a registered and unregistered user
+- Unregistered user see a hero image with a call to action to sign up for an account
+- Registered user do not see this hero image
+- A paginated list of publically viewable trip entry cards is displayed on the home page
+- Individual log entry cards feature an image, a year and country/location category as well as a short teaser of the trip entry
+
+![Home Page Unregistered Mobile Vertical](/static/media/docs/mobileviewhomepage.png)
+
+![Home Page Unregistered Mobile Horizontal](/static/media/docs/mobilehorizontalviewhomepage.png)
+
+![Home Page Registered](/static/media/docs/viewhomereg.png)
+
+**My Log Entries**
+
+- Allows registered users to see their personal log entries including those set to private
+- The log entry card for these trips will also display the status of the entry (whether it is a draft or published) and the privacy setting (whether it is viewable by the public or private)
+
+![My Log Entries](/static/media/docs/viewuserentries.png)
+
+![My Log Entry Card](/static/media/docs/entrycardreguser.png)
+
+**Countries View**
+
+- A dropdown menu in the nav bar allows both registered and unregistered users to search the entries by country/region.
+- The search will display the results. For uregistered users only publically available entries will be show. Registered users will also see their own entries if set to private.
+
+![Success Sign In](/static/media/docs/successmessagesignin.png)
+
+![Success Trip Update](/static/media/docs/tripupdatesuccess.png)
+
+![Success Image Added](/static/media/docs/successmessageimageadded.png)
+
+![Success Image Deleted](/static/media/docs/successmessageimagedeleted.png)
+
+![Success Trip Deleted](/static/media/docs/successmesssagelogentrydeleted.png)
+
+#### CRUD Functionality
 
 - Create a Log Entry and add images to Log Entry
 - Read/View Log Entry list and Log Entry details including images for unregistered and registered users
 - Update Log Entry and images for registered users
 - Delete Log Entry and images for registered users
 
-**Header and Navigation**
+#### Success Messages
 
-- Header with links for unregistered users
-- Header with links for registered users
-- Header for large devices
-- Header for small devices
-
-**Footer with Links**
-
-- Footer with social media links and motto text on large screens.
-- Footer on small screens.
+Every time a user carries out a function on the website, either as part of the account functionality or the CRUD functionality, a success message will be displayed confirm that the function as been carried our successfully.
 
 ### Future Features
 
