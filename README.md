@@ -58,16 +58,15 @@ The Entity Relationship Diagram (ERD) illustrates the structure of the data base
 
 ![ERD](/static/media/docs/erd.jpeg)
 
-A User Model is provided by Django, a Logentry Model stores the details of each Triplog that a user adds, a user can add many log entries. An Image Model allows the user to add and store images specific to each Triplog, each Log can have multiple pictures associated with it. In addition a Country Model allows the user to categorize their entries by country of travel, which then makes the log entries searchable to the user.
+A `User` Model is provided by Django, a `Logentry Model` stores the details of each Triplog that a user adds, a user can add many log entries. An `Image` Model allows the user to add and store images specific to each Triplog, each Log can have multiple pictures associated with it. In addition a `Country` Model allows the user to categorize their entries by country of travel, which then makes the log entries searchable to the user.
 
-Both models ``Logentry`` and ``Image`` are based on the blog walkthrough project by Code Institute. However, the models were significantly altered to fit the needs of this project. The `Logentry` model has added fields of 'year', 'privacy', and 'country', but the field of 'likes' was deleted. It also has an added helper method to slugify the logentry title for non-admin users. The second model from the blog walkthough, which was designed to allow a user to add comments to a blog, has been adapted here to become a model called `Image`, which allows the author of a trip entry to add images to an image gallery below their entry. There is no admin approval needed for adding these images.
+The `Logentry` and `Image` models are based on the blog walkthrough project by Code Institute. However, the models were significantly altered to fit the needs of this project. The `Logentry` model has added fields of 'year', 'privacy', and 'country', but the field of 'likes' was deleted. It also has an added helper method to slugify the logentry title for non-admin users. The second model from the blog walkthough, which was designed to allow a user to add comments to a blog, has been adapted here to become a model called `Image`, which allows the author of a trip entry to add images to an image gallery below their entry. There is no admin approval needed for adding these images.
 
-As required by the assessment criteria for this project, one custom model (the ``Country`` model) was added which was not covered by Code Institute's walkthrough. It is used to allow users to add more country categories (or other appropriate regions), which are then submitted for approval by the administrator.
+As required by the assessment criteria for this project, one custom model (the `Country` model) was added which was not covered by Code Institute's walkthrough. It is used to allow users to add more country categories (or other appropriate regions) which are then submitted for approval by the administrator.
 
 **Future Models**
 
 In the future the developer would like to add a `Favorites` model, which would allow users to add Log Entries to a list of Favorites and then allow them to be displayed on a separate view from other list-views, such as the Home Page View, the My Trip View, or the Country View.
-
 
 ## User Experience - UX
 
@@ -141,7 +140,7 @@ The target audience is user who enjoy travelling and would like to record their 
 
 ### Structure
 
-The website is divided into XXX pages with content depending on whether the user is authenticated or not.
+The website is divided into 10 pages with content depending on whether the user is authenticated or not.
 
 #### Current/Initial Structure
 
@@ -152,12 +151,13 @@ The website is divided into XXX pages with content depending on whether the user
 - **User Entries Page** allows authenticated user to see all their logs including those with the private setting and those that have not yet been published and are just saved as a draft.
 - **Log Entry Detail Page** allows the user to view all the details of a trip log, if they are authenticated and it is their own post they will see buttons that allow to access the edit or delete features. They will also see a feature for adding/editing/deleting images associated with the log entry.
 - **Update Log Entry Page** displays a prepopulated entry log form and allows the user to edit their previous inputs.
+- **Add Country Page** allows an authenticated user to request the addition of another country category.
+- **Countries Category Page** allows a user the display on the entries associated with a selected country/region.
 
-#### Yet to be implemented/future pages
+#### Future pages
 
 - **Favorite Entries Page** allows a user to select/save and display their favorite log entries from all publically published posts.
 
-**Add a flowchart illustrating user navigation through the site.**
 
 ### Skeleton
 
@@ -167,13 +167,21 @@ The wireframes for the pages listed in the above [Structure](#structure) section
 
 1. **Home Page**
 
+- **Unauthorized User**
+
 ![Home Page for unauthorized users](https://res.cloudinary.com/dcw0uahxd/image/upload/v1687849884/static/media/images/readme/wireframes/Home_View_unregistered_user_i3cqdt.png)
+
+- **Authorized User**
 
 ![Home Page for authorized users](https://res.cloudinary.com/dcw0uahxd/image/upload/v1687849883/static/media/images/readme/wireframes/Home_View_registered_user_xyx7ri.png)
 
 2. **Logentry Detail Page**
 
+- **Unauthorized User**
+
 ![Logentry Detail for unauthorized users](https://res.cloudinary.com/dcw0uahxd/image/upload/v1687849884/static/media/images/readme/wireframes/Log_Detail_View_unregistered_user_brg19n.png)
+
+- **Authorized User**
 
 ![Logentry Detail for authorized users](https://res.cloudinary.com/dcw0uahxd/image/upload/v1687849883/static/media/images/readme/wireframes/Log_Detail_View_registered_user_gkiqpn.png)
 
@@ -259,7 +267,7 @@ All functionality and development of this project was managed through GitHub iss
 
 ### Header and Navigation
 
-Navbar with logo, pagename and links. Different links are visible for unauthenticated users, authenticated users and the admin user. Active links are rendered in black as opposed to the default grey. On small to medium screen the navigation links are displayed as a collapsible burger menu. A dropdown menu for country categories is available on all screen sizes.
+Navbar with logo, page name and links. Different links are visible for unauthenticated users, authenticated users and the admin user. Active links are rendered in black as opposed to the default grey. On small to medium screen the navigation links are displayed as a collapsible burger menu. A dropdown menu for country categories is available on all screen sizes.
 
 - **Default navbar for unregistered user**
 
@@ -344,7 +352,7 @@ Two distinct views for a registered and unregistered user. Unregistered user see
 **Countries View**
 
 - A dropdown menu in the nav bar allows both registered and unregistered users to search the entries by country/region.
-- The search will display the results. For uregistered users only publically available entries will be show. Registered users will also see their own entries if set to private.
+- The search will display the results. For unregistered users only publically available entries will be show. Registered users will also see their own entries if set to private.
 
 ![Country View](/static/media/docs/countryview.png)
 
@@ -352,7 +360,7 @@ Two distinct views for a registered and unregistered user. Unregistered user see
 
 The Log Entry Detail view allows both registered and unregistered users to view the details of a Log Entry by clicking on the title and teaser of log entry card on the various list view pages. The title, featured image, year and country are displayed in the header. Below the header the description is featured followed by the image gallery associated with the entry.
 
-Registered users will have access to buttons that allow them to update or delete and entry, a form that allows them to add more images or delete images. These features are absent on the detail view if users are not logged in or if they are not the author of the entry.
+Registered users will have access to buttons that allow them to update or delete an entry, a form that allows them to add more images or delete images. These features are absent on the detail view if users are not logged in or if they are not the author of the entry.
 
 ![Log Detail View Registered User and Author](/static/media/docs/logdetailview.png)
 
@@ -370,7 +378,7 @@ Allows the user to create a log entry. The fields included in the form are: a ti
 
 **Add Images to Log Entry**
 
-Allows the user to add a selection of images to their log entry.
+Allows the user to add a selection of images to their log entry. The fields here include a caption field and a field for keywords to provide alternative text to the image tag.
 
 ![Add an Image](/static/media/docs/addimagefeature.png)
 
@@ -402,7 +410,7 @@ The user can add a country category (or region) should one not be available that
 
 ### Success Messages
 
-Every time a user carries out a function on the website, either as part of the account functionality or the CRUD functionality, a success message will be displayed confirming that the function as been carried our successfully. Some of the messages are shown here but this is not an exhaustive list.
+Every time a user carries out a function on the website, either as part of the account functionality or the CRUD functionality, a success message will be displayed confirming that the function as been carried out successfully. Some of the messages are shown here but this is not an exhaustive list.
 
 ![Success Sign In](/static/media/docs/successmessagesignin.png)
 
@@ -416,14 +424,17 @@ Every time a user carries out a function on the website, either as part of the a
 
 ## Future Features
 
-**List of Favorites Feature**
+1. **List of Favorites Feature**
 Creating functionality that lets the user add individual, publically available posts to a list of favorite Log Entries which can then be displayed in a 'My Favorites' View. Implementing this would involve adding a 'Favorite' model to models.py and then create a view and template that displays the list based on the authenticated user.
 
-**Delete Acccount Feature**
+2. **Delete Acccount Feature**
 To give users ultimate control over their data a feature should be added that allows users to delete their account. A tutorial on how to do this can be found in this YouTube video <a href="https://www.youtube.com/watch?v=ke1IIHDwCIk">Django Update & Delete Account Tutorial</a>.
 
-**Retrieve Password Feature**
+3. **Retrieve Password Feature**
 A feature to allow the user to retrieve/reset their password if they have lost/forgotten it, is also quite important and should be added for a more complete user experience.
+
+4. **Advance Gallery Functionality**
+The gallery section could be improved in a variety of ways. It would be nice to be able to view the images as a gallery that allows them to be enlarged and skiped through. Also adding functionality to edit image details would be useful.
 
 ## Technologies Used
 

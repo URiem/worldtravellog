@@ -183,12 +183,12 @@ Based on testing guidance and instruction on the Code Institute LMS 'Hello Djang
 
 In addition the following website were used for guidance and trouble shooting on how to implement the automated testing:
 
-- https://github.com/useriasminna/italianissimo-booking-website/blob/main/booking/tests.py
-- https://www.valentinog.com/blog/testing-modelform/
 - https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Testing
+- https://www.valentinog.com/blog/testing-modelform/
+- https://cferreirasuazo.medium.com/lets-unit-test-django-forms-280704168d1b
 - https://github.com/cloudinary/pycloudinary/blob/master/django_tests/test_cloudinaryField.py
 - https://stackoverflow.com/questions/26298821/django-testing-model-with-imagefield#26307916
-- https://cferreirasuazo.medium.com/lets-unit-test-django-forms-280704168d1b
+- https://github.com/useriasminna/italianissimo-booking-website/blob/main/booking/tests.py
 
 **Testing results:**
 
