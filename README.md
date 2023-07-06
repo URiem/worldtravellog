@@ -60,6 +60,15 @@ The Entity Relationship Diagram (ERD) illustrates the structure of the data base
 
 A User Model is provided by Django, a Logentry Model stores the details of each Triplog that a user adds, a user can add many log entries. An Image Model allows the user to add and store images specific to each Triplog, each Log can have multiple pictures associated with it. In addition a Country Model allows the user to categorize their entries by country of travel, which then makes the log entries searchable to the user.
 
+Both models ``Logentry`` and ``Image`` are based on the blog walkthrough project by Code Institute. However, the models were significantly altered to fit the needs of this project. The `Logentry` model has added fields of 'year', 'privacy', and 'country', but the field of 'likes' was deleted. It also has an added helper method to slugify the logentry title for non-admin users. The second model from the blog walkthough, which was designed to allow a user to add comments to a blog, has been adapted here to become a model called `Image`, which allows the author of a trip entry to add images to an image gallery below their entry. There is no admin approval needed for adding these images.
+
+As required by the assessment criteria for this project, one custom model (the ``Country`` model) was added which was not covered by Code Institute's walkthrough. It is used to allow users to add more country categories (or other appropriate regions), which are then submitted for approval by the administrator.
+
+**Future Models**
+
+In the future the developer would like to add a `Favorites` model, which would allow users to add Log Entries to a list of Favorites and then allow them to be displayed on a separate view from other list-views, such as the Home Page View, the My Trip View, or the Country View.
+
+
 ## User Experience - UX
 
 The application was developed taking the Five Planes of User Experience into consideration:
