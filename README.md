@@ -262,24 +262,35 @@ All functionality and development of this project was managed through GitHub iss
 <!-- ![Navbar for unregistered user](/static/media/docs/navbarunreguser.png) -->
 
 **Navbar for unregistered user**
+
 <img src="static/media/docs/navbarunreguser.png" width="60%">
 
-![Navbar for registered user](/static/media/docs/navbarreguser.png)
+**Navbar for registered user**
 
-![Navbar for admin user](/static/media/docs/adminnavbar.png)
+<img src="static/media/docs/navbarreguser.png" width="60%">
 
-![Navbar on mobile](/static/media/docs/mobilenavbar.png)
+**Navbar for admin user**
 
-![Navbar expanded on mobile](/static/media/docs/mobilenavbarexpanded.png)
+<img src="static/media/docs/adminnavbar.png" width="60%">
 
-![Navbar expanded dropdown menu](/static/media/docs/countriesmenuexpanded.png)
+**Navbar on mobile**
+
+<img src="static/media/docs/mobilenavbar.png" width="40%">
+
+**Navbar expanded on mobile**
+
+<img src="static/media/docs/mobilenavbarexpanded.png" width="40%">
+
+**Navbar expanded dropdown menu**
+
+<img src="static/media/docs/countriesmenuexpanded.png" width="40%">
 
 #### Footer
 
 - Footer with a slogan, links to several of the developers pages and a copyright feature
 - Footer is almost identical on all screen sizes.
 
-![Footer](/static/media/docs/footer.png)
+<img src="static/media/docs/footer.png" width="40%">
 
 #### Account Features
 
