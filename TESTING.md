@@ -160,7 +160,7 @@ The python code was tested using the [CI Python Linter](https://pep8ci.herokuapp
 </details>
 <details>
 <summary>asgi.py</summary>
-<img src="static/media/docs/py_test_asgi.png" width="60%">
+<img src="static/docs/py_test_asgi.png" width="60%">
 </details>
 <details>
 <summary>wsgi.py</summary>
