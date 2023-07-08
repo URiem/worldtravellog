@@ -167,46 +167,45 @@ The wireframes for the pages listed in the above [Structure](#structure) section
 1. **Home Page**
 
 <details>
-<summary>**Unauthorized User**</summary>
-<img src="https://res.cloudinary.com/dcw0uahxd/image/upload/v1687849884/static/media/images/readme/wireframes/Home_View_unregistered_user_i3cqdt.png" width="60%">
+<summary>Unauthorized User</summary>
+<img src="https://res.cloudinary.com/dcw0uahxd/image/upload/v1687849884/static/media/images/readme/wireframes/Home_View_unregistered_user_i3cqdt.png" width="80%">
 </details>
 
 <details>
-<summary>**Authorized User**</summary>
+<summary>Authorized User</summary>
 <img src="https://res.cloudinary.com/dcw0uahxd/image/upload/v1687849883/static/media/images/readme/wireframes/Home_View_registered_user_xyx7ri.png" width="60%">
 </details>
-
 
 2. **Logentry Detail Page**
 
 <details>
-<summary>**Unauthorized User**</summary>
+<summary>Unauthorized User</summary>
 <img src="https://res.cloudinary.com/dcw0uahxd/image/upload/v1687849884/static/media/images/readme/wireframes/Log_Detail_View_unregistered_user_brg19n.png" width="60%">
 </details>
 
 <details>
-<summary>**Authorized User**</summary>
+<summary>Authorized User</summary>
 <img src="https://res.cloudinary.com/dcw0uahxd/image/upload/v1687849883/static/media/images/readme/wireframes/Log_Detail_View_registered_user_gkiqpn.png" width="60%">
 </details>
 
 3. **My Trips View**
 
 <details>
-<summary>**User Entry Views**</summary>
+<summary>User Entry View</summary>
 <img src="https://res.cloudinary.com/dcw0uahxd/image/upload/v1687849883/static/media/images/readme/wireframes/My_Trips_View_lntrd8.png" width="60%">
 </details>
 
 4. **Add a Log Entry View**
 
 <details>
-<summary>**And a Trip View**</summary>
+<summary>And a Trip View</summary>
 <img src="https://res.cloudinary.com/dcw0uahxd/image/upload/v1687849883/static/media/images/readme/wireframes/Add_Trip_Log_Form_chikx7.png" width="60%">
 </details>
 
 5. **Sign Up View**
 
 <details>
-<summary>**Register**</summary>
+<summary>Register</summary>
 <img src="https://res.cloudinary.com/dcw0uahxd/image/upload/v1687849883/static/media/images/readme/wireframes/Sign_Up_Form_mjxxxe.png" width="60%">
 </details>
 

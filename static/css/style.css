@@ -61,14 +61,15 @@ body {
 .image-flash {
     position: absolute;
     bottom: 5%;
-    min-width: 30%;
+    min-width: 20%;
     left: -2px;
     background-color: rgb(22, 112, 112);
+    /* #167A7A */
 }
 
 .author {
     color: white;
-    margin: 4px;
+    margin: 4px 4px 4px 6px;
     text-transform: uppercase;
 }
 
