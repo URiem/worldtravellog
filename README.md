@@ -56,7 +56,7 @@ The goal of the project was to build a tool for users to create a repository of 
 
 The Entity Relationship Diagram (ERD) illustrates the structure of the data base which lies at the core of the functionality of the site:
 
-![ERD](/static/media/docs/erd.jpeg)
+![ERD](/static/docs/erd.jpeg)
 
 A `User` Model is provided by Django, a `Logentry Model` stores the details of each Triplog that a user adds, a user can add many log entries. An `Image` Model allows the user to add and store images specific to each Triplog, each Log can have multiple pictures associated with it. In addition a `Country` Model allows the user to categorize their entries by country of travel, which then makes the log entries searchable to the user.
 
@@ -270,34 +270,34 @@ Navbar with logo, page name and links. Different links are visible for unauthent
 
 - **Default navbar for unregistered user**
 
-<img src="static/media/docs/navbarunreguser.png" width="60%">
+<img src="static/docs/navbarunreguser.png" width="60%">
 
 - **Navbar for registered user**
 
-<img src="static/media/docs/navbarreguser.png" width="60%">
+<img src="static/docs/navbarreguser.png" width="60%">
 
 - **Navbar for admin user**
 
-<img src="static/media/docs/adminnavbar.png" width="60%">
+<img src="static/docs/adminnavbar.png" width="60%">
 
 - **Navbar on mobile**
 
-<img src="static/media/docs/mobilenavbar.png" width="40%">
+<img src="static/docs/mobilenavbar.png" width="40%">
 
 - **Navbar expanded on mobile**
 
-<img src="static/media/docs/mobilenavbarexpanded.png" width="40%">
+<img src="static/docs/mobilenavbarexpanded.png" width="40%">
 
 - **Navbar expanded dropdown menu**
 
-<img src="static/media/docs/countriesmenuexpanded.png" width="40%">
+<img src="static/docs/countriesmenuexpanded.png" width="40%">
 
 ### Footer
 
 - Footer with a slogan, links to several of the developers pages and a copyright feature.
 - Footer is almost identical on all screen sizes.
 
-<img src="static/media/docs/footer.png" width="60%">
+<img src="static/docs/footer.png" width="60%">
 
 ### Account Features
 
@@ -306,19 +306,19 @@ Navbar with logo, page name and links. Different links are visible for unauthent
 - Allows a user to sign up
 - Fields include Username, Email (optional), Password and Password confirmation
 
-<img src="static/media/docs/signupform.png" width="80%">
+<img src="static/docs/signupform.png" width="80%">
 
 **Login to an account**
 
 - Allows a user to access their information
 
-<img src="static/media/docs/viewsignin.png" width="80%">
+<img src="static/docs/viewsignin.png" width="80%">
 
 **Log out of an account**
 
 - Allows a user to exit their account
 
-<img src="static/media/docs/signoutconfirmation.png" width="60%">
+<img src="static/docs/signoutconfirmation.png" width="60%">
 
 ### Main Views
 
@@ -328,32 +328,32 @@ Two distinct views for a registered and unregistered user. Unregistered user see
 
 - **Vertical Mobile View for Unregistered Users**
 
-<img src="static/media/docs/mobileviewhomepage.png" width="40%">
+<img src="static/docs/mobileviewhomepage.png" width="40%">
 
 - **Horizontal Movile View for Unregistered Users**
 
-<img src="static/media/docs/mobilehorizontalviewhomepage.png" width="60%">
+<img src="static/docs/mobilehorizontalviewhomepage.png" width="60%">
 
 - **Desktop View of Home Page for Registered Users**
 
-<img src="static/media/docs/homepagereguser.png" width="100%">
+<img src="static/docs/homepagereguser.png" width="100%">
 
 **My Log Entries**
 
 - Allows registered users to see their personal log entries including those set to private:
 
-![My Log Entries](/static/media/docs/viewuserentries.png)
+![My Log Entries](/static/docs/viewuserentries.png)
 
 - The log entry card for these trips will also display the status of the entry (whether it is a draft or published) and the privacy setting (whether it is viewable by the public or private):
 
-![My Log Entry Card](/static/media/docs/entrycardreguser.png)
+![My Log Entry Card](/static/docs/entrycardreguser.png)
 
 **Countries View**
 
 - A dropdown menu in the nav bar allows both registered and unregistered users to search the entries by country/region.
 - The search will display the results. For unregistered users only publically available entries will be show. Registered users will also see their own entries if set to private.
 
-![Country View](/static/media/docs/countryview.png)
+![Country View](/static/docs/countryview.png)
 
 **Log Entry Detail View**
 
@@ -361,9 +361,9 @@ The Log Entry Detail view allows both registered and unregistered users to view 
 
 Registered users will have access to buttons that allow them to update or delete an entry, a form that allows them to add more images or delete images. These features are absent on the detail view if users are not logged in or if they are not the author of the entry.
 
-![Log Detail View Registered User and Author](/static/media/docs/logdetailview.png)
+![Log Detail View Registered User and Author](/static/docs/logdetailview.png)
 
-![Log Detail View Unregistered User or not the Author](/static/media/docs/detailviewunreg.png)
+![Log Detail View Unregistered User or not the Author](/static/docs/detailviewunreg.png)
 
 ### CRUD Functionality
 
@@ -373,53 +373,53 @@ All CRUD functionality is only available to registered users once they are logge
 
 Allows the user to create a log entry. The fields included in the form are: a title, a country select menu, a year, a description, a teaser section which is optional, upload of a feature image, published/draft choice and private/public choice.
 
-![Add a Log Entry](/static/media/docs/addtripview.png)
+![Add a Log Entry](/static/docs/addtripview.png)
 
 **Add Images to Log Entry**
 
 Allows the user to add a selection of images to their log entry. The fields here include a caption field and a field for keywords to provide alternative text to the image tag.
 
-![Add an Image](/static/media/docs/addimagefeature.png)
+![Add an Image](/static/docs/addimagefeature.png)
 
 **Update a Log Entry**
 
 Allows the user to update a log entry. The form is prefilled with all the details from the original entry.
 
-![Update a Log Entry](/static/media/docs/viewupdateentry.png)
+![Update a Log Entry](/static/docs/viewupdateentry.png)
 
 **Delete a Log Entry**
 
 Allow the user to delete an entry. The user will be prompted to confirm that they really want to delete the entry.
 
-![Delete a Log Entry](/static/media/docs/viewdeleteentry.png)
+![Delete a Log Entry](/static/docs/viewdeleteentry.png)
 
 **Delete an Image**
 
 The user is able to delete an image by clicking on the small red waste basket icon at the bottom of the image, which is only visible to the author of the entry if he/she is logged in. The image is immediately deleted, the user is not asked to confirm their wish to delete the image.
 
-![Delete an Image](/static/media/docs/singleimage.png)
+![Delete an Image](/static/docs/singleimage.png)
 
 **Add a country/region category**
 
 The user can add a country category (or region) should one not be available that would fit a new entry they want to add. A link is displayed at the beginning of the 'Add Log Entry Form'. It links to a separate page with a form to be completed. The category name is then submitted for approval by the page administrator. Below the form a list of countries currently waiting for approval is displayed.
 
-![Add a Country](/static/media/docs/addcountryfeature.png)
+![Add a Country](/static/docs/addcountryfeature.png)
 
-![Add Country Form](/static/media/docs/addcountryform.png)
+![Add Country Form](/static/docs/addcountryform.png)
 
 ### Success Messages
 
 Every time a user carries out a function on the website, either as part of the account functionality or the CRUD functionality, a success message will be displayed confirming that the function as been carried out successfully. Some of the messages are shown here but this is not an exhaustive list.
 
-![Success Sign In](/static/media/docs/successmessagesignin.png)
+![Success Sign In](/static/docs/successmessagesignin.png)
 
-![Success Trip Update](/static/media/docs/tripupdatesuccess.png)
+![Success Trip Update](/static/docs/tripupdatesuccess.png)
 
-![Success Image Added](/static/media/docs/successmessageimageadded.png)
+![Success Image Added](/static/docs/successmessageimageadded.png)
 
-![Success Image Deleted](/static/media/docs/successmessageimagedeleted.png)
+![Success Image Deleted](/static/docs/successmessageimagedeleted.png)
 
-![Success Trip Deleted](/static/media/docs/successmesssagelogentrydeleted.png)
+![Success Trip Deleted](/static/docs/successmesssagelogentrydeleted.png)
 
 ## Future Features
 

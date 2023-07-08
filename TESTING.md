@@ -26,11 +26,11 @@
 
 - Home page
 
-  <img src="static/media/docs/lighthouse_test_mainpage.png" width="60%">
+  <img src="static/docs/lighthouse_test_mainpage.png" width="60%">
 
 - Entry Detail page
 
-  <img src="static/media/docs/lighthouse_test_entrydetail.png" width="60%">
+  <img src="static/docs/lighthouse_test_entrydetail.png" width="60%">
 
 </details>
 
@@ -39,11 +39,11 @@
 
 - Home page
 
-  <img src="static/media/docs/#.png" width="60%">
+  <img src="static/docs/#.png" width="60%">
 
 - Entry Detail page
 
-  <img src="static/media/docs/#.png" width="60%">
+  <img src="static/docs/#.png" width="60%">
 
 </details>
 
@@ -55,7 +55,7 @@ The [WAVE WebAIM web accessibility evaluation tool](https://wave.webaim.org/) wa
 
 <details>
 <summary>Home page</summary>
-<img src="static/media/docs/accessibility_test_wave.png" width="30%">
+<img src="static/docs/accessibility_test_wave.png" width="30%">
 </details>
 
 # Code Validation
@@ -70,43 +70,43 @@ The following pages where tested and no errors were detected on any of the pages
 
 <details>
 <summary>Home page</summary>
-<img src="static/media/docs/html_test_home.png" width="60%">
+<img src="static/docs/html_test_home.png" width="60%">
 </details>
 <details>
 <summary>Log Entry Detail page</summary>
-<img src="static/media/docs/html_test_entrydetail.png" width="60%">
+<img src="static/docs/html_test_entrydetail.png" width="60%">
 </details>
 <details>
 <summary>Login page</summary>
-<img src="static/media/docs/html_test_login.png" width="60%">
+<img src="static/docs/html_test_login.png" width="60%">
 </details>
 <details>
 <summary>Sign Up page</summary>
-<img src="static/media/docs/html_test_signup.png" width="60%">
+<img src="static/docs/html_test_signup.png" width="60%">
 </details>
 <details>
 <summary>Logout page</summary>
-<img src="static/media/docs/html_test_logout.png" width="60%">
+<img src="static/docs/html_test_logout.png" width="60%">
 </details>
 <details>
 <details>
 <summary>Add Logentry page</summary>
-<img src="static/media/docs/html_test_addlogentry.png" width="60%">
+<img src="static/docs/html_test_addlogentry.png" width="60%">
 </details>
 <summary>Update Logentry page</summary>
-<img src="static/media/docs/html_test_updatelogentry.png" width="60%">
+<img src="static/docs/html_test_updatelogentry.png" width="60%">
 </details>
 <details>
 <summary>Delete Logentry page</summary>
-<img src="static/media/docs/html_test_deleteentry.png" width="60%">
+<img src="static/docs/html_test_deleteentry.png" width="60%">
 </details>
 <details>
 <summary>User Entries page</summary>
-<img src="static/media/docs/html_test_userentries.png" width="60%">
+<img src="static/docs/html_test_userentries.png" width="60%">
 </details>
 <details>
 <summary>Countries page</summary>
-<img src="static/media/docs/html_test_countries.png" width="60%">
+<img src="static/docs/html_test_countries.png" width="60%">
 </details>
 
 ## CSS Validation
@@ -115,7 +115,7 @@ The [W3C Jigsaw CSS Validation Service](https://jigsaw.w3.org/css-validator/) wa
 
 The testing of the `style.css` file resulted in the following outcome:
 
-<img src="static/media/docs/css_test_cssfile.png" width="50%">
+<img src="static/docs/css_test_cssfile.png" width="50%">
 
 ## JS Validation
 
@@ -129,34 +129,34 @@ The python code was tested using the [CI Python Linter](https://pep8ci.herokuapp
 
 <details>
 <summary>models.py</summary>
-<img src="static/media/docs/py_test_models.png" width="60%">
+<img src="static/docs/py_test_models.png" width="60%">
 </details>
 <details>
 <summary>views.py</summary>
-<img src="static/media/docs/py_test_views_travellog.png" width="60%">
+<img src="static/docs/py_test_views_travellog.png" width="60%">
 </details>
 <details>
 <summary>forms.py</summary>
-<img src="static/media/docs/py_test_form.png" width="60%">
+<img src="static/docs/py_test_form.png" width="60%">
 </details>
 <details>
 <summary>urls.py</summary>
-<img src="static/media/docs/py_test_urls_travellog.png" width="60%">
+<img src="static/docs/py_test_urls_travellog.png" width="60%">
 </details>
 <details>
 <summary>apps.py</summary>
-<img src="static/media/docs/py_test_app.png" width="60%">
+<img src="static/docs/py_test_app.png" width="60%">
 </details>
 <details>
 <summary>admin.py</summary>
-<img src="static/media/docs/py_test_admin.png" width="60%">
+<img src="static/docs/py_test_admin.png" width="60%">
 </details>
 
 **Python testing results of Worldtravels Files:**
 
 <details>
 <summary>views.py</summary>
-<img src="static/media/docs/py_test_views_worldtravel.png" width="60%">
+<img src="static/docs/py_test_views_worldtravel.png" width="60%">
 </details>
 <details>
 <summary>asgi.py</summary>
@@ -164,11 +164,11 @@ The python code was tested using the [CI Python Linter](https://pep8ci.herokuapp
 </details>
 <details>
 <summary>wsgi.py</summary>
-<img src="static/media/docs/py_test_wsgi.png" width="60%">
+<img src="static/docs/py_test_wsgi.png" width="60%">
 </details>
 <details>
 <summary>urls.py</summary>
-<img src="static/media/docs/py_test_urls_worldtravel.png" width="60%">
+<img src="static/docs/py_test_urls_worldtravel.png" width="60%">
 </details>
 
 # Testing
@@ -194,21 +194,21 @@ In addition the following website were used for guidance and trouble shooting on
 
 - **test_models.py**
 
-<img src="static/media/docs/at_test_models.png">
+<img src="static/docs/at_test_models.png">
 
 - **test_views.py**
 
-<img src="static/media/docs/at_test_views.png">
+<img src="static/docs/at_test_views.png">
 
 - **test_forms.py**
 
-<img src="static/media/docs/at_test_forms.png">
+<img src="static/docs/at_test_forms.png">
 
 **Testing coverage:**
 
 A coverage report was generated to determine the percentage of code tested:
 
-<img src="static/media/docs/automated_testing_coverage.png">
+<img src="static/docs/automated_testing_coverage.png">
 
 # Browser Testing
 
