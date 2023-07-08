@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% block title %}Approve Countries{% endblock %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<!-- This if statement prevents unauthorized users 
+                    from editing the log entry via the URL -->
+{% if user.is_superuser %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 mt-3 offset-md-2">
+            <h2>Approve submitted Country Categories</h2>
+            <br>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mt-3 offset-md-2">
+                <div class="country-table">
+                    <table>
+                        <tr>
+                            <th>Country</th>
+                            <th>Approved</th>
+                        </tr>
+                        {% for ctry in country_list %}
+                        <tr>
+                            <td>{{ ctry.ctry_title }}</td>
+                            <td>{{ ctry.approved }}</td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- </div>
+    </div> -->
+
+<!-- Log Entry edit form -->
+<!-- <form method="POST" class="form text-muted" action="{% url 'approve_countries' %}"
+                    enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ form | crispy }}
+                    <div class="update-btn-group">
+                        <button type="submit" class="btn btn-signup my-2">Update</button>
+                        <a href="{% url 'home' %}" class="btn btn-secondary my-2">Cancel</a>
+                    </div>
+                </form> -->
+<!-- </div>
+    </div>
+    </div>
+</section>
+{% else %}
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 mt-3 offset-md-2">
+                <h2>You have to be logged in as the Administrator to access this page.</h2>
+            </div>
+        </div>
+    </div>
+</section> -->
+{% endif %}
+
+{% endblock %}

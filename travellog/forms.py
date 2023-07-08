@@ -55,3 +55,18 @@ class CountryForm(forms.ModelForm):
             'ctry_title': forms.TextInput(
                 attrs={'placeholder': 'Enter country name'}),
         }
+
+
+# class CountryApproveForm(forms.ModelForm):
+#     """
+#     class enables authenticated users to add a country to the site
+#     """
+#     class Meta:
+#         model = Country
+#         fields = ('ctry_title', 'approved')
+
+        # widgets = {
+        #     'ctry_title': forms.TextInput(
+        #         attrs={'placeholder': 'Enter country name'}),
+        #     'appoved': forms.
+        # }

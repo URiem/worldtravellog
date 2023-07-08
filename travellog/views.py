@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404, reverse
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.views import generic, View
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.http import HttpResponseRedirect
@@ -20,6 +20,27 @@ class LogentryList(generic.ListView):
         status=1, privacy=1).order_by('-date_created')
     template_name = 'index.html'
     paginate_by = 8
+
+
+class CountryApproveList(LoginRequiredMixin, generic.ListView):
+    """
+    List based view of countries that need approval
+    """
+
+    model = Country
+    queryset = Country.objects.filter(approved=False)
+    # form_class = CountryApproveForm
+    template_name = 'approve_countries.html'
+    # success_url = reverse_lazy('home')
+
+    # def form_valid(self, form):
+    #     form.instance.author = self.request.user
+    #     msg = "The countries were approved successfully"
+    #     messages.add_message(self.request, messages.SUCCESS, msg)
+    #     return super(UpdateView, self).form_valid(form)
+
+    # def test_func(self):
+    #     return self.request.user.is_superuser
 
 
 def ctry_items(request):
