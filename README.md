@@ -166,35 +166,49 @@ The wireframes for the pages listed in the above [Structure](#structure) section
 
 1. **Home Page**
 
-- **Unauthorized User**
+<details>
+<summary>**Unauthorized User**</summary>
+<img src="https://res.cloudinary.com/dcw0uahxd/image/upload/v1687849884/static/media/images/readme/wireframes/Home_View_unregistered_user_i3cqdt.png" width="60%">
+</details>
 
-![Home Page for unauthorized users](https://res.cloudinary.com/dcw0uahxd/image/upload/v1687849884/static/media/images/readme/wireframes/Home_View_unregistered_user_i3cqdt.png)
+<details>
+<summary>**Authorized User**</summary>
+<img src="https://res.cloudinary.com/dcw0uahxd/image/upload/v1687849883/static/media/images/readme/wireframes/Home_View_registered_user_xyx7ri.png" width="60%">
+</details>
 
-- **Authorized User**
-
-![Home Page for authorized users](https://res.cloudinary.com/dcw0uahxd/image/upload/v1687849883/static/media/images/readme/wireframes/Home_View_registered_user_xyx7ri.png)
 
 2. **Logentry Detail Page**
 
-- **Unauthorized User**
+<details>
+<summary>**Unauthorized User**</summary>
+<img src="https://res.cloudinary.com/dcw0uahxd/image/upload/v1687849884/static/media/images/readme/wireframes/Log_Detail_View_unregistered_user_brg19n.png" width="60%">
+</details>
 
-![Logentry Detail for unauthorized users](https://res.cloudinary.com/dcw0uahxd/image/upload/v1687849884/static/media/images/readme/wireframes/Log_Detail_View_unregistered_user_brg19n.png)
-
-- **Authorized User**
-
-![Logentry Detail for authorized users](https://res.cloudinary.com/dcw0uahxd/image/upload/v1687849883/static/media/images/readme/wireframes/Log_Detail_View_registered_user_gkiqpn.png)
+<details>
+<summary>**Authorized User**</summary>
+<img src="https://res.cloudinary.com/dcw0uahxd/image/upload/v1687849883/static/media/images/readme/wireframes/Log_Detail_View_registered_user_gkiqpn.png" width="60%">
+</details>
 
 3. **My Trips View**
 
-![My Trips View](https://res.cloudinary.com/dcw0uahxd/image/upload/v1687849883/static/media/images/readme/wireframes/My_Trips_View_lntrd8.png)
+<details>
+<summary>**User Entry Views**</summary>
+<img src="https://res.cloudinary.com/dcw0uahxd/image/upload/v1687849883/static/media/images/readme/wireframes/My_Trips_View_lntrd8.png" width="60%">
+</details>
 
 4. **Add a Log Entry View**
 
-![Add a Log Entry](https://res.cloudinary.com/dcw0uahxd/image/upload/v1687849883/static/media/images/readme/wireframes/Add_Trip_Log_Form_chikx7.png)
+<details>
+<summary>**And a Trip View**</summary>
+<img src="https://res.cloudinary.com/dcw0uahxd/image/upload/v1687849883/static/media/images/readme/wireframes/Add_Trip_Log_Form_chikx7.png" width="60%">
+</details>
 
 5. **Sign Up View**
 
-![Sign Up](https://res.cloudinary.com/dcw0uahxd/image/upload/v1687849883/static/media/images/readme/wireframes/Sign_Up_Form_mjxxxe.png)
+<details>
+<summary>**Register**</summary>
+<img src="https://res.cloudinary.com/dcw0uahxd/image/upload/v1687849883/static/media/images/readme/wireframes/Sign_Up_Form_mjxxxe.png" width="60%">
+</details>
 
 6. **404 Page** - a simple 404 Error page is also included (404.html)
 
