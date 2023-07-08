@@ -2,7 +2,7 @@
 
 (Developer: Ulrike Riemenschneider)
 
-![Mockup image](/static/media/docs/iamresponsivepp4.png)
+![Mockup image](/static/docs/iamresponsivepp4.png)
 
 **Live Site:**
 
