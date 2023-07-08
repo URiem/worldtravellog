@@ -1,6 +1,5 @@
 from django.contrib import admin
 from .models import Logentry, Image, Country
-from django_summernote.admin import SummernoteModelAdmin
 
 
 @admin.register(Country)
@@ -19,7 +18,7 @@ class CountryAdmin(admin.ModelAdmin):
 
 
 @admin.register(Logentry)
-class LogentryAdmin(SummernoteModelAdmin):
+class LogentryAdmin(admin.ModelAdmin):
     """
     Register the Logentry model in the Admin area
     """
@@ -28,7 +27,6 @@ class LogentryAdmin(SummernoteModelAdmin):
     search_fields = ['title', 'description']
     prepopulated_fields = {'slug': ('title',)}
     list_filter = ('status', 'date_created')
-    summernote_fields = ('description')
 
 
 @admin.register(Image)
