@@ -158,7 +158,6 @@ The website is divided into 10 pages with content depending on whether the user 
 
 - **Favorite Entries Page** allows a user to select/save and display their favorite log entries from all publically published posts.
 
-
 ### Skeleton
 
 #### Wireframes
@@ -425,16 +424,16 @@ Every time a user carries out a function on the website, either as part of the a
 ## Future Features
 
 1. **List of Favorites Feature**
-Creating functionality that lets the user add individual, publically available posts to a list of favorite Log Entries which can then be displayed in a 'My Favorites' View. Implementing this would involve adding a 'Favorite' model to models.py and then create a view and template that displays the list based on the authenticated user.
+   Creating functionality that lets the user add individual, publically available posts to a list of favorite Log Entries which can then be displayed in a 'My Favorites' View. Implementing this would involve adding a 'Favorite' model to models.py and then create a view and template that displays the list based on the authenticated user.
 
 2. **Delete Acccount Feature**
-To give users ultimate control over their data a feature should be added that allows users to delete their account. A tutorial on how to do this can be found in this YouTube video <a href="https://www.youtube.com/watch?v=ke1IIHDwCIk">Django Update & Delete Account Tutorial</a>.
+   To give users ultimate control over their data a feature should be added that allows users to delete their account. A tutorial on how to do this can be found in this YouTube video <a href="https://www.youtube.com/watch?v=ke1IIHDwCIk">Django Update & Delete Account Tutorial</a>.
 
 3. **Retrieve Password Feature**
-A feature to allow the user to retrieve/reset their password if they have lost/forgotten it, is also quite important and should be added for a more complete user experience.
+   A feature to allow the user to retrieve/reset their password if they have lost/forgotten it, is also quite important and should be added for a more complete user experience.
 
 4. **Advance Gallery Functionality**
-The gallery section could be improved in a variety of ways. It would be nice to be able to view the images as a gallery that allows them to be enlarged and skiped through. Also adding functionality to edit image details would be useful.
+   The gallery section could be improved in a variety of ways. It would be nice to be able to view the images as a gallery that allows them to be enlarged and skiped through. Also adding functionality to edit image details would be useful.
 
 ## Technologies Used
 
@@ -505,7 +504,7 @@ Before depolyment on Heroku, two files need to be created and be up to date, a `
 - Log into ElephantSQL.com and access your dashboard.
 - Click "Create New Instance"
 - Set up a plan, give your plan a **Name**, select the **Tiny Turtel (Free)** plan, leave the **Tags** field blank.
-- Select "Select Retion" and select a data center new you.
+- Select "Select Region" and select a data center new you.
 - Click "Review".
 - Confirm your details and then click "Create instance".
 - Return to the ElephantSQL dashboard and click on the database instance name for this project.
@@ -591,5 +590,5 @@ Django Image Gallery Website Step by Step Tutorial <https://www.youtube.com/watc
 I would like to thank:
 
 - My mentor Brian O'Hare for his feedback, advice, guidance and support.
-- Cohort fascilitator Paul Thomas O'Rirodan, for his general advice on the management of the course and pointing us to a plethora of resources to help with the projects.
+- Cohort facilitator Paul Thomas O'Rirodan, for his general advice on the management of the course and pointing us to a plethora of resources to help with the projects.
 - My husband, Matt, for his encouragement and support along the way.
