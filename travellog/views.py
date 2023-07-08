@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404, reverse
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views import generic, View
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.http import HttpResponseRedirect
@@ -76,7 +77,7 @@ class LogentryDetail(View):
         )
 
 
-class AddLogentry(CreateView):
+class AddLogentry(LoginRequiredMixin, CreateView):
     """
     Allows authenticated users to add
     and save a log entry
@@ -94,7 +95,7 @@ class AddLogentry(CreateView):
         return super(CreateView, self).form_valid(form)
 
 
-class AddCountry(CreateView):
+class AddCountry(LoginRequiredMixin, CreateView):
     """
     Allows authenticated users to add a new Country category
     """
@@ -132,7 +133,7 @@ class AddCountry(CreateView):
         return HttpResponseRedirect(reverse('add_logentry'))
 
 
-class UpdateLogentry(UpdateView):
+class UpdateLogentry(LoginRequiredMixin, UpdateView):
     """
     Allows an authenticated user to update an already submitted Log Entry
     """
@@ -148,7 +149,7 @@ class UpdateLogentry(UpdateView):
         return super(UpdateView, self).form_valid(form)
 
 
-class DeleteLogentry(DeleteView):
+class DeleteLogentry(LoginRequiredMixin, DeleteView):
     """
     This allows an authenticated user to delete a log entry
     """
@@ -162,7 +163,7 @@ class DeleteLogentry(DeleteView):
         return super(DeleteView, self).delete(request, *args, **kwargs)
 
 
-class UserLogentryList(generic.ListView):
+class UserLogentryList(LoginRequiredMixin, generic.ListView):
     """
     Displays all objects of the Logentry model submitted only by the
     currently authenticates user, including draft and private entries.

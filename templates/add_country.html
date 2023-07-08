@@ -4,9 +4,6 @@
 
 {% block content %}
 
-<!-- This if statement prevents unauthorized users 
-                    from editing the log entry via the URL -->
-{% if user.is_authenticated %}
 <section>
     <div class="container">
         <div class="row">
@@ -33,12 +30,5 @@
         </div>
     </div>
 </section>
-{% else %}
-
-<!-- If a user is not logged in and sees this page -->
-
-<h1>You have to be logged in in order to view this page.</h1>
-
-{% endif %}
 
 {% endblock %}
