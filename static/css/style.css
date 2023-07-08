@@ -23,6 +23,19 @@ body {
     color: #E84610;
 }
 
+.darkred {
+    color: #7A1616;
+    border-color: #7A1616;
+    background-color: white;
+}
+
+.darkred:hover {
+    color: white;
+    background-color: #7A1616;
+}
+
+
+
 .thin {
     font-weight: 300;
 }

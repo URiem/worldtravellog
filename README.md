@@ -215,9 +215,19 @@ The wireframes for the pages listed in the above [Structure](#structure) section
 
 #### Color Scheme
 
-![Color Scheme](#)
+The site is dominatd by image. In order to not distract from the images, the background and font colors are kept in unobtrusive shades of white and black, sometimes shifting into off-white and shades of grey in order to create subtle division between sections of the page, such as the footer, header and main section of each page, or to create contrast between active and not active links in the navigation bar.
+
+The colors for buttons were choosen using [Canva](https://www.canva.com/). The main color in use is a dark shade of teal (#167A7A) which contrasts well with the white text on the buttons. This is used for all submit buttons. The complementary color of Falu Red (#7A1616) is used for delete buttons. It also allows for a good contrast to white text and contrasts well with the teal of the submit buttons.
+
+In general the color palette is kept in relatively neutral and natural colors so it complements the colors of the many featured images well and does not overpower them.
+
+![Color Scheme](/static/docs/colorscheme.png)
 
 #### Font
+
+Public Sans is used for all text on the site, including headings and links. It is a strong, neutral typeface, that is clearly defined and easily ledgible. It does not steer attention away from the content it is trying to convey.
+
+![Font](/static/docs/publicsan.png)
 
 ## Agile Development
 

@@ -48,7 +48,7 @@
 <div class="container">
     <div class="row">
         <div class=" update-btn-group d-flex flex-row-reverse">
-            <a href="{% url 'delete' logentry.slug %}" class="btn btn-outline-danger me-2" role="button">Delete
+            <a href="{% url 'delete' logentry.slug %}" class="btn btn-outline-danger darkred me-2" role="button">Delete
                 the trip</a>
             <a href="{% url 'update' logentry.slug %}" class="btn btn-signup me-2" role="button">Update the
                 trip</a>
@@ -77,7 +77,7 @@
                                     {% if user.id == logentry.author.id %}
                                     <div class="update-btn-group">
                                         <a href="{% url 'delete_image' img.id %}"
-                                            class="btn btn-outline-danger btn-sm me-1 mt-2" role="button"><i
+                                            class="btn btn-outline-danger darkred btn-sm me-1 mt-2" role="button"><i
                                                 class="fa-solid fa-trash-can"></i></a>
                                         <!-- <a href="#" class="btn btn-signup btn-sm me-1" role="button">Update</a> -->
                                     </div>
