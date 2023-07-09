@@ -34,7 +34,6 @@
     - [Languages](#languages)
     - [Python Modules \& Packages](#python-modulespackages-used)
     - [Frameworks \& Tools](#frameworks--tools)
-    - [Helpful sites](#helpful-sites)
   - [Testing and Validation](#testing-and-validation)
   - [Deployment \& Development](#deployment--development)
   - [Credits](#credits)
@@ -90,14 +89,13 @@ The application was developed taking the Five Planes of User Experience into con
 |                            | 3A  | As an authenticated user, I want to be able to add a log entry and choose privacy and draft/publish setting, so that I can create a trip log that displays as specified on the site.              |
 |                            | 3B  | As an authenticated user, I want to be able to edit and delete my log entries so that I can customize as I see fit.                                                                               |
 |                            | 3C  | As an authenticated user, I want to be able to add images to individual log entries so that I can customize the log entry with this added feature.                                                |
-|                            | 3D  | As an authenticated user, I want to be able to edit and delete the images associated with a particular log entry so that I can customize individual entries.                                      |
+|                            | 3D  | As an authenticated user, I want to be able to delete the images associated with a particular log entry so that I can customize individual entries.                                      |
 | **USER VIEWS**             |     |                                                                                                                                                                                                   |
 |                            | 4A  | As a user, I want to be able to see all publically available log entries so that I can browse through them.                                                                                       |
 |                            | 4B  | As a user, I want to be able to view the detail of all publically available log entries, so I can learn details about the trip entry.                                                             |
 |                            | 4C  | As a user, I want to be able to search the log entries by country, in order to see various trips associated with that country.                                                                    |
-|                            | 4D  | As an authenticated user, I want to be able to view all my personal entries including the current settings on privacy and published/draft status so that I can get a quick overview of my entries |
-|                            | 4E  | As an authenticated user, I want to be able to select and save favorite log entries, so that I can save them and view them in a separate page.                                                    |
-|                            | 4F  | As an authenticated user, I want to see feedback on my interactions with the site functionality, so that I can confirm my intended action was executed correctly.                                 |
+|                            | 4D  | As an authenticated user, I want to be able to view all my personal entries including the current settings on privacy and published/draft status so that I can get a quick overview of my entries |                                                |
+|                            | 4E  | As an authenticated user, I want to see feedback on my interactions with the site functionality, so that I can confirm my intended action was executed correctly.                                 |
 
 #### Target Audience
 
@@ -483,7 +481,7 @@ Every time a user carries out a function on the website, either as part of the a
    A feature to allow the user to retrieve/reset their password if they have lost/forgotten it, is also quite important and should be added for a more complete user experience.
 
 4. **Google Login**
-    Allowing users to register and login using Google would add ease of use for the user.
+   Allowing users to register and login using Google would add ease of use for the user.
 
 5. **Advanced Gallery Functionality**
    The gallery section could be improved in a variety of ways. It would be nice to be able to view the images as a gallery that allows them to be enlarged and skiped through. Also adding functionality to edit image details would be useful.
@@ -506,7 +504,6 @@ Every time a user carries out a function on the website, either as part of the a
 - dj3-cloudinary-storage
 - django-allauth
 - django-crispy-forms
-
 
 ### Frameworks & Tools
 
@@ -633,14 +630,14 @@ Resources and inspiration came from a few sources:
 
 - Especially during the initial setup of the project the Code Institute's 'I Think Therefore I Blog' Django walkthrough project was used to get started with the code.
 - Several past projects were of great help and inspiration to the developer in guiding the implementation of functionality in line with the requirements of PP4 and to reach the MVP stage:
-    - <a href="https://github.com/Kathrin-ddggxh/woohoo-haiku">Woohoo Haiku</a> by Kay Welfare.
-    - <a href="https://github.com/paulie-o74/newsbox86">The Newsbox</a> by Paul Thomas O'Rirodan.
-    - <a href="https://github.com/useriasminna/italianissimo-booking-website">Italianissimo</a> by Iasmina Pal.
+  - <a href="https://github.com/Kathrin-ddggxh/woohoo-haiku">Woohoo Haiku</a> by Kay Welfare.
+  - <a href="https://github.com/paulie-o74/newsbox86">The Newsbox</a> by Paul Thomas O'Rirodan.
+  - <a href="https://github.com/useriasminna/italianissimo-booking-website">Italianissimo</a> by Iasmina Pal.
 - Over the course of the project the following helpful websites were often frequented for troubleshooting:
-    - <a href="https://www.w3schools.com/">W3 Schools</a>
-    - <a href="https://stackoverflow.com">Stack Overflow</a>
-    - <a href="https://developer.mozilla.org/">mdn web docs</a>
-    - <a href="https://docs.djangoproject.com/en/4.2/">Django documentation</a>
+  - <a href="https://www.w3schools.com/">W3 Schools</a>
+  - <a href="https://stackoverflow.com">Stack Overflow</a>
+  - <a href="https://developer.mozilla.org/">mdn web docs</a>
+  - <a href="https://docs.djangoproject.com/en/4.2/">Django documentation</a>
 
 ## Acknowledgements
 
