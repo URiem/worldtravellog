@@ -266,9 +266,9 @@ The application was tested on the following browsers and worked without issues:
 | Static files were not loading in deployed project                                                   | Collect static after deployment.                                                                                             |
 | Database not connected after deplyment                                                              | Heroku had done maintenance on their databases and the database_url variable had changed and needed to be updated in env.py. |
 
-| **Bug**                                                                                                                              | **Fix**                                                                                                                                               |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- | --------------- |
-| Logentry description did not display with paragraphs and linebreaks as orginially intended when form to add the entry was submitted. | Add the `linebreak` filter after the call to display the description of the log entry in the `logentry_deail.html` template: `{{ logentry.description | linebreaks }}`. |
+| **Bug**                                                                                                                              | **Fix**                                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
+| Logentry description did not display with paragraphs and linebreaks as orginially intended when form to add the entry was submitted. | Add the `linebreak` filter after the call to display the description of the log entry in the `logentry_deail.html` template: . |
 
 | The 'Countries' dropdown menu would not populate on all pages. | Add the following line of code to the `context_processors` in the `settings.py` file: `'travellog.views.ctry_items',`. |
 
