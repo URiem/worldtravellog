@@ -19,18 +19,18 @@
 
 # Performance
 
-[Google Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) was used to test the performance of the website.
+[Google Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) was used to test the performance of the website. Due to the heavy presence of images on the site the performance has a tendancy to acchieve a relatively low score, though over the course of a few days of testing, it occasionally scored much better. Accessibility, Best Practises and SEO scored consistently high.
 
 <details>
 <summary>Desktop</summary>
 
 - Home page
 
-  <img src="static/docs/lighthouse_test_mainpage.png" width="60%">
+  <img src="static/docs/lighthousedesktophome.png" width="60%">
 
 - Entry Detail page
 
-  <img src="static/docs/lighthouse_test_entrydetail.png" width="60%">
+  <img src="static/docs/lighthousedesktopdetailview.png" width="60%">
 
 </details>
 
@@ -39,11 +39,11 @@
 
 - Home page
 
-  <img src="static/docs/#.png" width="60%">
+  <img src="static/docs/lighthousemobilhome.png" width="60%">
 
 - Entry Detail page
 
-  <img src="static/docs/#.png" width="60%">
+  <img src="static/docs/lighthousemobildetailview.png" width="60%">
 
 </details>
 
@@ -55,7 +55,7 @@ The [WAVE WebAIM web accessibility evaluation tool](https://wave.webaim.org/) wa
 
 <details>
 <summary>Home page</summary>
-<img src="static/docs/accessibility_test_wave.png" width="30%">
+<img src="static/docs/waveaccessibilityhome.png" width="30%">
 </details>
 
 # Code Validation
@@ -119,7 +119,9 @@ The testing of the `style.css` file resulted in the following outcome:
 
 ## JS Validation
 
-[JSHint](https://jshint.com/) was used to validate the JavaScript/Jquery of the website.
+[JSHint](https://jshint.com/) was used to validate the JavaScript of the website, which consists only of one function at the end of the base.html files.
+
+<img src="static/docs/jshinttesting.png" width="50%">
 
 ## Python Code Validation
 
@@ -203,11 +205,11 @@ BDD, or Behaviour Driven Development, is the process used to test user stories i
 **EPIC: USER VIEWS**
 | ID | User Story | Action/Expected Results | Pass |
 | -- | ---------- | ----------------------- | ---- |
-| 4A | As a user, I want to be able to see all publically available log entries so that I can browse through them. | Here is what I do to make this happen | :white_check_mark: |
-| 4B | As a user, I want to be able to view the detail of all publically available log entries, so I can learn details about the trip entry. | Here is what I do to make this happen | :white_check_mark: |
-| 4C | As a user, I want to be able to search the log entries by country, in order to see various trips associated with that country. | Here is what I do to make this happen | :white_check_mark: |
-| 4D | As an authenticated user, I want to be able to view all my personal entries including the current settings on privacy and published/draft status so that I can get a quick overview of my entries | Here is what I do to make this happen | :white_check_mark: |
-| 4E | As an authenticated user, I want to see feedback on my interactions with the site functionality, so that I can confirm my intended action was executed correctly. | Here is what I do to make this happen | :white_check_mark: |
+| 4A | As a user, I want to be able to see all publically available log entries so that I can browse through them. | Any user can access the home page, on this page all publically available log entries are displayed. They are paginated, so that 8 entries can be seen at any one time, below the 8 entries displayed an arrow will be visible, click on this and the use can browse through and access more entries. | :white_check_mark: |
+| 4B | As a user, I want to be able to view the detail of all publically available log entries, so I can learn details about the trip entry. | On any page that displays log entries, click on the text field below the featured image. A new page opens displaying the detailed information of the trip, including title, year, country, description and an image gallery. | :white_check_mark: |
+| 4C | As a user, I want to be able to search the log entries by country, in order to see various trips associated with that country. | On any page, scroll to the top to access the navigation bar, locate and click the dropdown menu labeled 'Countries', a list of countries will open up, select the desired country, click on it, and a new page will display all entries associated with this country. | :white_check_mark: |
+| 4D | As an authenticated user, I want to be able to view all my personal entries including the current settings on privacy and published/draft status so that I can get a quick overview of my entries | As an authenticated user, scroll to the top of any page to access the navigation bar. Click the link labeled 'My Trips'. A new page will open up displaying all entries for the user, including private entries and drafts. Each trip entry card will display for the user, whether the entry is private or not and whether it has been published or is still a draft. | :white_check_mark: |
+| 4E | As an authenticated user, I want to see feedback on my interactions with the site functionality, so that I can confirm my intended action was executed correctly. | Carry out any interactive functionality on the site, such as creating an account, loging in or out, adding, updating, deleting and entry or an image and a success message will display that confirms the successfull execution of the action. | :white_check_mark: |
 
 ## Automated Testing
 
