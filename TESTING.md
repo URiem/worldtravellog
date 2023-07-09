@@ -12,7 +12,7 @@
   - [JS Validation](#js-validation)
   - [PEP8 Validation](#python-code-validation)
 - [Testing](#testing)
-  - [Manual Testing](#manual-testing-bdd)
+  - [Manual Testing](#manual-testing)
   - [Automated Testing](#automated-testing)
 - [Browser Testing](#browser-testing)
 - [Bugs & Fixes](#bugs-and-fixes)
@@ -244,6 +244,8 @@ A coverage report was generated to determine the percentage of code tested:
 <img src="static/docs/automated_testing_coverage.png">
 
 # Browser Testing
+
+The application was tested on the following browsers and worked without issues:
 
 - Chrome
 - Edge

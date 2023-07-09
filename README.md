@@ -74,7 +74,7 @@ The application was developed taking the Five Planes of User Experience into con
 ### Strategy
 
 | EPIC                       | ID  | User Story                                                                                                                                                                                        |
-| -------------------------- | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| -------------------------- | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --- |
 | **CONTENT AND NAVIGATION** |     |                                                                                                                                                                                                   |
 |                            | 1A  | As a user, I want to see a navigation menu so I can easily movement through the site.                                                                                                             |
 |                            | 1B  | As a user, I want to see relevant information about the site and its content easily so I can decide if I want to register an account                                                              |
@@ -89,12 +89,12 @@ The application was developed taking the Five Planes of User Experience into con
 |                            | 3A  | As an authenticated user, I want to be able to add a log entry and choose privacy and draft/publish setting, so that I can create a trip log that displays as specified on the site.              |
 |                            | 3B  | As an authenticated user, I want to be able to edit and delete my log entries so that I can customize as I see fit.                                                                               |
 |                            | 3C  | As an authenticated user, I want to be able to add images to individual log entries so that I can customize the log entry with this added feature.                                                |
-|                            | 3D  | As an authenticated user, I want to be able to delete the images associated with a particular log entry so that I can customize individual entries.                                      |
+|                            | 3D  | As an authenticated user, I want to be able to delete the images associated with a particular log entry so that I can customize individual entries.                                               |
 | **USER VIEWS**             |     |                                                                                                                                                                                                   |
 |                            | 4A  | As a user, I want to be able to see all publically available log entries so that I can browse through them.                                                                                       |
 |                            | 4B  | As a user, I want to be able to view the detail of all publically available log entries, so I can learn details about the trip entry.                                                             |
 |                            | 4C  | As a user, I want to be able to search the log entries by country, in order to see various trips associated with that country.                                                                    |
-|                            | 4D  | As an authenticated user, I want to be able to view all my personal entries including the current settings on privacy and published/draft status so that I can get a quick overview of my entries |                                                |
+|                            | 4D  | As an authenticated user, I want to be able to view all my personal entries including the current settings on privacy and published/draft status so that I can get a quick overview of my entries |     |
 |                            | 4E  | As an authenticated user, I want to see feedback on my interactions with the site functionality, so that I can confirm my intended action was executed correctly.                                 |
 
 #### Target Audience
@@ -618,7 +618,7 @@ You will need to install all of the packages listed in the requirements file you
 
 All images added by the developer to her own trip entries are owned by the developer. In addition, credit is to be given to the following parties for images used on the main site of this projects:
 
-Images:
+**Images:**
 
 - Hero image of a plane taking off at the Aron Islands is also owned by the developer.
 - Default image used to display log entries without a featured image: <a href="https://unsplash.com/@amyshamblen">Amy Shamblen</a> on <a href="https://unsplash.com/photos/E2qx9Ed2qIQ">Unsplash</a>.
