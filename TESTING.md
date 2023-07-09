@@ -180,10 +180,10 @@ BDD, or Behaviour Driven Development, is the process used to test user stories i
 **EPIC: Content and navigation**
 | ID | User Story | Action/Expected Results | Pass |
 | -- | ---------- | ----------------------- | ---- |
-| 1A | As a user, I want to see a navigation menu so I can easily movement through the site. | Here is what I do to make this happen | :white_check_mark: |
-| 1B | As a user, I want to see relevant information about the site and its content easily so I can decide if I want to register an account |Here is what I do to make this happen | :white_check_mark: |
-| 1C | As a user, I want to see an intitive and visualy pleasing design that matches the intent of the website. | Here is what I do to make this happen | :white_check_mark: |
-| 1D | As a user, I can access different pages on the site, so that I can navigate smoothy through all the functionality of the site. | Here is what I do to make this happen | :white_check_mark: |
+| 1A | As a user, I want to see a navigation menu so I can easily movement through the site. | A user accessing any page on the site will see a navigation bar in the header with links to the core pages of the site. Click on a desired link and a new page opens. On a mobile devise or other small screens a burger menu can be clicked and the menu will appear. | :white_check_mark: |
+| 1B | As a user, I want to see relevant information about the site and its content easily so I can decide if I want to register an account | For unregistered users who access the home page a hero image and banner with a call to action succinctly invokes the purpose of the site. Trip entries displayed in a list below the hero image illustrate the purpose. | :white_check_mark: |
+| 1C | As a user, I want to see an intuitive and visualy pleasing design that matches the intent of the website. | Access any of the core pages of the site. They will display a list of relevant log entries in uncluttered and clear styling, illustrating the intent of the page. | :white_check_mark: |
+| 1D | As a user, I can access different pages on the site, so that I can navigate smoothy through all the functionality of the site. | Any user can scroll to the top of any page to access the header. In the header clear navigation options are displayed to the core pages of the site. | :white_check_mark: |
 
 **EPIC: REGISTRATION AND USER**
 | ID | User Story | Action/Expected Results | Pass |
