@@ -186,21 +186,24 @@ BDD, or Behaviour Driven Development, is the process used to test user stories i
 | 1D | As a user, I can access different pages on the site, so that I can navigate smoothy through all the functionality of the site. | Here is what I do to make this happen | :white_check_mark: |
 
 **EPIC: REGISTRATION AND USER**
-
+| ID | User Story | Action/Expected Results | Pass |
+| -- | ---------- | ----------------------- | ---- |
 | 2A | As a user, I want to be able to register a profile, so I can access the main functionality of the site. | Here is what I do to make this happen | :white_check_mark: |
 | 2B | As a user, I want to be able to log into my account easily, so I can access my account information. |Here is what I do to make this happen | :white_check_mark: |
 | 2C | As a user, I want to be able to logout of my account with ease to protect my account information. | Here is what I do to make this happen | :white_check_mark: |
 | 2D | As a user, I want to be able to delete my account information or request account deletion from the website owner. | Here is what I do to make this happen | :white_check_mark: |
 
 **EPIC: MANAGING LOG ENTRIES**
-
+| ID | User Story | Action/Expected Results | Pass |
+| -- | ---------- | ----------------------- | ---- |
 | 3A | As an authenticated user, I want to be able to add a log entry and choose privacy and draft/publish setting, so that I can create a trip log that displays as specified on the site. | Here is what I do to make this happen | :white_check_mark: |
 | 3B | As an authenticated user, I want to be able to edit and delete my log entries so that I can customize as I see fit. | Here is what I do to make this happen | :white_check_mark: |
 | 3C | As an authenticated user, I want to be able to add images to individual log entries so that I can customize the log entry with this added feature. | Here is what I do to make this happen | :white_check_mark: |
 | 3D | As an authenticated user, I want to be able to delete the images associated with a particular log entry so that I can customize individual entries. | Here is what I do to make this happen | :white_check_mark: |
 
 **EPIC: USER VIEWS**
-
+| ID | User Story | Action/Expected Results | Pass |
+| -- | ---------- | ----------------------- | ---- |
 | 4A | As a user, I want to be able to see all publically available log entries so that I can browse through them. | Here is what I do to make this happen | :white_check_mark: |
 | 4B | As a user, I want to be able to view the detail of all publically available log entries, so I can learn details about the trip entry. | Here is what I do to make this happen | :white_check_mark: |
 | 4C | As a user, I want to be able to search the log entries by country, in order to see various trips associated with that country. | Here is what I do to make this happen | :white_check_mark: |
