@@ -255,9 +255,21 @@ The application was tested on the following browsers and worked without issues:
 
 # Bugs and Fixes
 
+| **Bug**                                                                                             | **Fix**                                                                                                                      |
+| --------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| The logo would not stay in the footer when changing screen sizes.                                   | Removing redundant classes                                                                                                   |
+| When scrolling down I could see the footer halfway up the screen behind content.                    | Remove the html height - 80% in css                                                                                          |
+| A search term was only searching the title.                                                         | I used Q \_\_icontains and the pipe to signify or and added name and content.                                                |
+| When trying to like a post, the comment form was saying please fill in this field.                  | The if else statement had to have the final part moved outside the postLike form.                                            |
+| Message container was moving the hero image down when it appeared and not sitting on top of content | Add css and specifically z index and position to achieve this.                                                               |
+| The categories drop down was not populating                                                         | Add correct template literals within the for loop. As well as adding the data-bs-toggle.                                     |
+| Static files were not loading in deployed project                                                   | Collect static after deployment.                                                                                             |
+| Database not connected after deplyment                                                              | Heroku had done maintenance on their databases and the database_url variable had changed and needed to be updated in env.py. |
+
 | **Bug**                                                                                                                              | **Fix**                                                                                                                                               |
 | ------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- | --------------- |
 | Logentry description did not display with paragraphs and linebreaks as orginially intended when form to add the entry was submitted. | Add the `linebreak` filter after the call to display the description of the log entry in the `logentry_deail.html` template: `{{ logentry.description | linebreaks }}`. |
-| The 'Countries' dropdown menu would not populate on all pages.                                                                       | Add the following line of code to the `context_processors` in the `settings.py` file: `'travellog.views.ctry_items',`.                                |
+
+| The 'Countries' dropdown menu would not populate on all pages. | Add the following line of code to the `context_processors` in the `settings.py` file: `'travellog.views.ctry_items',`. |
 
 :arrow_left: [Return to the README](README.md)
