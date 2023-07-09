@@ -273,17 +273,40 @@ All functionality and development of this project was managed through GitHub iss
   - Add content to README: UX, Deployment and Development
   - Create separate TESTING file with layout
 
-- Sprint 4: Refine and customize the CSS including footer and header - June 17th, 2023 to present
+- Sprint 4: Refine and customize the CSS start testing - June 17th, 2023 to July 3rd, 2023
 
-  - Style banner, add call to action to banner
+  - Add Deployment and Development information to README
+  - Style banner/hero image, add call to action to banner
   - Style header and footer
   - Add and finalize display of success-messages
-
+  - Refine styling of image gallery section
+  - First Lighthouse testing
+  - Fixes based on Lighthouse testing
+  - Refine styling of Login and Signup Forms
+  - Add wireframes to README
+  - Set automated view testing
+  - Add 404.html pages
+  - Add functionality to add/approve countries
+  - Add functionality to sort entries by country category
   - MVP reached
 
-- Sprint 5: Testing
+- Sprint 5: Testing, Final revisions to code and documentation - July 4th to
 
-- Sprint 6: Final revisions to code and documentation
+  - Set up view, model and form testing
+  - install coverage package and compile coverage report
+  - HTML testing, fix errors and warnings
+  - CSS testing
+  - Python testing, fix warnings
+  - Delete commented code
+  - Add test results and images to TESTING.md
+  - Add content to features section in README
+  - Uninstall unnecessary packages (summernote)
+  - Add LoginRequiredMixin to the relevant views
+  - Carry out final revisions
+  - Finalize README.md and TESTING.md
+  - Proofread code and documentation
+  - Set DEBUG to False
+  - Final deploy
 
 ## Existing Features
 
@@ -363,7 +386,7 @@ Two distinct views for a registered and unregistered user. Unregistered user see
 
 **My Log Entries**
 
-- Allows registered users to see their personal log entries including those set to private:
+- Allows registered users to see their personal log entries including those set to private and those saved as a draft.
 
 ![My Log Entries](/static/docs/viewuserentries.png)
 
@@ -384,7 +407,11 @@ The Log Entry Detail view allows both registered and unregistered users to view 
 
 Registered users will have access to buttons that allow them to update or delete an entry, a form that allows them to add more images or delete images. These features are absent on the detail view if users are not logged in or if they are not the author of the entry.
 
+- View for Registered users with edit/delete buttons
+
 ![Log Detail View Registered User and Author](/static/docs/logdetailview.png)
+
+- View for Unregistered users without the button features
 
 ![Log Detail View Unregistered User or not the Author](/static/docs/detailviewunreg.png)
 
@@ -455,7 +482,10 @@ Every time a user carries out a function on the website, either as part of the a
 3. **Retrieve Password Feature**
    A feature to allow the user to retrieve/reset their password if they have lost/forgotten it, is also quite important and should be added for a more complete user experience.
 
-4. **Advance Gallery Functionality**
+4. **Google Login**
+    Allowing users to register and login using Google would add ease of use for the user.
+
+5. **Advanced Gallery Functionality**
    The gallery section could be improved in a variety of ways. It would be nice to be able to view the images as a gallery that allows them to be enlarged and skiped through. Also adding functionality to edit image details would be useful.
 
 ## Technologies Used
@@ -476,7 +506,7 @@ Every time a user carries out a function on the website, either as part of the a
 - dj3-cloudinary-storage
 - django-allauth
 - django-crispy-forms
-- and more ...
+
 
 ### Frameworks & Tools
 
@@ -490,14 +520,7 @@ Every time a user carries out a function on the website, either as part of the a
 - Lucid Chart - used for creating the ERD and Flowchart.
 - Google Fonts - used to import fonts for the website.
 - Font Awesome - used for icons features on the site.
-
-### Helpful sites
-
-Several sites came in handy while developing the code to help with problem solving:
-
-- <a href="https://www.w3schools.com/">W3 Schools</a>
-- <a href="https://stackoverflow.com">Stack Overflow</a>
-- <a href="https://developer.mozilla.org/">mdn web docs</a>
+- Canva - used to generate the colour scheme.
 
 ## Testing and Validation
 
@@ -596,22 +619,35 @@ You will need to install all of the packages listed in the requirements file you
 
 ### Media
 
-Images not referenced below are owned by the developer.
+All images added by the developer to her own trip entries are owned by the developer. In addition, credit is to be given to the following parties for images used on the main site of this projects:
 
 Images:
 
-- Background image by <a href="https://unsplash.com/@drwmrk">Andrew Stutesman</a> on <a href="https://unsplash.com/photos/l68Z6eF2peA">Unsplash</a>
+- Hero image of a plane taking off at the Aron Islands is also owned by the developer.
+- Default image used to display log entries without a featured image: <a href="https://unsplash.com/@amyshamblen">Amy Shamblen</a> on <a href="https://unsplash.com/photos/E2qx9Ed2qIQ">Unsplash</a>.
+- Logo is taken from <a href="https://www.pngegg.com/en/png-nipeb">PNG EGG</a>.
 
 ### Code
 
 Resources and inspiration came from a few sources:
 
-Django Image Gallery Website Step by Step Tutorial <https://www.youtube.com/watch?v=eOM4e6N7fuc>
+- Especially during the initial setup of the project the Code Institute's 'I Think Therefore I Blog' Django walkthrough project was used to get started with the code.
+- Several past projects were of great help and inspiration to the developer in guiding the implementation of functionality in line with the requirements of PP4 and to reach the MVP stage:
+    - <a href="https://github.com/Kathrin-ddggxh/woohoo-haiku">Woohoo Haiku</a> by Kay Welfare.
+    - <a href="https://github.com/paulie-o74/newsbox86">The Newsbox</a> by Paul Thomas O'Rirodan.
+    - <a href="https://github.com/useriasminna/italianissimo-booking-website">Italianissimo</a> by Iasmina Pal.
+- Over the course of the project the following helpful websites were often frequented for troubleshooting:
+    - <a href="https://www.w3schools.com/">W3 Schools</a>
+    - <a href="https://stackoverflow.com">Stack Overflow</a>
+    - <a href="https://developer.mozilla.org/">mdn web docs</a>
+    - <a href="https://docs.djangoproject.com/en/4.2/">Django documentation</a>
 
 ## Acknowledgements
 
 I would like to thank:
 
-- My mentor Brian O'Hare for his feedback, advice, guidance and support.
-- Cohort facilitator Paul Thomas O'Rirodan, for his general advice on the management of the course and pointing us to a plethora of resources to help with the projects.
+- My mentor Brian O'Hare for his feedback, advice, guidance and support on this and the previous three projects!
+- Cohort facilitators Kay Welfare and Paul Thomas O'Rirodan, for their general advice on the management of the course, pointing us to a plethora of resources to help with the projects, and always being there to answer questions.
+- The invaluable Slack community with 'the usual suspects' that have come through numerous times to help troubleshoot bugs and overcome implementation hurdles.
+- The tutors at tutor support which I, surprisingly, did not need to contact much during this project (the 'Slackers' were just so on the ball!) but when I did they were always quick and efficient at resolving my issues.
 - My husband, Matt, for his encouragement and support along the way.
