@@ -121,7 +121,7 @@ The testing of the `style.css` file resulted in the following outcome:
 
 [JSHint](https://jshint.com/) was used to validate the JavaScript of the website, which consists only of one function at the end of the base.html files.
 
-<img src="static/docs/jshinttesting.png" width="50%">
+<img src="static/docs/jshinttesting.png" width="80%">
 
 ## Python Code Validation
 
@@ -254,5 +254,10 @@ The application was tested on the following browsers and worked without issues:
 - Waterfox
 
 # Bugs and Fixes
+
+| **Bug**                                                                                                                              | **Fix**                                                                                                                                               |
+| ------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- | --------------- |
+| Logentry description did not display with paragraphs and linebreaks as orginially intended when form to add the entry was submitted. | Add the `linebreak` filter after the call to display the description of the log entry in the `logentry_deail.html` template: `{{ logentry.description | linebreaks }}`. |
+| The 'Countries' dropdown menu would not populate on all pages.                                                                       | Add the following line of code to the `context_processors` in the `settings.py` file: `'travellog.views.ctry_items',`.                                |
 
 :arrow_left: [Return to the README](README.md)
