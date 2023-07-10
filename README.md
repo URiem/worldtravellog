@@ -217,7 +217,7 @@ The site is dominated by images. To not distract from the images, the background
 
 The colors for buttons were chosen using [Canva](https://www.canva.com/). The main color in use is a dark shade of teal (#167A7A) which contrasts well with the white text on the buttons. This is used for all submit buttons. The complementary color of Falu Red (#7A1616) is used for delete buttons. It also allows for a good contrast to white text and contrasts well with the teal of the submit buttons.
 
-In general, the color palette is kept in relatively neutral and natural colors so it complements the colors of the many featured images well and does not overpower them.
+In general, the color palette is kept in relatively neutral so it complements the colors of the many featured images well and does not overpower them.
 
 ![Color Scheme](/static/docs/colorscheme.png)
 
@@ -288,7 +288,7 @@ The development of this project was managed through GitHub issues, milestones, a
   - Add functionality to sort entries by country category
   - MVP reached
 
-- Sprint 5: Testing, Final revisions to code and documentation - July 4th to
+- Sprint 5: Testing, Final revisions to code and documentation - July 4th to July 10th, 2023
 
   - Set up view, model, and form testing
   - install coverage package and compile coverage report
@@ -310,7 +310,7 @@ The development of this project was managed through GitHub issues, milestones, a
 
 ### Header and Navigation
 
-Navbar with logo, page name, and links. Different links are visible for unauthenticated users, authenticated users, and the admin user. Active links are rendered in black as opposed to the default grey. On small to medium screens the navigation links are displayed as a collapsible burger menu. A dropdown menu for country categories is available on all screen sizes.
+Navbar with logo, page name, and links. Different links are visible for unauthenticated users and authenticated. Active links are rendered in black as opposed to the default grey. On small to medium screens the navigation links are displayed as a collapsible burger menu. A dropdown menu for country categories is available on all screen sizes.
 
 - **Default navbar for unregistered user**
 
@@ -319,10 +319,6 @@ Navbar with logo, page name, and links. Different links are visible for unauthen
 - **Navbar for registered user**
 
 <img src="static/docs/navbarreguser.png" width="60%">
-
-- **Navbar for admin user**
-
-<img src="static/docs/adminnavbar.png" width="60%">
 
 - **Navbar on mobile**
 
@@ -471,19 +467,19 @@ Every time a user carries out a function on the website, either as part of the a
 
 ## Future Features
 
-1. **List of Favorites Feature**
+1. **List of Favorites Feature** -
    Creating functionality that lets the user add individual, publically available posts to a list of favorite Log Entries which can then be displayed in a 'My Favorites' View. Implementing this would involve adding a 'Favorite' model to models.py and then creating a view and template that displays the list based on the authenticated user.
 
-2. **Delete Account Feature**
+2. **Delete Account Feature** -
    To give users ultimate control over their data a feature should be added that allows users to delete their account. A tutorial on how to do this can be found in this YouTube video <a href="https://www.youtube.com/watch?v=ke1IIHDwCIk">Django Update & Delete Account Tutorial</a>.
 
-3. **Retrieve Password Feature**
+3. **Retrieve Password Feature** -
    A feature to allow the user to retrieve/reset their password if they have lost/forgotten it is also quite important and should be added for a more complete user experience.
 
-4. **Google Login**
+4. **Google Login** -
    Allowing users to register and log in using Google would add ease of use for the user.
 
-5. **Advanced Gallery Functionality**
+5. **Advanced Gallery Functionality** -
    The gallery section could be improved in a variety of ways. It would be nice to be able to view the images as a gallery that allows them to be enlarged and skipped through. Also adding functionality to edit image details would be useful.
 
 ## Technologies Used
@@ -516,7 +512,7 @@ Several core packages were used, a few of the most important ones are listed her
 - Cloudinary - is a cloud storage solution for website media and other static files. It also allows for the manipulation and optimization of media delivery.
 - Bootstrap - used throughout the site for responsiveness, layout, and predefined style elements.
 - Balsamiq - used to create the project wireframes.
-- Lucid Chart - used for creating the ERD and Flowchart.
+- Lucid Chart - used for creating the ERD.
 - Google Fonts - used to import fonts for the website.
 - Font Awesome - used for icon features on the site.
 - Canva - used to generate the color scheme.
@@ -646,7 +642,7 @@ Resources and inspiration came from a few sources:
 I would like to thank:
 
 - My mentor Brian O'Hare for his feedback, advice, guidance, and support on this and the previous three projects!
-- Cohort facilitators Kay Welfare and Paul Thomas O'Rirodan, for their general advice on the management of the course, pointing us to a plethora of resources to help with the projects, and always being there to answer questions.
+- Cohort facilitators Kay Welfare and Paul Thomas O'Rirodan, for their general advice on the management of the course, pointing us to a plethora of resources to help with the projects, and always being there to answer questions during the lovely Wednesday morning cohort chats.
 - The invaluable Slack community with 'the usual suspects' that have come through numerous times to help troubleshoot bugs and overcome implementation hurdles.
 - The tutors at tutor support which I, surprisingly, did not need to contact much during this project (the 'Slackers' were just so on the ball!) but when I did they were always quick and efficient at resolving my issues.
 - My husband, Matt, for his encouragement and support along the way.

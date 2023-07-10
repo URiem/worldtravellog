@@ -3,8 +3,6 @@ from django.urls import path
 from django.contrib import admin
 
 urlpatterns = [
-    path('approve_countries/', views.CountryApproveList.as_view(),
-         name='approve_countries'),
     path('add_logentry/', views.AddLogentry.as_view(), name='add_logentry'),
     path('add_country/', views.AddCountry.as_view(), name='add_country'),
     path('countries/<country>/', views.CountryView.as_view(),

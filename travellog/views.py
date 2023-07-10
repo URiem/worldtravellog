@@ -12,7 +12,7 @@ from .forms import LogentryForm, ImageForm, CountryForm
 
 class LogentryList(generic.ListView):
     """
-    Displays all objects of the Logentry model that are set by the user
+    Displays all objects of the Logentry model that are marked
     as 'published' and 'public'
     """
     model = Logentry
@@ -22,28 +22,8 @@ class LogentryList(generic.ListView):
     paginate_by = 8
 
 
-class CountryApproveList(LoginRequiredMixin, generic.ListView):
-    """
-    List based view of countries that need approval
-    """
-
-    model = Country
-    queryset = Country.objects.filter(approved=False)
-    # form_class = CountryApproveForm
-    template_name = 'approve_countries.html'
-    # success_url = reverse_lazy('home')
-
-    # def form_valid(self, form):
-    #     form.instance.author = self.request.user
-    #     msg = "The countries were approved successfully"
-    #     messages.add_message(self.request, messages.SUCCESS, msg)
-    #     return super(UpdateView, self).form_valid(form)
-
-    # def test_func(self):
-    #     return self.request.user.is_superuser
-
-
 def ctry_items(request):
+    '''list of approved country items to be used in drop-down menu'''
     ctry_items = Country.objects.filter(approved=True)
     context = {
         "ctry_items": ctry_items,
@@ -210,7 +190,7 @@ def delete_image(request, pk):
 
 class CountryView(View):
     """
-    List based view of to display log entries of a specific country
+    List based view to display log entries of a specific country
     """
     paginate_by = 8
 
