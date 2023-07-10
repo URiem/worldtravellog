@@ -61,7 +61,7 @@ A `User` Model is provided by Django, and a `Logentry Model` stores the details 
 
 The `Logentry` and `Image` models are based on the blog walkthrough project by Code Institute. However, the models were significantly altered to fit the needs of this project. The `Logentry` model has added fields of 'year', 'privacy', and 'country', but the field of 'likes' was deleted. It also has an added helper method to slugify the log entry title for non-admin users. The second model from the blog walkthrough, which was designed to allow a user to add comments to a blog, has been adapted here to become a model called `Image`, which allows the author of a trip entry to add images to an image gallery below their entry. There is no admin approval needed for adding these images.
 
-As required by the assessment criteria for this project, one custom model (the `Country` model) was added which was not covered by Code Institute's walkthrough. It is used to allow users to add more country categories (or other appropriate regions) which are then submitted for approval by the administrator.
+As required by the assessment criteria for this project, one custom model (the `Country` model) was added which was not covered by Code Institute's walkthrough. It is used to allow users to add more country categories (or other appropriate regions) which are then submitted for approval by the administrator. The administrator has log in and access the Django admin panel to approve the submitted country categories.
 
 **Future Models**
 
