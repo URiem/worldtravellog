@@ -19,7 +19,7 @@
 
 # Performance
 
-[Google Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) was used to test the performance of the website. Due to the heavy presence of images on the site the performance has a tendancy to acchieve a relatively low score, though over the course of a few days of testing, it occasionally scored much better. Accessibility, Best Practises and SEO scored consistently high.
+[Google Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) was used to test the performance of the website. Due to the heavy presence of images on the site, the performance tends to achieve a relatively low score, though over a few days of testing, it occasionally scored much better. Accessibility, Best Practices, and SEO scored consistently high.
 
 <details>
 <summary>Desktop</summary>
@@ -66,7 +66,7 @@ The [W3C Markup Validation Service](https://validator.w3.org/) was used to valid
 
 **HTML results:**
 
-The following pages where tested and no errors were detected on any of the pages.
+The following pages were tested and no errors were detected on any of the pages.
 
 <details>
 <summary>Home page</summary>
@@ -125,9 +125,9 @@ The testing of the `style.css` file resulted in the following outcome:
 
 ## Python Code Validation
 
-The python code was tested using the [CI Python Linter](https://pep8ci.herokuapp.com/).
+The Python code was tested using the [CI Python Linter](https://pep8ci.herokuapp.com/).
 
-**Python testing results Travellog App:**
+**Python testing results for Travellog App:**
 
 <details>
 <summary>models.py</summary>
@@ -182,40 +182,40 @@ BDD, or Behaviour Driven Development, is the process used to test user stories i
 **EPIC: Content and navigation**
 | ID | User Story | Action/Expected Results | Pass |
 | -- | ---------- | ----------------------- | ---- |
-| 1A | As a user, I want to see a navigation menu so I can easily movement through the site. | A user accessing any page on the site will see a navigation bar in the header with links to the core pages of the site. Click on a desired link and a new page opens. On a mobile devise or other small screens a burger menu can be clicked and the menu will appear. | :white_check_mark: |
+| 1A | As a user, I want to see a navigation menu so I can easily move through the site. | A user accessing any page on the site will see a navigation bar in the header with links to the core pages of the site. Click on a desired link and a new page opens. On a mobile device or other small screens, a burger menu can be clicked and the menu will appear. | :white_check_mark: |
 | 1B | As a user, I want to see relevant information about the site and its content easily so I can decide if I want to register an account | For unregistered users who access the home page a hero image and banner with a call to action succinctly invokes the purpose of the site. Trip entries displayed in a list below the hero image illustrate the purpose. | :white_check_mark: |
-| 1C | As a user, I want to see an intuitive and visualy pleasing design that matches the intent of the website. | Access any of the core pages of the site. They will display a list of relevant log entries in uncluttered and clear styling, illustrating the intent of the page. | :white_check_mark: |
-| 1D | As a user, I can access different pages on the site, so that I can navigate smoothy through all the functionality of the site. | Any user can scroll to the top of any page to access the header. In the header clear navigation options are displayed to the core pages of the site. The site is clearly divided into pages that perform distinctly different functionalities. | :white_check_mark: |
+| 1C | As a user, I want to see an intuitive and visually pleasing design that matches the intent of the website. | Access any of the core pages of the site. They will display a list of relevant log entries in uncluttered and clear styling, illustrating the intent of the page. | :white_check_mark: |
+| 1D | As a user, I can access different pages on the site so that I can navigate smoothly through all the functionality of the site. | Any user can scroll to the top of any page to access the header. In the header, clear navigation options to the core pages of the site are displayed. The site is divided into pages that perform distinctly different functionalities. | :white_check_mark: |
 
 **EPIC: REGISTRATION AND USER**
 | ID | User Story | Action/Expected Results | Pass |
 | -- | ---------- | ----------------------- | ---- |
 | 2A | As a user, I want to be able to register a profile, so I can access the main functionality of the site. | An unregistered user will see a 'Register' link in the navigation bar when scrolling to the top of the home page, click on this and a page opens which allows the user to register an account. | :white_check_mark: |
 | 2B | As a user, I want to be able to log into my account easily, so I can access my account information. | An unregistered user will see a 'Login' link in the navigation bar when scrolling to the top of the home page, click on this and a page opens which allows the user to log in. | :white_check_mark: |
-| 2C | As a user, I want to be able to logout of my account with ease to protect my account information. | A registered user will see a 'Log out' link in the navigation bar when scrolling to the top of the home page, click on this and a page opens which will request confirmation from the user to log out. | :white_check_mark: |
+| 2C | As a user, I want to be able to log out of my account with ease to protect my account information. | A registered user will see a 'Log out' link in the navigation bar when scrolling to the top of the home page, click on this and a page opens which will request confirmation from the user to log out. | :white_check_mark: |
 
 **EPIC: MANAGING LOG ENTRIES**
 | ID | User Story | Action/Expected Results | Pass |
 | -- | ---------- | ----------------------- | ---- |
-| 3A | As an authenticated user, I want to be able to add a log entry and choose privacy and draft/publish setting, so that I can create a trip log that displays as specified on the site. | As an authenticated user, I can access a link in the navigation bar called 'Add a Trip', click on this and a page will open that displays a form with several fields including privacy and publish/draft choices and a 'submit' button, allowing the user to add and display a log entry to their account. | :white_check_mark: |
-| 3B | As an authenticated user, I want to be able to edit and delete my log entries so that I can customize as I see fit. | An authenticated user can click on 'My Trips' in the navigation bar, locate the entry they wish to edit, click on it, to open the entry in the detail view. Here the user will be able to see two buttons under the entry description, one to update and one to delete the view. Click on the relevant choice and either a form will be displayed in a new page allowing the user to edit the entry information, or a confirmation screen is displayed requesting confirmation to delete the entry from the user. | :white_check_mark: |
-| 3C | As an authenticated user, I want to be able to add images to individual log entries so that I can customize the log entry with this added feature. | An authenticated user can click on 'My Trips' in the navigation bar, locate the entry they wish to add images to, click on it, to open the entry in the detail view. At the bottom of the entry a form will be displayed allowing the user to add images to the specific log entry. | :white_check_mark: |
-| 3D | As an authenticated user, I want to be able to delete the images associated with a particular log entry so that I can customize individual entries. | An authenticated user can click on 'My Trips' in the navigation bar, locate the entry the images of which they wish edit, click on it, to open the entry in the detail view. Each image in the Trip Gallery will have a small wastebasket icon next to the caption of the image, which the user can click to delete the image. | :white_check_mark: |
+| 3A | As an authenticated user, I want to be able to add a log entry and choose privacy and draft/publish settings so that I can create a trip log that displays as specified on the site. | As an authenticated user, I can access a link in the navigation bar called 'Add a Trip', click on this, and a page will open that displays a form with several fields including privacy and publish/draft choices and a 'submit' button, allowing the user to add and display a log entry to their account. | :white_check_mark: |
+| 3B | As an authenticated user, I want to be able to edit and delete my log entries so that I can customize them as I see fit. | An authenticated user can click on 'My Trips' in the navigation bar, locate the entry they wish to edit, click on it, to open the entry in the detail view. Here the user will be able to see two buttons under the entry description, one to update and one to delete the view. Click on the relevant choice and either a form will be displayed in a new page allowing the user to edit the entry information, or a confirmation screen is displayed requesting confirmation to delete the entry from the user. | :white_check_mark: |
+| 3C | As an authenticated user, I want to be able to add images to individual log entries so that I can customize the log entry with this added feature. | An authenticated user can click on 'My Trips' in the navigation bar, locate the entry they wish to add images to, click on it, to open the entry in the detail view. At the bottom of the log entry, a form will be displayed allowing the user to add images to the specific log entry. | :white_check_mark: |
+| 3D | As an authenticated user, I want to be able to delete the images associated with a particular log entry so that I can customize individual entries. | An authenticated user can click on 'My Trips' in the navigation bar, locate the entry the images of which they wish to edit, and click on it, to open the entry in the detail view. Each image in the Trip Gallery will have a small wastebasket icon next to the caption of the image, which the user can click to delete the image. | :white_check_mark: |
 
 **EPIC: USER VIEWS**
 | ID | User Story | Action/Expected Results | Pass |
 | -- | ---------- | ----------------------- | ---- |
-| 4A | As a user, I want to be able to see all publically available log entries so that I can browse through them. | Any user can access the home page, on this page all publically available log entries are displayed. They are paginated, so that 8 entries can be seen at any one time, below the 8 entries displayed an arrow will be visible, click on this and the use can browse through and access more entries. | :white_check_mark: |
-| 4B | As a user, I want to be able to view the detail of all publically available log entries, so I can learn details about the trip entry. | On any page that displays log entries, click on the text field below the featured image. A new page opens displaying the detailed information of the trip, including title, year, country, description and an image gallery. | :white_check_mark: |
-| 4C | As a user, I want to be able to search the log entries by country, in order to see various trips associated with that country. | On any page, scroll to the top to access the navigation bar, locate and click the dropdown menu labeled 'Countries', a list of countries will open up, select the desired country, click on it, and a new page will display all entries associated with this country. | :white_check_mark: |
-| 4D | As an authenticated user, I want to be able to view all my personal entries including the current settings on privacy and published/draft status so that I can get a quick overview of my entries | As an authenticated user, scroll to the top of any page to access the navigation bar. Click the link labeled 'My Trips'. A new page will open up displaying all entries for the user, including private entries and drafts. Each trip entry card will display for the user, whether the entry is private or not and whether it has been published or is still a draft. | :white_check_mark: |
-| 4E | As an authenticated user, I want to see feedback on my interactions with the site functionality, so that I can confirm my intended action was executed correctly. | Carry out any interactive functionality on the site, such as creating an account, loging in or out, adding, updating, deleting and entry or an image and a success message will display that confirms the successfull execution of the action. | :white_check_mark: |
+| 4A | As a user, I want to be able to see all publically available log entries so that I can browse through them. | Any user can access the home page, on this page, all publically available log entries are displayed. They are paginated, so that 8 entries can be seen at any one time, below the 8 entries displayed an arrow will be visible, click on this, and the user can browse through and access more entries. | :white_check_mark: |
+| 4B | As a user, I want to be able to view the detail of all publically available log entries, so I can learn details about the trip entry. | On any page that displays log entries, click on the text field below the featured image. A new page opens, displaying the detailed information about the trip, including title, year, country, description, and an image gallery. | :white_check_mark: |
+| 4C | As a user, I want to be able to search the log entries by country, to see various trips associated with that country. | On any page, scroll to the top to access the navigation bar, locate and click the dropdown menu labeled 'Countries', a list of countries will open up, select the desired country, click on it, and a new page will display all entries associated with this country. | :white_check_mark: |
+| 4D | As an authenticated user, I want to be able to view all my entries including the current settings on privacy and published/draft status so that I can get a quick overview of my entries | As an authenticated user, scroll to the top of any page to access the navigation bar. Click the link labeled 'My Trips'. A new page will open up displaying all entries for the user, including private entries and drafts. Each trip entry card will display for the user, whether the entry is private or not and whether it has been published or is still a draft. | :white_check_mark: |
+| 4E | As an authenticated user, I want to see feedback on my interactions with the site functionality so that I can confirm my intended action was executed correctly. | Carry out any interactive functionality on the site, such as creating an account, logging in or out, adding, updating, deleting an entry or an image, and a success message will display that confirms the successful execution of the action. | :white_check_mark: |
 
 ## Automated Testing
 
-Based on testing guidance and instruction on the Code Institute LMS 'Hello Django' walkthrough some automated testing for the project was carried out. Three separate files where used `test_models.py` to test some aspects of the models, `test_views.py` to test aspects of the views, and `test_forms.py` to test the forms.
+Based on testing guidance and instruction on the Code Institute LMS 'Hello Django' walkthrough some automated testing for the project was carried out. Three separate files were used `test_models.py` to test some aspects of the models, `test_views.py` to test aspects of the views, and `test_forms.py` to test the forms.
 
-In addition the following website were used for guidance and trouble shooting on how to implement the automated testing:
+In addition, the following websites were used for guidance and troubleshooting on how to implement the automated testing:
 
 - https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Testing
 - https://www.valentinog.com/blog/testing-modelform/
@@ -255,14 +255,14 @@ The application was tested on the following browsers and worked without issues:
 
 # Bugs and Fixes
 
-| **Bug**                                                                                                                                                      | **Fix**                                                                                                                                           |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Logentry description did not display with paragraphs and linebreaks as orginially intended when form to add the entry was submitted.                         | Add the `linebreak` filter after the call to display the description of the log entry in the `logentry_detail.html` template.                     |
-| The 'Countries' dropdown menu would not populate on all pages.                                                                                               | Add the following line of code to the `context_processors` in the `settings.py` file: `'travellog.views.ctry_items',`.                            |
-| This table of bugs and fixes was not displaying correctly.                                                                                                   | I had to delete the line of code illustrating the added filter used to display the logentry description because it contained a vertical line/bar. |
-| Add_logentry page was displaying for unregistered users who accessed it with the url directly. On submitting the form a 500 error was raised.                | Add LoginRequiredMixin to all views that should be accessible only to users who are logged in.                                                    |
-| Column width was changed to 4 entries per row on large screens, but this mean that the second row only displayed 2 entries and then paginated to a new page. | Pagination was set to 8, instead of the original 6 from the Code Institute Blog walkthrough.                                                      |
-| Slug was not automatically created when submitting the log entry form.                                                                                       | Added the helper method `save` to slugify and save the slug.                                                                                      |
-| The 'Excerpt' field in the LogEntryForm felt big and clunky for its intended purpose.                                                                        | Changed it from a `Textarea` to `TextInput` in the `widgets` section of the `LogentryForm`.                                                       |
+| **Bug**                                                                                                                                                      | **Fix**                                                                                                                                            |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Logentry description did not display as paragraphs and with linebreaks as originally intended when the form to add the entry was submitted.                  | Add the `linebreak` filter after the call to display the description of the log entry in the `logentry_detail.html` template.                      |
+| The 'Countries' dropdown menu would not populate on all pages.                                                                                               | Add the following line of code to the `context_processors` in the `settings.py` file: `'travellog.views.ctry_items',`.                             |
+| This table of bugs and fixes was not displaying correctly.                                                                                                   | I had to delete the line of code illustrating the added filter used to display the log entry description because it contained a vertical line/bar. |
+| Add_logentry page was displaying for unregistered users who accessed it with the URL directly. On submitting the form a 500 error was raised.                | Add LoginRequiredMixin to all views that should be accessible only to users who are logged in.                                                     |
+| Column width was changed to 4 entries per row on large screens, but this mean that the second row only displayed 2 entries and then paginated to a new page. | Pagination was set to 8, instead of the original 6 from the Code Institute Blog walkthrough.                                                       |
+| Slug was not automatically created when submitting the log entry form.                                                                                       | Added the helper method `save` to slugify and save the slug.                                                                                       |
+| The 'Excerpt' field in the LogEntryForm felt big and clunky for its intended purpose.                                                                        | Changed it from a `Textarea` to `TextInput` in the `widgets` section of the `LogentryForm`.                                                        |
 
 :arrow_left: [Return to the README](README.md)
