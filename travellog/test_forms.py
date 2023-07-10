@@ -1,4 +1,5 @@
 import os
+import unittest
 from pathlib import Path
 from django.test import TestCase
 from django.http import HttpRequest
@@ -7,10 +8,11 @@ from django.core.files.uploadedfile import SimpleUploadedFile
 from .forms import ImageForm, LogentryForm, CountryForm
 from .models import Image, Logentry, Country
 
-# BASE_DIR = Path(__file__).resolve().parent.parent
-
 
 class TestCountryForm(TestCase):
+    """
+    Unittest for testing the add country form
+    """
 
     def test_country_form_ctry_title_label(self):
         form = CountryForm()
@@ -30,49 +32,11 @@ class TestCountryForm(TestCase):
 
 
 class TestLogentryForm(TestCase):
-
-    #     def test_logentry_form_is_valid(self):
-    #         user = User.objects.create_user(
-    #             username='testuser',
-    #             email='test@email.com',
-    #             password='pwrd',
-    #         )
-    #         country = Country.objects.create(
-    #             ctry_title='testcountry',
-    #         )
-
-    #         request = HttpRequest()
-    #         request.POST = {
-    #             'title': 'Test Title',
-    #             'author': user.pk,
-    #             'year': '2000',
-    #             'description': 'Details about test',
-    #             'status': 1,
-    #             'privacy': 1,
-    #             'country': country.pk,
-    #         }
-
-    #         form = LogentryForm(request.POST)
-    #         self.assertTrue(form.is_valid())
+    """
+    Testing the Logentry form
+    """
 
     def test_logentry_form_title_label(self):
         form = LogentryForm()
         self.assertTrue(
             form.fields['title'].label == 'Title')
-
-
-# class TestImageForm(TestCase):
-
-#     def test_image_form_valid(self):
-#         self.image_file = open(
-#             os.path.join(BASE_DIR, 'static/media/images/erd.jpeg'), "rb"
-#         )
-#         data = {'caption': 'Test', 'alttest': 'Test', }
-#         files_data = {
-#             'gallery_image': SimpleUploadedFile(
-#                 self.image_file.name,
-#                 self.image_file.read()
-#             )
-#         }
-#         form = ImageForm(files=files_data, data=data)
-#         self.assertTrue(form.is_valid())
