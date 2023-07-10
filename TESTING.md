@@ -89,10 +89,10 @@ The following pages were tested and no errors were detected on any of the pages.
 <img src="static/docs/html_test_logout.png" width="60%">
 </details>
 <details>
-<details>
 <summary>Add Logentry page</summary>
 <img src="static/docs/html_test_addlogentry.png" width="60%">
 </details>
+<details>
 <summary>Update Logentry page</summary>
 <img src="static/docs/html_test_updatelogentry.png" width="60%">
 </details>
