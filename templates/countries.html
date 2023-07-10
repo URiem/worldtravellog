@@ -2,6 +2,8 @@
 {% block title %}Countries{% endblock %}
 {% block content %}
 
+
+<!-- Displays log entries for a specified country -->
 <div class="container-fluid">
     <div class="row">
         <h1 class="text-center my-5">Trips to {{ country }}</h1>
@@ -9,6 +11,7 @@
         <div class="col-12 mt-3 left">
             <div class="row">
                 {% for log in country_logs %}
+                <!-- For entries not belonging to the user, only the public ones are displayed -->
                 {% if user.id != log.author.id and log.privacy == 1 %}
                 <div class="col-sm-12 col-md-6 col-lg-3 ">
                     <div class="card-deck">
@@ -39,6 +42,7 @@
             </div>
             <div class="row">
                 {% endif %}
+                <!-- For entries belonging to the user, all entries are displayed (including private) -->
                 {% elif user.id == log.author.id %}
                 <div class="col-sm-12 col-md-6 col-lg-3 ">
                     <div class="card-deck">
@@ -70,6 +74,7 @@
             <div class="row">
                 {% endif %}
                 {% endif %}
+                <!-- If no entries exist for a country this message displays -->
                 {% empty %}
                 <p class="text-center lead mt-2">
                     Sorry there are currently no log entries for this country!

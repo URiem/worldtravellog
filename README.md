@@ -505,6 +505,7 @@ Several core packages were used, a few of the most important ones are listed her
 - django-allauth - Integrated set of Django applications addressing authentication, registration, account management as well as 3rd party (social) account authentication.
 - django-crispy-forms - provides a `crispy` filter and `{% crispy %}` tag that allows control of the rendering behavior of Django forms in a very elegant and DRY way.
 - crispy-boostrap4 - Bootstrap4 template pack for django-crispy-forms.
+- coverage - allows to create a coverage report of automated testing.
 
 ### Frameworks & Tools
 

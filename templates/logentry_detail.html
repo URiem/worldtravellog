@@ -4,9 +4,8 @@
 
 {% load crispy_forms_tags %}
 
-
+<!-- Title card with featured image and other basic information -->
 <div class="container">
-
     <div class="card my-3">
         <div class="row g-0">
             <div class="col-md-6">
@@ -34,8 +33,6 @@
     <div class="row">
         <div class="col card mb-4  mt-3 mx-2 left  top">
             <div class="card-body">
-                <!-- The post content goes inside the card-text. -->
-                <!-- Use the | safe filter inside the template tags -->
                 <div class="card-text ">
                     <p>{{ logentry.description | linebreaks }}</p>
                 </div>
@@ -44,6 +41,7 @@
     </div>
 </div>
 
+<!-- If user is the author of the entry the edit and delete buttons will display -->
 {% if user.id == logentry.author.id %}
 <div class="container">
     <div class="row">
@@ -79,7 +77,6 @@
                                         <a href="{% url 'delete_image' img.id %}"
                                             class="btn btn-outline-danger darkred btn-sm me-1 mt-2" role="button"><i
                                                 class="fa-solid fa-trash-can"></i></a>
-                                        <!-- <a href="#" class="btn btn-signup btn-sm me-1" role="button">Update</a> -->
                                     </div>
                                     {% endif %}
                                 </div>
@@ -93,6 +90,7 @@
     </div>
 </div>
 
+<!-- Form to add an image to the entry, which only displays for the author of an entry if they are logged in -->
 <div class="container">
     <div class="row">
         {% if user.id == logentry.author.id %}

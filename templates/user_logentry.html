@@ -2,9 +2,9 @@
 {% block title %}User Log Entries{% endblock %}
 {% block content %}
 
+<!-- Display of log entries owned by an authenticated user -->
 <div class="container-fluid">
     <div class="row">
-
         <!-- Log Entries Column -->
         <div class="col-12 mt-3 left">
             <div class="row">
@@ -45,6 +45,7 @@
             </div>
             <div class="row">
                 {% endif %}
+                <!-- If the user has not added any entries this message will display -->
                 {% empty %}
                 <p class="text-center lead mt-2">
                     Actually, you haven't added any trips to your log yet.

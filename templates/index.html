@@ -2,6 +2,7 @@
 {% block title %}The WorldTravel Log{% endblock %}
 {% block content %}
 
+<!-- Hero image and call to action is displayed only for users who are not logged in -->
 {% if not user.is_authenticated %}
 <header class="bg-image-full d-flex justify-content-center align-items-center"
     style="background-image: url(https://res.cloudinary.com/dcw0uahxd/image/upload/v1687253135/DSC_0273_prfblp.jpg); 
@@ -18,10 +19,11 @@ opacity: 0.9; background-size: cover; background-position: center; background-re
 </header>
 {% endif %}
 
+<!-- Display of all publically available log entries -->
 <div class="container-fluid">
     <div class="row">
 
-        <!-- Blog Entries Column -->
+        <!-- Log Entries Column -->
         <div class="col-12 mt-3 left">
             <div class="row">
                 {% for log in logentry_list %}

@@ -94,6 +94,7 @@
         </div>
     </nav>
 
+    <!-- Container for the success messages  -->
     <div class="container">
         <div class="row alert-fixed">
             <div class="col-8 mx-auto m-0">
@@ -109,6 +110,7 @@
         </div>
     </div>
 
+    <!-- Container for the main content of the page -->
     <main class="flex-shrink-0 main-bg">
         {% block content %}
         <!-- Content Goes here -->
@@ -130,7 +132,7 @@
         <p> &copy; 2023 The
             WorldTravel Log</p>
     </footer>
-    <!--Script-->
+    <!--Script that fades out the success message after a certain time -->
     <script src="https://kit.fontawesome.com/3e15c9c764.js" crossorigin="anonymous"></script>
     <script>
         setTimeout(function () {

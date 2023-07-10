@@ -16,7 +16,6 @@
                 <br>
                 <p>Are you sure you want to delete the entry titled "{{ logentry.title }}"? This will also delete all
                     images in the gallery associated with this trip entry.</p>
-                <!-- Log Entry edit form -->
                 <form method="POST" class="form text-muted" action="{% url 'delete' logentry.slug %}"
                     enctype="multipart/form-data">
                     {% csrf_token %}
